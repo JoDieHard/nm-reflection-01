@@ -1,0 +1,77 @@
+
+//          REMEMBER THAT FLEX STYLES ARE CONTROLLED BY CLASSES IN _STYLES.SCSS
+
+footer {
+    .container {                //-----  FOOTER CONTAINER STYLES
+
+        width: 1200px;
+        align-items: baseline;
+        margin-top: 15px;
+        justify-content: space-around;
+
+
+    color: white;
+
+//-----  MAIN STYLING FOOTER SECTIONS
+
+    ul {
+        list-style-type: none;
+        letter-spacing: .4px;
+        line-height: 1.35em;
+
+        h2 {
+            font-size: .9em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        li {
+            font-size: .75em;
+
+            & a:hover {
+                text-decoration: underline;
+            }
+        }
+
+        :link, :visited {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+//-----  THIS IS THE SOCIAL SECTION     
+
+    .ft-social {
+        display: flex;
+        flex-wrap: wrap;
+        width: 350px;
+
+        cursor: pointer;
+
+        h2 {
+            flex-basis: 100%;
+        }
+
+        //-----   SOCIAL HOVER STYLES
+
+        .soc-fb:hover  { background-color: rgba(66, 103, 178, .7); }
+        .soc-twi:hover { background-color: rgba(29, 161, 242,.7);  }
+        .soc-lin:hover { background-color: rgba(0, 119, 181, .7);  }
+
+        i {
+            flex-basis: 60%;
+            width: 110px;
+            height: 50px;
+            padding: 5px 10px;
+            margin: 0px 30px 30px 0px;
+
+            background-color: rgba(0,0,0,.25);
+            text-align: center;
+            padding-top: 15px;
+            font-size: 1.45rem;
+        }
+    }
+
+  }
+}
+

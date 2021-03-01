@@ -1,0 +1,121 @@
+
+header {
+  padding-top: 22px;     // Because I couldn't center HEADER content for some reason
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+     img {
+         padding-right: 85px;
+         height: 65px;
+         width: auto;
+     }
+}
+
+
+//--------------------------------------------------------------------------------------------------
+//-----------------------------   HEADER BUTTONS MIXIN   -------------------------------------------
+
+//    SUPPORT BUTTON
+
+.btn-support {
+  @include btn-default(135px, 56px);
+
+  padding: 5px 15px; 
+  margin: 0px 10px;
+  
+  color: white;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+
+  text-align: center;
+
+  border: none;
+  border-radius: 3px;
+}
+
+
+//    CONTACT BUTTON
+
+.btn-contact {
+  @include btn-default(145px, 56px, $dark-grey);
+
+  padding: 5px 15px; 
+  margin: 0px 10px;
+  
+  color: white;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+
+  text-align: center;
+
+  border: none;
+  border-radius: 3px;
+
+  i {
+    font-size: 1.3rem;
+  }
+}
+
+
+//    SEARCH FIELD TEXT & BUTTON 
+
+#search-box {
+  display: flex;
+  width: 303px;
+  height: 56px;
+  margin: 0px 10px;
+
+  overflow: hidden;
+
+  border: solid 1px $grey;
+  border-radius: 3px;
+
+    .search-field {
+        width: 240px;
+        height: 56px;
+        margin: 0px;
+        border: none;
+
+        font-size: .85rem;
+        padding: 5px 5px 5px 15px;
+    }
+
+    .search-btn {
+        @include btn-default(63px, 56px, $dark-grey, row);
+
+        border-radius: 0px;
+        color: white;
+
+        i {
+        font-size: 2.3rem;
+    }
+  }
+}
+
+
+//---------   HAMBURGER MENU BUTTON MIXIN
+
+#menu-btn {
+    @include btn-default(63px, 56px, $primary-colour, column);
+
+    padding: 5px 15px; 
+    margin: 0px 10px;
+
+    
+    color: white;
+    text-align: center;
+
+    i {
+        margin-top: 6px;
+        margin-bottom: -18px;
+        font-size: 2.5rem;
+    }
+}
+
+
+//--------------------------------------------------------------------------------------------------

@@ -1,0 +1,27 @@
+
+
+
+//------ PARTIAL IMPORTS ---------------------------------------------
+
+@import "partials/styles";      //  STYLES
+@import "partials/elements";    //  ELEMENTS
+@import "partials/layout";      //  LAYOUT
+
+//--------------------------------------------------------------------
+
+* {
+    font-family: $primary-font-stack;
+    font-family: 'Poppins', sans-serif;
+}
+
+//------ SECTION STYLE IMPORTS ---------------------------------------
+
+@import "sections/header";
+@import "sections/main-nav";
+@import "sections/banner";
+@import "sections/services";
+@import "sections/about-us";
+@import "sections/articles";
+@import "sections/clients";
+@import "sections/newsletter";
+@import "sections/footer";

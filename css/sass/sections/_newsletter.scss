@@ -1,0 +1,74 @@
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $primary-colour;
+    letter-spacing: 1px;
+
+    h2 { 
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    p, strong {
+        font-weight: 600;
+        font-size: 1.05rem;
+        letter-spacing: .4px;
+        line-height: 2rem;
+    }
+
+    .btn {
+        @include btn-default(120px, 46px, $primary-colour);
+        color: white;
+        margin-top: 15px;
+
+        p {
+            letter-spacing: .2px;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+    }
+
+    .container{
+        width: 1170px;
+
+        input[type="text"] {
+            width: 540px;
+            height: 47px;
+            padding: 5px 15px 5px 5px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .nl-input {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        strong::after {
+            content: " *";
+            color: #d24d57; 
+        }
+    }
+
+    .nl-check {
+        float: left;
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+
+    //THIS IS THE PRIVACY POLICY LINK DARKEN
+
+    a, :visited {
+        color: inherit;
+    }
+
+    .inline-link:hover {
+        color: darken($primary-colour, 10%);
+    }
+
+}

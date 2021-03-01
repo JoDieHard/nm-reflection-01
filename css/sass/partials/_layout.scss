@@ -1,0 +1,178 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.homepage {
+    margin: 0px;
+}
+
+//--------------------------------------------------------------------
+//--------------- MAIN-PAGE GRID LAYOUT ------------------------------
+//--------------------------------------------------------------------
+
+
+//--------------- GRID ITEMS -----------------------------------------
+
+//      These are all of the grid items on the main page for the general structure. 
+//          - Also includes background colour and image properties.
+
+header {
+    grid-area: head;
+    background-color: white;
+}
+
+.main-nav {
+    grid-area: main-nav;
+    background-color: $primary-colour;
+}
+
+.banner {
+    grid-area: banner;
+
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../../assets/carousel/web.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.services-list {
+    grid-area: services;
+    background-color: white;
+}
+
+.about-us {
+    grid-area: about-us;
+    background: $primary-colour url(../../assets/nm-brand-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center; 
+}
+
+.article-split {
+    grid-area: a-split;
+}
+
+.articles {
+    grid-area: articles;
+    background-color: white;
+    box-shadow: inset 0 10px 30px 10px rgba(#666, 0.1);
+}
+
+.clients {
+    grid-area: clients;
+    background: white;
+    box-shadow: inset 0 10px 25px 5px rgba(#666, 0.15);
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        width: 1500px;
+        margin: 0px auto;
+        padding-top: 35px;
+        img {
+            padding: 10px 40px;
+            height: 100px;
+            width: auto;
+            background-size: contain;
+            filter: grayscale(100%);
+
+            &:hover {
+                filter: grayscale(0%);
+                transition: .2s ease-in-out;
+            }
+        }
+    }
+}
+
+.newsletter {
+    grid-area: newsletter;
+    background-color: $grey;
+}
+
+footer {
+    grid-area: footer;
+    background-color: $primary-colour;
+}
+
+.awards {
+    grid-area: awards;
+    background-color: white;
+    padding-top: 15px;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        width: 1200px;
+        margin: 0px auto;
+
+        img {
+            padding: 20px 40px;
+
+            .img-line-1 {
+                height: 100px;
+                width: auto;
+            }
+
+            .img-line-2 {
+                height: 70px;
+                width: auto;
+            }
+
+            filter: grayscale(100%);
+
+
+            &:hover {
+                filter: grayscale(0%);
+                transition: .2s ease-in-out;
+            }
+
+            
+        }
+    }
+}
+
+//--------------------------------------------------------------------
+//--------------- GRID CONTROLLER ------------------------------------
+
+.grid {
+    height: 100vh;
+    display: grid;
+
+    grid-template-rows: 110px                   //  Header 
+                        100px                    //  Main-nav 
+                        750px                   //  Banner 
+                        755px                   //  Services List 
+                        553px                   //  About Us 
+                        104px
+                        706px                   //  Latest Articles  
+                        170px                   //  Clients
+                        381px                   //  Newsletter Sign-Up
+                        310px                   //  Footer
+                        265px;                  //  Awards/Accreditations
+                        
+
+
+    grid-template-columns: 1fr;
+    grid-gap: 0px;                              //This controls the Grid's gutter
+
+    grid-template-areas:     "head"             //This generates the websites core structure
+                             "main-nav" 
+                             "banner" 
+                             "services"
+                             "about-us" 
+                             "a-split"       
+                             "articles" 
+                             "clients" 
+                             "newsletter" 
+                             "footer" 
+                             "awards";
+}
+
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------

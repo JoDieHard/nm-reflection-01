@@ -1,0 +1,42 @@
+.banner {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        font-size: 3em;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 5px; 
+    }
+
+    p {
+        font-size: 1.4em;
+        margin-top: 20px; 
+        line-height: 2em;
+    }
+
+    .banner-content {
+        height: 247px;
+        width: 1170px;
+        margin-left: 250px;
+        margin-bottom: 100px;
+
+        color: white;
+        letter-spacing: 1px;
+        }
+
+    .btn-arrw {
+        @include btn-default(225px, 62px, $wd-dt-theme);
+
+        justify-content: space-around;
+        font-size: 1.3em;
+        padding: 5px 15px;
+
+        p {
+            font-size: 1.3rem;
+            padding-top: 4px;
+        }
+    }
+}

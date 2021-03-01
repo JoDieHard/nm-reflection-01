@@ -1,0 +1,84 @@
+//---------------------     FONT IMPORT     ----------------------------------------------------------------------------
+
+/* poppins-regular - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v15-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/poppins-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/poppins-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/poppins-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/poppins-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/poppins-v15-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
+  }
+  
+  /* poppins-600 - latin */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v15-latin-600.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/poppins-v15-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/poppins-v15-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/poppins-v15-latin-600.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/poppins-v15-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/poppins-v15-latin-600.svg#Poppins') format('svg'); /* Legacy iOS */
+  }
+
+//---------------------     FONT STACK VARIABLE    
+
+  $primary-font-stack: Poppins, sans-serif;
+
+//---------------------     PRE-DEFINED FONT STYLES
+
+  .s-type {
+    font-size: .65rem;
+    letter-spacing: .1px;
+  }
+
+  .l-type {
+    font-size: 1.13rem;
+}
+
+//----------------------------------------------------------------------------------------------------------------
+//---------------------     COLOURS     --------------------------------------------------------------------------
+
+$primary-colour: #333645;   //  Dark Blue
+
+$white: #fff;
+$grey: #ddd;
+$dark-grey: #999aa2;
+
+$btn-primary: #4183d7; //       Bright Blue,    Same as IT Support below / So it is customizable later!
+$btn-secondary: #67809f;
+
+// These are the Section Colours
+
+$it-theme:     #4183d7;      //    IT Support                        --  Bright Blue
+$dm-theme:     #2ecc71;      //    Digital Marketing                 --  Green
+$ts-theme:     #d64541;      //    Telecoms Services                 --  Orange
+$wd-dt-theme:  #926fb1;      //    Web Design & Developer Training   --  Purple
+$cs-theme:     #f62459;      //    Cyber Security                    --  Red
+$bs-theme:     #67809f;      //     Bespoke Software                 -- Light Blue 
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------
+//---------------------     FLEX CLASSES    --------------------------------------------------------------------
+
+.flexy {
+  display: flex;
+}
+
+.flex-c {
+  justify-content: center;
+}
+
+.flex-break {
+  flex-basis: 1200px;
+  height: 0;
+}
