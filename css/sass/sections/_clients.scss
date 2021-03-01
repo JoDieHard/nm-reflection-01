@@ -40,7 +40,7 @@
                 background: $primary-colour;
                 padding: 5px 20px 10px;
                 flex-direction: column;
-                display: none;
+                visibility: hidden;
 
                 h3 {
                     font-weight: 500;
@@ -72,8 +72,15 @@
                     background: $primary-colour;
                     z-index: -1
                 }
+
                 
             }
+
+                            // THIS CONTROLS THE HOVER STATE FOR POP UPS 
+
+                            img:hover ~ .info-box {         // <------- Example of a :HOVER rule that effects a SIBLING ELEMENT.
+                                visibility: visible;
+                            }
         }
 
     }
