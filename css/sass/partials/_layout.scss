@@ -68,22 +68,6 @@ header {
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-
-        width: 1500px;
-        margin: 0px auto;
-        padding-top: 35px;
-        img {
-            padding: 10px 40px;
-            height: 100px;
-            width: auto;
-            background-size: contain;
-            filter: grayscale(100%);
-
-            &:hover {
-                filter: grayscale(0%);
-                transition: .2s ease-in-out;
-            }
-        }
     }
 }
 
