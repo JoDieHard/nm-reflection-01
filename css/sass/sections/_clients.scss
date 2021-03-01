@@ -1,8 +1,87 @@
-
-.client {
-    position: relative;
-
-    .info-box {
+.clients {
+    .container {
         
+        width: 1400px;
+        padding-top: 35px;
+        margin: 0px auto;
+
+        .client {
+            position: relative;
+            justify-content: center;
+            min-width: 240px;
+
+            // THIS IS THE STYLING FOR THE IMAGES -------------------------
+
+            img {
+                padding: 10px 40px;
+                height: 100px;
+                width: auto;
+                background-size: contain;
+                filter: grayscale(100%);
+    
+                &:hover {
+                    filter: grayscale(0%);
+                    transition: .2s ease-in-out;
+                }
+            }
+
+            // THIS IS THE STYLING FOR THE POP-UP INFO BOX.
+
+            .info-box {
+                position: absolute;
+                bottom: 135px;
+                z-index: 10;
+
+                width: 280px;
+
+                color: white;
+                text-align: center;
+
+                background: $primary-colour;
+                padding: 5px 20px 10px;
+                flex-direction: column;
+                visibility: hidden;
+
+                h3 {
+                    font-weight: 500;
+                    font-size: 1.1rem;
+                    margin-bottom: 12.5px;
+                }
+
+                .break {                // THIS IS A LINE BREAK WITH BORDER (HOPEFULLY)
+                    width: 30px;
+                    height: 0px;
+                    align-self: center;
+                    border-bottom: solid 3px $white;
+                }
+
+                p {
+                    font-size: .85rem;
+                    line-height: 1.4rem;
+                }
+
+                &::after {
+                    content: " ";
+                    width: 50px;
+                    height: 50px;
+
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: rotateZ(45deg) translateY(35px);
+                    background: $primary-colour;
+                    z-index: -1
+                }
+
+                
+            }
+
+                            // THIS CONTROLS THE HOVER STATE FOR POP UPS 
+
+                            img:hover ~ .info-box {         // <------- Example of a :HOVER rule that effects a SIBLING ELEMENT.
+                                visibility: visible;
+                            }
+        }
+
     }
 }
