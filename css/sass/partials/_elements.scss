@@ -100,7 +100,7 @@
 
 //  THIS IS THE MAIN-NAV DROP DOWN MENU MIXIN
 
-@mixin nav-drop-item($theme: $primary-colour, $offset-y: -200px, $offset-x: 72px) {
+@mixin nav-drop-item($theme: $primary-colour, $offset-y: -200px, $offset-x: 72px, $width: 1200px, $margin: 40px) {
 
     width: 100%;
     height: 45px;
@@ -120,12 +120,13 @@
 
     .contain {
     justify-content: space-between;
-    width: 1100px;
+    width: $width;
     list-style-type: none;
 
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: .6px;
+    flex-wrap: nowrap;
 
         li:nth-child(1)::after, 
         li:nth-child(2)::after,
@@ -133,7 +134,14 @@
         li:nth-child(4)::after,
         li:nth-child(5)::after {
             content: " — ";
-            margin-left: 40px;
+            margin-left: $margin;
+        }
+
+        li:first-child {
+            margin-left: -20px;
+        }
+        li:last-child {
+            margin-right: 20px;
         }
 
         a:hover {                             //THIS IS AN UNUSED HOVER FUNCTION FOR MAIN NAV DROP DOWN ITEMS

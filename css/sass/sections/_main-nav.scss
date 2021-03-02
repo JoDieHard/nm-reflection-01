@@ -90,14 +90,14 @@
 
 // THIS IS THE NAVIGATION DROP DOWN MENU
 
-.nav-drop.wd-drop {   @include nav-drop-item($wd-dt-theme, -262px, 72px);   }
+.nav-drop.wd-drop {   @include nav-drop-item($wd-dt-theme, -262px, 72px, 1200px, 30px);   }
 
-.nav-drop.it-drop {   @include nav-drop-item($it-theme, -456px, 72px);      }
+.nav-drop.it-drop {   @include nav-drop-item($it-theme, -456px, 72px, 1150px, 35px);      }
 
-.nav-drop.ts-drop {   @include nav-drop-item($ts-theme, -651px, 72px);      }
+.nav-drop.ts-drop {   @include nav-drop-item($ts-theme, -651px, 72px, 1200px, 27px);      }
 
-.nav-drop.bs-drop {   @include nav-drop-item($bs-theme, -846px, 72px);      }
+.nav-drop.bs-drop {   @include nav-drop-item($bs-theme, -846px, 72px, 1200px, 25px);      }
 
-.nav-drop.dm-drop {   @include nav-drop-item($dm-theme, -1040px, 72px);      }
+.nav-drop.dm-drop {   @include nav-drop-item($dm-theme, -1040px, 72px, 1100px, 35px);      }
 
-.nav-drop.cs-drop {   @include nav-drop-item($cs-theme, -1235px, 72px);      }
+.nav-drop.cs-drop {   @include nav-drop-item($cs-theme, -1235px, 72px, 1200px, 27px); }

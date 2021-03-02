@@ -9,6 +9,7 @@
     h2 { 
         font-size: 2rem;
         font-weight: 400;
+        margin-top: -10px;
     }
 
     p, strong {
@@ -21,7 +22,7 @@
     .btn {
         @include btn-default(120px, 46px, $primary-colour);
         color: white;
-        margin-top: 15px;
+        margin-top: 10px;
 
         p {
             letter-spacing: .2px;
@@ -38,7 +39,7 @@
             width: 540px;
             height: 47px;
             padding: 5px 15px 5px 5px;
-            margin-bottom: 15px;
+            margin-bottom: 0px;
         }
     }
 
