@@ -1680,11 +1680,45 @@ header .container img {
   content: " *";
   color: #d24d57;
 }
+.newsletter .custom-checkbox {
+  margin-bottom: -15px;
+}
 .newsletter .nl-check {
   float: left;
   width: 40px;
   height: 40px;
   margin-right: 10px;
+  position: relative;
+  visibility: hidden;
+}
+.newsletter .custom-checkbox::before {
+  content: " ";
+  width: 28px;
+  height: 28px;
+  border: solid 3px #333645;
+  border-radius: 3px;
+  position: absolute;
+  display: block;
+}
+.newsletter input[type=checkbox]:checked ~ ::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background: #333645 url(../assets/custom-check.svg) no-repeat center;
+  background-size: 80%;
+  border: solid 3px #333645;
+  color: white;
+  border-radius: 3px;
+  position: absolute;
+  display: block;
+  text-align: center;
+  line-height: 28px;
+}
+.newsletter .check-select {
+  display: block;
+  position: absolute;
+  width: 34px;
+  height: 34px;
 }
 .newsletter a, .newsletter :visited {
   color: inherit;
