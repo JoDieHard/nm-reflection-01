@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* poppins-regular - latin */
 @font-face {
   font-family: "Poppins";
@@ -396,7 +397,7 @@ header .container img {
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 0px;
 }
-.main-nav .container li {
+.main-nav .container .main-li {
   height: 99px;
   width: 220px;
   padding: 20px 5px;
@@ -411,14 +412,14 @@ header .container img {
   line-height: 16px;
   letter-spacing: 0.5px;
 }
-.main-nav .container li .s-type {
+.main-nav .container .main-li .s-type {
   padding-top: 6px;
   margin-bottom: -1px;
 }
-.main-nav .container li i {
+.main-nav .container .main-li i {
   font-size: 1.5rem;
 }
-.main-nav .container li:hover i {
+.main-nav .container .main-li:hover i {
   color: white;
 }
 
@@ -462,6 +463,288 @@ header .container img {
 }
 .cs:hover {
   background-color: #f62459;
+}
+
+.wd:hover .nav-drop.wd-drop {
+  visibility: visible;
+}
+
+.it:hover .nav-drop.it-drop {
+  visibility: visible;
+}
+
+.ts:hover .nav-drop.ts-drop {
+  visibility: visible;
+}
+
+.bs:hover .nav-drop.bs-drop {
+  visibility: visible;
+}
+
+.dm:hover .nav-drop.dm-drop {
+  visibility: visible;
+}
+
+.cs:hover .nav-drop.cs-drop {
+  visibility: visible;
+}
+
+.nav-drop.wd-drop {
+  width: 100%;
+  height: 45px;
+  color: white;
+  position: absolute;
+  transform: translate3d(-262px, 72px, 0px);
+  visibility: hidden;
+  background: #724f91;
+  align-items: center;
+  justify-content: center;
+}
+.nav-drop.wd-drop :link, .nav-drop.wd-drop :visited {
+  color: inherit;
+  text-decoration: none;
+}
+.nav-drop.wd-drop .contain {
+  justify-content: space-between;
+  width: 1200px;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  flex-wrap: nowrap;
+}
+.nav-drop.wd-drop .contain li:nth-child(1)::after,
+.nav-drop.wd-drop .contain li:nth-child(2)::after,
+.nav-drop.wd-drop .contain li:nth-child(3)::after,
+.nav-drop.wd-drop .contain li:nth-child(4)::after,
+.nav-drop.wd-drop .contain li:nth-child(5)::after {
+  content: " — ";
+  margin-left: 30px;
+}
+.nav-drop.wd-drop .contain li:first-child {
+  margin-left: -20px;
+}
+.nav-drop.wd-drop .contain li:last-child {
+  margin-right: 20px;
+}
+.nav-drop.wd-drop .contain a:hover {
+  color: #f2f2f2;
+  transition: color 0.1s ease-in-out;
+}
+
+.nav-drop.it-drop {
+  width: 100%;
+  height: 45px;
+  color: white;
+  position: absolute;
+  transform: translate3d(-456px, 72px, 0px);
+  visibility: hidden;
+  background: #2664b3;
+  align-items: center;
+  justify-content: center;
+}
+.nav-drop.it-drop :link, .nav-drop.it-drop :visited {
+  color: inherit;
+  text-decoration: none;
+}
+.nav-drop.it-drop .contain {
+  justify-content: space-between;
+  width: 1150px;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  flex-wrap: nowrap;
+}
+.nav-drop.it-drop .contain li:nth-child(1)::after,
+.nav-drop.it-drop .contain li:nth-child(2)::after,
+.nav-drop.it-drop .contain li:nth-child(3)::after,
+.nav-drop.it-drop .contain li:nth-child(4)::after,
+.nav-drop.it-drop .contain li:nth-child(5)::after {
+  content: " — ";
+  margin-left: 35px;
+}
+.nav-drop.it-drop .contain li:first-child {
+  margin-left: -20px;
+}
+.nav-drop.it-drop .contain li:last-child {
+  margin-right: 20px;
+}
+.nav-drop.it-drop .contain a:hover {
+  color: #f2f2f2;
+  transition: color 0.1s ease-in-out;
+}
+
+.nav-drop.ts-drop {
+  width: 100%;
+  height: 45px;
+  color: white;
+  position: absolute;
+  transform: translate3d(-651px, 72px, 0px);
+  visibility: hidden;
+  background: #b12a26;
+  align-items: center;
+  justify-content: center;
+}
+.nav-drop.ts-drop :link, .nav-drop.ts-drop :visited {
+  color: inherit;
+  text-decoration: none;
+}
+.nav-drop.ts-drop .contain {
+  justify-content: space-between;
+  width: 1200px;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  flex-wrap: nowrap;
+}
+.nav-drop.ts-drop .contain li:nth-child(1)::after,
+.nav-drop.ts-drop .contain li:nth-child(2)::after,
+.nav-drop.ts-drop .contain li:nth-child(3)::after,
+.nav-drop.ts-drop .contain li:nth-child(4)::after,
+.nav-drop.ts-drop .contain li:nth-child(5)::after {
+  content: " — ";
+  margin-left: 27px;
+}
+.nav-drop.ts-drop .contain li:first-child {
+  margin-left: -20px;
+}
+.nav-drop.ts-drop .contain li:last-child {
+  margin-right: 20px;
+}
+.nav-drop.ts-drop .contain a:hover {
+  color: #f2f2f2;
+  transition: color 0.1s ease-in-out;
+}
+
+.nav-drop.bs-drop {
+  width: 100%;
+  height: 45px;
+  color: white;
+  position: absolute;
+  transform: translate3d(-846px, 72px, 0px);
+  visibility: hidden;
+  background: #4d617a;
+  align-items: center;
+  justify-content: center;
+}
+.nav-drop.bs-drop :link, .nav-drop.bs-drop :visited {
+  color: inherit;
+  text-decoration: none;
+}
+.nav-drop.bs-drop .contain {
+  justify-content: space-between;
+  width: 1200px;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  flex-wrap: nowrap;
+}
+.nav-drop.bs-drop .contain li:nth-child(1)::after,
+.nav-drop.bs-drop .contain li:nth-child(2)::after,
+.nav-drop.bs-drop .contain li:nth-child(3)::after,
+.nav-drop.bs-drop .contain li:nth-child(4)::after,
+.nav-drop.bs-drop .contain li:nth-child(5)::after {
+  content: " — ";
+  margin-left: 25px;
+}
+.nav-drop.bs-drop .contain li:first-child {
+  margin-left: -20px;
+}
+.nav-drop.bs-drop .contain li:last-child {
+  margin-right: 20px;
+}
+.nav-drop.bs-drop .contain a:hover {
+  color: #f2f2f2;
+  transition: color 0.1s ease-in-out;
+}
+
+.nav-drop.dm-drop {
+  width: 100%;
+  height: 45px;
+  color: white;
+  position: absolute;
+  transform: translate3d(-1040px, 72px, 0px);
+  visibility: hidden;
+  background: #229854;
+  align-items: center;
+  justify-content: center;
+}
+.nav-drop.dm-drop :link, .nav-drop.dm-drop :visited {
+  color: inherit;
+  text-decoration: none;
+}
+.nav-drop.dm-drop .contain {
+  justify-content: space-between;
+  width: 1100px;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  flex-wrap: nowrap;
+}
+.nav-drop.dm-drop .contain li:nth-child(1)::after,
+.nav-drop.dm-drop .contain li:nth-child(2)::after,
+.nav-drop.dm-drop .contain li:nth-child(3)::after,
+.nav-drop.dm-drop .contain li:nth-child(4)::after,
+.nav-drop.dm-drop .contain li:nth-child(5)::after {
+  content: " — ";
+  margin-left: 35px;
+}
+.nav-drop.dm-drop .contain li:first-child {
+  margin-left: -20px;
+}
+.nav-drop.dm-drop .contain li:last-child {
+  margin-right: 20px;
+}
+.nav-drop.dm-drop .contain a:hover {
+  color: #f2f2f2;
+  transition: color 0.1s ease-in-out;
+}
+
+.nav-drop.cs-drop {
+  width: 100%;
+  height: 45px;
+  color: white;
+  position: absolute;
+  transform: translate3d(-1235px, 72px, 0px);
+  visibility: hidden;
+  background: #d2093b;
+  align-items: center;
+  justify-content: center;
+}
+.nav-drop.cs-drop :link, .nav-drop.cs-drop :visited {
+  color: inherit;
+  text-decoration: none;
+}
+.nav-drop.cs-drop .contain {
+  justify-content: space-between;
+  width: 1200px;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  flex-wrap: nowrap;
+}
+.nav-drop.cs-drop .contain li:nth-child(1)::after,
+.nav-drop.cs-drop .contain li:nth-child(2)::after,
+.nav-drop.cs-drop .contain li:nth-child(3)::after,
+.nav-drop.cs-drop .contain li:nth-child(4)::after,
+.nav-drop.cs-drop .contain li:nth-child(5)::after {
+  content: " — ";
+  margin-left: 27px;
+}
+.nav-drop.cs-drop .contain li:first-child {
+  margin-left: -20px;
+}
+.nav-drop.cs-drop .contain li:last-child {
+  margin-right: 20px;
+}
+.nav-drop.cs-drop .contain a:hover {
+  color: #f2f2f2;
+  transition: color 0.1s ease-in-out;
 }
 
 .banner {
@@ -1315,7 +1598,8 @@ header .container img {
   background: #333645;
   z-index: -1;
 }
-.clients .container .client img:hover ~ .info-box {
+.clients .container .client img:hover ~ .info-box,
+.clients .container .client .info-box:hover {
   visibility: visible;
 }
 
@@ -1329,6 +1613,7 @@ header .container img {
 .newsletter h2 {
   font-size: 2rem;
   font-weight: 400;
+  margin-top: -10px;
 }
 .newsletter p, .newsletter strong {
   font-weight: 600;
@@ -1350,7 +1635,7 @@ header .container img {
   border-radius: 3px;
   position: relative;
   color: white;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .newsletter .btn i, .newsletter .btn p {
   z-index: 5;
@@ -1384,7 +1669,7 @@ header .container img {
   width: 540px;
   height: 47px;
   padding: 5px 15px 5px 5px;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 .newsletter .nl-input {
   display: flex;

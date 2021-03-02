@@ -96,7 +96,61 @@
     }
 }
 
-//-----------------------------------------
+//---------------------------------------------------------------------
+
+//  THIS IS THE MAIN-NAV DROP DOWN MENU MIXIN
+
+@mixin nav-drop-item($theme: $primary-colour, $offset-y: -200px, $offset-x: 72px, $width: 1200px, $margin: 40px) {
+
+    width: 100%;
+    height: 45px;
+    color: white;
+    position: absolute;
+    transform: translate3d($offset-y, $offset-x, 0px);
+    visibility: hidden;
+
+    background: darken($theme, 12.5%);
+    align-items: center;
+    justify-content: center;
+
+    :link, :visited {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .contain {
+    justify-content: space-between;
+    width: $width;
+    list-style-type: none;
+
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .6px;
+    flex-wrap: nowrap;
+
+        li:nth-child(1)::after, 
+        li:nth-child(2)::after,
+        li:nth-child(3)::after,
+        li:nth-child(4)::after,
+        li:nth-child(5)::after {
+            content: " — ";
+            margin-left: $margin;
+        }
+
+        li:first-child {
+            margin-left: -20px;
+        }
+        li:last-child {
+            margin-right: 20px;
+        }
+
+        a:hover {                             //THIS IS AN UNUSED HOVER FUNCTION FOR MAIN NAV DROP DOWN ITEMS
+            // text-decoration: underline;
+            color: darken(white, 5%);
+            transition: color .1s ease-in-out;
+        }
+    }
+}
 
 //--------------------------------------------------------------------------------------------------
 //-----------------------------   SERVICES LIST CARD MIXIN   --------------------------------------------
