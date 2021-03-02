@@ -1418,16 +1418,18 @@ header .container img {
 .articles .article-credit {
   height: 100px;
   padding-top: 20px;
+  line-height: 12px;
 }
 .articles .article-credit img {
   float: left;
   width: 47px;
   height: 47px;
-  margin: 0px 20px 0px 30px;
+  margin: -4px 20px 0px 30px;
   border-radius: 50%;
 }
 .articles .article-credit strong {
   color: #333645;
+  font-weight: 600;
 }
 .articles .article-credit p {
   line-height: 0px;

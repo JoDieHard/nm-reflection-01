@@ -71,18 +71,20 @@
         .article-credit {
             height: 100px;
             padding-top: 20px;
+            line-height: 12px;
 
             img {
                 float: left;
 
                 width: 47px;
                 height: 47px;
-                margin: 0px 20px 0px 30px;
+                margin: -4px 20px 0px 30px;
                 border-radius: 50%;
         }
 
         strong {   
-            color: $primary-colour;  
+            color: $primary-colour; 
+            font-weight: 600; 
         }
 
         p {  
