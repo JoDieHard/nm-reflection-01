@@ -78,7 +78,8 @@
 
                             // THIS CONTROLS THE HOVER STATE FOR POP UPS 
 
-                            img:hover ~ .info-box {         // <------- Example of a :HOVER rule that effects a SIBLING ELEMENT.
+                            img:hover ~ .info-box,
+                            .info-box:hover {         // <------- Example of a :HOVER rule that effects a SIBLING ELEMENT.
                                 visibility: visible;
                             }
         }
