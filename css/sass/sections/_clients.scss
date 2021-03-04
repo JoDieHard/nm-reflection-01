@@ -1,20 +1,21 @@
 .clients {
     .container {
         
-        width: 1400px;
-        padding-top: 35px;
+        width: 1200px;                      //CONTAINER WIDTH
+        padding: 35px 0px;
         margin: 0px auto;
+        justify-content: space-around;
 
         .client {
             position: relative;
             justify-content: center;
-            min-width: 240px;
+            // min-width: 240px;
 
             // THIS IS THE STYLING FOR THE IMAGES -------------------------
 
             img {
-                padding: 10px 40px;
-                height: 100px;
+                padding: 10px 20px;
+                height: 90px;
                 width: auto;
                 background-size: contain;
                 filter: grayscale(100%);

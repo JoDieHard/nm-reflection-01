@@ -8,11 +8,12 @@
     
     .container {
         height: 100px;
-        width: 1170px;
+        width: 100%;
         padding: 0px 0px 30px 0px;
 
         display: flex;
         flex-direction: row;
+        justify-content: center;
 
         color: white;
         text-decoration: none;
@@ -90,14 +91,14 @@
 
 // THIS IS THE NAVIGATION DROP DOWN MENU
 
-.nav-drop.wd-drop {   @include nav-drop-item($wd-dt-theme, -262px, 72px, 1200px, 30px);   }
+.nav-drop.wd-drop {   @include nav-drop-item($wd-dt-theme, 1200px, 30px);   }
 
-.nav-drop.it-drop {   @include nav-drop-item($it-theme, -456px, 72px, 1150px, 35px);      }
+.nav-drop.it-drop {   @include nav-drop-item($it-theme, 1150px, 35px);      }
 
-.nav-drop.ts-drop {   @include nav-drop-item($ts-theme, -651px, 72px, 1200px, 27px);      }
+.nav-drop.ts-drop {   @include nav-drop-item($ts-theme, 1200px, 27px);      }
 
-.nav-drop.bs-drop {   @include nav-drop-item($bs-theme, -846px, 72px, 1200px, 25px);      }
+.nav-drop.bs-drop {   @include nav-drop-item($bs-theme, 1200px, 25px);      }
 
-.nav-drop.dm-drop {   @include nav-drop-item($dm-theme, -1040px, 72px, 1100px, 35px);      }
+.nav-drop.dm-drop {   @include nav-drop-item($dm-theme, 1100px, 35px);      }
 
-.nav-drop.cs-drop {   @include nav-drop-item($cs-theme, -1235px, 72px, 1200px, 27px); }
+.nav-drop.cs-drop {   @include nav-drop-item($cs-theme, 1200px, 27px); }

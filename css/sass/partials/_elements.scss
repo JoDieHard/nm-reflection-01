@@ -100,14 +100,15 @@
 
 //  THIS IS THE MAIN-NAV DROP DOWN MENU MIXIN
 
-@mixin nav-drop-item($theme: $primary-colour, $offset-y: -200px, $offset-x: 72px, $width: 1200px, $margin: 40px) {
+@mixin nav-drop-item($theme: $primary-colour, $width: 1200px, $margin: 40px) {
 
     width: 100%;
     height: 45px;
     color: white;
     position: absolute;
-    transform: translate3d($offset-y, $offset-x, 0px);
     visibility: hidden;
+    left: 0;
+    top: 209px;
 
     background: darken($theme, 12.5%);
     align-items: center;

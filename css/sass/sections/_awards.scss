@@ -1,0 +1,36 @@
+.awards {
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        width: 1200px;
+        margin: 0px auto;
+
+        img {
+            padding: 20px 40px;
+
+            .img-line-1 {
+                height: 100px;
+                width: auto;
+            }
+
+            .img-line-2 {
+                height: 70px;
+                width: auto;
+            }
+
+            filter: grayscale(100%);
+
+
+            &:hover {
+                filter: grayscale(0%);
+                transition: .2s ease-in-out;
+            }
+
+            
+        }
+    }
+}
