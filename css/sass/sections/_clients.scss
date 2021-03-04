@@ -6,6 +6,10 @@
         margin: 0px auto;
         justify-content: space-around;
 
+        @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
+            width: 960px;
+        }
+
         .client {
             position: relative;
             justify-content: center;
@@ -23,6 +27,10 @@
                 &:hover {
                     filter: grayscale(0%);
                     transition: .2s ease-in-out;
+                }
+
+                @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
+                    height: 80px;
                 }
             }
 

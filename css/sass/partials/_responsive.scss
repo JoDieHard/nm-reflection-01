@@ -4,3 +4,9 @@ $media-m: 992px;
 $media-l: 1260px;
 
 
+@media (max-width: $media-l) {
+    .hide-l {
+        display: none;
+    }
+}
+

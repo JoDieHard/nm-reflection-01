@@ -47,6 +47,10 @@ header {
     background-color: white;
 
     height: 755px;
+
+    @media (max-width: $media-l)      {     // BREAKPOINT LARGE
+        height: 1180px;
+    }
 }
 
 .about-us {
@@ -112,43 +116,8 @@ footer {
 
     height: 265px;
     overflow: hidden;
+
+    @media (max-width: $media-l)      {     // BREAKPOINT LARGE
+        height: 300px;
+    }
 }
-
-// //--------------------------------------------------------------------
-// //--------------- GRID CONTROLLER ------------------------------------
-
-// .grid {
-//     height: 100vh;
-//     display: grid;
-
-//     grid-template-rows: 110px                   //  Header 
-//                         100px                    //  Main-nav 
-//                         750px                   //  Banner 
-//                         755px                   //  Services List 
-//                         553px                   //  About Us 
-//                         104px
-//                         706px                   //  Latest Articles  
-//                         170px                   //  Clients
-//                         381px                   //  Newsletter Sign-Up
-//                         310px                   //  Footer
-//                         265px;                  //  Awards/Accreditations
-                        
-
-
-//     grid-template-columns: 1fr;
-//     grid-gap: 0px;                              //This controls the Grid's gutter
-
-//     grid-template-areas:     "head"             //This generates the websites core structure
-//                              "main-nav" 
-//                              "banner" 
-//                              "services"
-//                              "about-us" 
-//                              "a-split"       
-//                              "articles" 
-//                              "clients" 
-//                              "newsletter" 
-//                              "footer" 
-//                              "awards";
-// }
-
-// //--------------------------------------------------------------------

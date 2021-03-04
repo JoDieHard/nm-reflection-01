@@ -42,6 +42,10 @@
             line-height: 16px;
             letter-spacing: .5px;
 
+            @media (max-width: $media-l) {          // LARGE BREAKPOINT MEDIA QUERY
+                width: 154px;
+            }
+
             .s-type {
                 padding-top: 6px;
                 margin-bottom: -1px;
@@ -91,14 +95,14 @@
 
 // THIS IS THE NAVIGATION DROP DOWN MENU
 
-.nav-drop.wd-drop {   @include nav-drop-item($wd-dt-theme, 1200px, 30px);   }
+.nav-drop.wd-drop {   @include nav-drop-item($wd-dt-theme, 90%, 30px);   }
 
-.nav-drop.it-drop {   @include nav-drop-item($it-theme, 1150px, 35px);      }
+.nav-drop.it-drop {   @include nav-drop-item($it-theme, 85%, 35px);      }
 
-.nav-drop.ts-drop {   @include nav-drop-item($ts-theme, 1200px, 27px);      }
+.nav-drop.ts-drop {   @include nav-drop-item($ts-theme, 90%, 27px);      }
 
-.nav-drop.bs-drop {   @include nav-drop-item($bs-theme, 1200px, 25px);      }
+.nav-drop.bs-drop {   @include nav-drop-item($bs-theme, 90%, 25px);      }
 
-.nav-drop.dm-drop {   @include nav-drop-item($dm-theme, 1100px, 35px);      }
+.nav-drop.dm-drop {   @include nav-drop-item($dm-theme, 80%, 35px);      }
 
-.nav-drop.cs-drop {   @include nav-drop-item($cs-theme, 1200px, 27px); }
+.nav-drop.cs-drop {   @include nav-drop-item($cs-theme, 85%, 27px); }

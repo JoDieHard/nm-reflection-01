@@ -34,14 +34,20 @@
 
     .container{
         width: 1170px;
-        // width: 900px;         //THIS IS THE SIZE FOR FIRST BREAKPOINT
+        
+        @media (max-width: $media-l) {
+            width: 900px; 
+        }
 
         input[type="text"] {
             width: 540px;
-            // width: 425px;       //THIS IS THE SIZE FOR FIRST BREAKPOINT
             height: 47px;
             padding: 5px 15px 5px 5px;
             margin-bottom: 0px;
+
+            @media (max-width: $media-l) {
+                width: 425px; 
+            }
         }
     }
 

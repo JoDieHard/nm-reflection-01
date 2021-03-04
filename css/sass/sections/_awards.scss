@@ -12,14 +12,13 @@
         img {
             padding: 20px 40px;
 
-            .img-line-1 {
-                height: 100px;
-                width: auto;
-            }
+            height: 100px;
+            width: auto;
 
-            .img-line-2 {
-                height: 70px;
+            @media (max-width: $media-l) {
+                height: 120px;
                 width: auto;
+                padding: 20px 30px;
             }
 
             filter: grayscale(100%);

@@ -7,6 +7,12 @@
         letter-spacing: 1px;
         line-height: 1.8em;
 
+        @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
     color: white;
 
     h2 {
