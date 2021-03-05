@@ -13,6 +13,11 @@ header .container {
          padding-right: 85px;
          height: 65px;
          width: auto;
+
+         @media (max-width: $media-m) {
+          padding-right: 45px;
+          height: 60px;
+       }
      }
 }
 
@@ -83,6 +88,10 @@ header .container {
 
         font-size: .85rem;
         padding: 5px 5px 5px 15px;
+
+        @media (max-width: $media-m) {
+          width: 180px;
+       }
     }
 
     .search-btn {
@@ -96,9 +105,13 @@ header .container {
     }
   }
 
-    @media (max-width: $media-l) {
+    @media (max-width: $media-l) {     // LARGE SCREEN SIZE
      width: 62px;
   }
+
+  @media (max-width: $media-m) {      // MEDIUM SCREEN SIZE
+    width: 243px;
+ }
 
 }
 

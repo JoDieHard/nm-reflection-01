@@ -10,3 +10,18 @@ $media-l: 1260px;
     }
 }
 
+@media (max-width: $media-m) {
+    .hide-m {
+        display: none !important;
+    }
+}
+
+@media (max-width: $media-m)  {
+    .show-m {
+        display: inline-flex;
+    }
+}
+
+
+
+

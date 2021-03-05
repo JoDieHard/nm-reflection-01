@@ -107,6 +107,10 @@ footer {
     background-color: $primary-colour;
 
     height: 310px;
+
+    @media (max-width: $media-l) {
+       height: 550px;
+    }
 }
 
 .awards {

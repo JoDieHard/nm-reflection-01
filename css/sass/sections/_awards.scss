@@ -9,6 +9,10 @@
         width: 1200px;
         margin: 0px auto;
 
+        @media (max-width: $media-l) {
+            width: 100%;
+        }
+
         img {
             padding: 20px 40px;
 
