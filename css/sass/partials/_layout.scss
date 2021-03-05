@@ -51,6 +51,10 @@ header {
     @media (max-width: $media-l)      {     // BREAKPOINT LARGE
         height: 1180px;
     }
+
+    @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+        height: 1780px;
+    }
 }
 
 .about-us {
@@ -61,6 +65,10 @@ header {
     background-position: right center; 
 
     height: 553px;
+
+    @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+        background: $primary-colour;
+    }
 }
 
 .a-split {
@@ -100,6 +108,10 @@ header {
     padding: 50px 0px;
 
     overflow: hidden;
+
+    @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGE
+        height: 500px;
+     }
 }
 
 footer {
@@ -108,7 +120,7 @@ footer {
 
     height: 310px;
 
-    @media (max-width: $media-l) {
+    @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGE
        height: 550px;
     }
 }
@@ -121,7 +133,11 @@ footer {
     height: 265px;
     overflow: hidden;
 
-    @media (max-width: $media-l)      {     // BREAKPOINT LARGE
+    @media (max-width: $media-l)      {     // BREAKPOINT LARGE CHANGE
         height: 300px;
+    }
+
+    @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM CHANGE 
+        height: 240px;
     }
 }

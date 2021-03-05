@@ -17,6 +17,10 @@
             width: 970px;
         }        
 
+        @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+            width: 720px;
+        }        
+
         .btn-theme {
             @include btn-theme();
         }
@@ -28,6 +32,10 @@
             @media (max-width: $media-l)      {     // BREAKPOINT LARGE
                 @include card-s(300px, 400px);
             }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(720px);
+            }
         }
 
         .s-card.s-it {
@@ -37,6 +45,10 @@
             @media (max-width: $media-l)      {     // BREAKPOINT LARGE
                 @include card-s(300px, 400px);
             }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(720px);
+            }
         }
 
         .s-card.s-dm {
@@ -45,6 +57,10 @@
 
             @media (max-width: $media-l)      {     // BREAKPOINT LARGE
                 @include card-s(310px, 400px);
+            }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(720px);
             }
         }
 
@@ -56,6 +72,10 @@
             @media (max-width: $media-l)      {     // BREAKPOINT LARGE
                 @include card-s(470px);
             }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(345px);
+            }
         }
 
         .s-card.s-wd {
@@ -64,6 +84,10 @@
 
             @media (max-width: $media-l)      {     // BREAKPOINT LARGE
                 @include card-s(470px);
+            }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(345px);
             }
         }
 
@@ -74,6 +98,10 @@
             @media (max-width: $media-l)      {     // BREAKPOINT LARGE
                 @include card-s(470px);
             }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(345px);
+            }
         }
 
         .s-card.s-dt {
@@ -82,6 +110,10 @@
 
             @media (max-width: $media-l)      {     // BREAKPOINT LARGE
                 @include card-s(470px);
+            }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(345px);
             }
         }
 

@@ -81,9 +81,7 @@ footer {
     //----------- THIS IS WHERE THE MEDIA QUERIES ARE ----------
     //----------------------------------------------------------
 
-    @media (max-width: $media-l) {
-
-
+    @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
 
          & {
             flex-wrap: wrap;
@@ -121,9 +119,14 @@ footer {
                 width: 212.5px;
             }
         }
-    }
+    }  //----------------------------------- LARGE BREAKPOINT CHANGE --- END
 
-    //----------------------------------------------------------
+
+    @media (max-width: $media-m) {     //--------- MEDIUM BREAKPOINT CHANGES
+        .ft-social i {
+            width: 150px;
+        }
+    }
 
   }
 }

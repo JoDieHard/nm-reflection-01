@@ -250,10 +250,10 @@
 //--------------------------------------------------------------------------------------------------
 //-----------------------------   ARTICLES CARD MIXIN   --------------------------------------------
 
-@mixin card-a {
+@mixin card-a($width: 400px, $height: 614px) {
 
-    height: 614px;
-    width: 400px;
+    width: $width;
+    height: $height;
     align-items: center;
     margin: 40px 20px;
     overflow: hidden;
@@ -273,9 +273,14 @@
 
     .title-img {
         height: 235px;
-        width: 400px;
+        width: 100%;
         overflow: hidden;
         position: relative;
+        
+        @media (max-width: $media-l) {           // MEDIUM BREAKPOINT CHANGE
+            margin-top: -15px;
+        }
+        
 
         .label { 
             height: 20px;

@@ -35,8 +35,12 @@
     .container{
         width: 1170px;
         
-        @media (max-width: $media-l) {
+        @media (max-width: $media-l) {      //  LARGE BREAKPOINT CHANGE
             width: 900px; 
+        }
+
+        @media (max-width: $media-m) {      //  MEDIUM BREAKPOINT CHANGE
+            width: 670px; 
         }
 
         input[type="text"] {
@@ -45,8 +49,12 @@
             padding: 5px 15px 5px 5px;
             margin-bottom: 0px;
 
-            @media (max-width: $media-l) {
+            @media (max-width: $media-l) {      //  LARGE BREAKPOINT CHANGE
                 width: 425px; 
+            }
+
+            @media (max-width: $media-m) {      //  MEDIUM BREAKPOINT CHANGE
+                width: 680px; 
             }
         }
     }
@@ -59,6 +67,10 @@
         strong::after {
             content: " *";
             color: #d24d57; 
+        }
+
+        @media (max-width: $media-m) {      //  MEDIUM BREAKPOINT CHANGE
+            flex-direction: column;
         }
     }
 
@@ -73,6 +85,10 @@
         margin-right: 10px;
         position: relative;
         visibility: hidden;
+
+        @media (max-width: $media-m) {      //  MEDIUM BREAKPOINT CHANGE
+            height: 120px; 
+        }
     }
 
     .custom-checkbox::before {

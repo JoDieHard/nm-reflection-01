@@ -10,6 +10,10 @@
             width: 960px;
         }
 
+        @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+            width: 720px;
+        }
+
         .client {
             position: relative;
             justify-content: center;
@@ -31,6 +35,10 @@
 
                 @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
                     height: 80px;
+                }
+
+                @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+                    height: 65px;
                 }
             }
 
