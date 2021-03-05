@@ -2963,7 +2963,7 @@ header .container img {
 }
 .clients .container .client .info-box {
   position: absolute;
-  bottom: 135px;
+  bottom: 125px;
   z-index: 10;
   width: 280px;
   color: white;
@@ -2972,6 +2972,16 @@ header .container img {
   padding: 5px 20px 10px;
   flex-direction: column;
   visibility: hidden;
+}
+@media (max-width: 1260px) {
+  .clients .container .client .info-box {
+    bottom: 115px;
+  }
+}
+@media (max-width: 992px) {
+  .clients .container .client .info-box {
+    bottom: 100px;
+  }
 }
 .clients .container .client .info-box h3 {
   font-weight: 500;

@@ -46,8 +46,16 @@
 
             .info-box {
                 position: absolute;
-                bottom: 135px;
+                bottom: 125px;
                 z-index: 10;
+
+                @media (max-width: $media-l) {      //-------------- LARGE BREAKPOINT CHANGE
+                    bottom: 115px;
+                  }
+
+                  @media (max-width: $media-m) {      //-------------- SMALL BREAKPOINT CHANGE
+                    bottom: 100px;
+                  }
 
                 width: 280px;
 
