@@ -12,6 +12,11 @@ footer {
 
     color: white;
 
+    @media (max-width: $media-s) {     //--------- SMALL BREAKPOINT CHANGES
+        height: 800px;
+    }
+
+
 //-----  MAIN STYLING FOOTER SECTIONS
 
     ul {
@@ -76,6 +81,10 @@ footer {
         .soc-fb {
             margin-right: 30px;
         }
+
+        .soc-lin {
+            align-self: flex-end;
+        }
     }
 
     //----------- THIS IS WHERE THE MEDIA QUERIES ARE ----------
@@ -85,24 +94,14 @@ footer {
 
          & {
             flex-wrap: wrap;
-            align-items: center;
+            // align-items: center;
             width: 1200px;
             margin-top: 0px;
             padding: 15px 40px;
         }
 
-        .ft-contact {
-            flex-basis: 50%;
-            width: 300px;
-            padding-left: 0;
-        }
-    
-        .ft-about  {
-            flex-basis: 50%;
-            width: 300px;
-            padding-left: 0;
-        }
-    
+        .ft-contact,
+        .ft-about,
         .ft-website {
             flex-basis: 50%;
             width: 300px;
@@ -126,6 +125,26 @@ footer {
         .ft-social i {
             width: 150px;
         }
+    }
+
+    @media (max-width: $media-s) {     //--------- SMALL BREAKPOINT CHANGES
+        flex-direction: row;
+
+        .ft-contact,
+        .ft-about,
+        .ft-website {
+            flex-basis: 100%;
+        }
+
+        .ft-social {
+            flex-basis: 100%;
+            justify-content: flex-start;
+        }
+
+        .ft-social i {
+            width: 293px;
+        }
+
     }
 
   }

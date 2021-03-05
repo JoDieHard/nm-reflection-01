@@ -1,5 +1,9 @@
 
 .about-us {
+
+    @media (max-width: $media-s) {          // MEDIUM BREAKPOINT CHANGES
+        width: 100%;
+    }
     .container {
         width: 550px;
         margin-left: 250px;
@@ -19,6 +23,11 @@
             margin-right: auto;
         }
 
+        @media (max-width: $media-s) {          // MEDIUM BREAKPOINT CHANGES
+            width: 95%;
+            margin: 0 20px;
+        }
+
     color: white;
 
     h2 {
@@ -34,10 +43,7 @@
     }
     .au-body {
         font-size: 1em;
-
     }
-
-
 
         .btn-arrw {
             @include btn-default(165px, 45px, white, row);

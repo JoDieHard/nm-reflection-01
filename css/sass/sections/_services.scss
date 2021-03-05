@@ -21,6 +21,10 @@
             width: 720px;
         }        
 
+        @media (max-width: $media-s)      {     // BREAKPOINT MEDIUM
+            width: 100%;
+        }        
+
         .btn-theme {
             @include btn-theme();
         }
@@ -114,6 +118,20 @@
 
             @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
                 @include card-s(345px);
+            }
+        }
+
+        .s-card.s-bs,
+        .s-card.s-it,
+        .s-card.s-dm,
+        .s-card.s-ts,
+        .s-card.s-wd,
+        .s-card.s-cs,
+        .s-card.s-dt, {
+
+            @media (max-width: $media-s)      {     // BREAKPOINT SMALL
+                @include card-s(100%, 290px);
+                margin: 0 15px;
             }
         }
 
