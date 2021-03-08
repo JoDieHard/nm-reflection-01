@@ -76,7 +76,7 @@ header {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../../assets/carousel/web.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 750px;
+  padding: 200px 0px;
   overflow: hidden;
 }
 
@@ -107,7 +107,7 @@ header {
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: right center;
-  height: 553px;
+  padding: 50px 0px;
 }
 @media (max-width: 992px) {
   .about-us {
@@ -124,12 +124,7 @@ header {
   grid-area: articles;
   background-color: white;
   box-shadow: inset 0 10px 30px 10px rgba(102, 102, 102, 0.1);
-  height: 706px;
-}
-@media (max-width: 767px) {
-  .articles {
-    height: 2300px;
-  }
+  padding: 30px 0px;
 }
 
 .clients {
@@ -147,14 +142,8 @@ header {
 .newsletter {
   grid-area: newsletter;
   background-color: #ddd;
-  height: 381px;
   padding: 50px 0px;
   overflow: hidden;
-}
-@media (max-width: 992px) {
-  .newsletter {
-    height: 500px;
-  }
 }
 
 footer {
@@ -1309,7 +1298,7 @@ header .container img {
   margin-bottom: 5px;
 }
 .banner p {
-  font-size: 1.4em;
+  font-size: 1.2em;
   margin-top: 20px;
   line-height: 2em;
 }
@@ -1325,6 +1314,14 @@ header .container img {
   .banner .banner-content {
     width: 100%;
     margin-left: 0px;
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  .banner .banner-content {
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
   }
 }
@@ -2822,7 +2819,6 @@ header .container img {
 .about-us .container {
   width: 550px;
   margin-left: 250px;
-  padding-top: 25px;
   letter-spacing: 0.6px;
   line-height: 2em;
   color: white;
@@ -2843,7 +2839,7 @@ header .container img {
 }
 @media (max-width: 767px) {
   .about-us .container {
-    width: 95%;
+    width: 90%;
     margin: 0 20px;
   }
 }
@@ -2852,6 +2848,7 @@ header .container img {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
+  margin-top: 0;
 }
 .about-us .container strong {
   font-weight: 700;
@@ -2902,8 +2899,8 @@ header .container img {
 }
 
 .a-split {
-  justify-content: stretch;
-  padding-left: 200px;
+  justify-content: center;
+  padding-left: 25px;
   align-items: stretch;
   text-transform: uppercase;
   font-weight: 400;
@@ -2916,6 +2913,23 @@ header .container img {
   height: 100%;
   margin: 0px;
   font-size: 1.2rem;
+  margin-right: 1230px;
+}
+@media (max-width: 1260px) {
+  .a-split h2 {
+    margin-right: 790px;
+  }
+}
+@media (max-width: 992px) {
+  .a-split h2 {
+    margin-right: 690px;
+  }
+}
+@media (max-width: 767px) {
+  .a-split h2 {
+    margin-right: auto;
+    margin-left: 10px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2962,7 +2976,8 @@ header .container img {
 @media (max-width: 767px) {
   .articles .article-item .title-img {
     margin-top: -15px;
-    height: 350px;
+    height: 0;
+    padding-top: 60%;
   }
 }
 .articles .article-item .title-img .label {
@@ -3028,7 +3043,8 @@ header .container img {
 @media (max-width: 992px) and (max-width: 767px) {
   .articles .article-item .title-img {
     margin-top: -15px;
-    height: 350px;
+    height: 0;
+    padding-top: 60%;
   }
 }
 @media (max-width: 992px) {
@@ -3055,7 +3071,7 @@ header .container img {
 @media (max-width: 767px) {
   .articles .article-item {
     width: 90%;
-    height: 700px;
+    height: 100%;
     align-items: center;
     margin: 40px 20px;
     overflow: hidden;
@@ -3097,7 +3113,8 @@ header .container img {
 @media (max-width: 767px) and (max-width: 767px) {
   .articles .article-item .title-img {
     margin-top: -15px;
-    height: 350px;
+    height: 0;
+    padding-top: 60%;
   }
 }
 @media (max-width: 767px) {
@@ -3183,7 +3200,7 @@ header .container img {
 .articles .article-credit {
   height: 100px;
   padding-top: 20px;
-  line-height: 12px;
+  line-height: 15px;
 }
 @media (max-width: 767px) {
   .articles .article-credit {
@@ -3200,10 +3217,13 @@ header .container img {
 .articles .article-credit strong {
   color: #333645;
   font-weight: 600;
+  font-size: 0.9em;
 }
 .articles .article-credit p {
   line-height: 0px;
   color: #999aa2;
+  font-size: 0.9em;
+  margin-left: 98px;
 }
 
 .article-1 .title-img {
@@ -3212,9 +3232,12 @@ header .container img {
   background-image: url("../assets/articles/10-tips.jpg");
   background-size: 103%;
   transition: 0.1s ease-in;
+  position: relative;
 }
 .article-1 .title-img::after {
   content: " ";
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -3248,9 +3271,12 @@ header .container img {
   background-image: url("../assets/articles/it-call-handler.jpg");
   background-size: 103%;
   transition: 0.1s ease-in;
+  position: relative;
 }
 .article-2 .title-img::after {
   content: " ";
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -3284,9 +3310,12 @@ header .container img {
   background-image: url("../assets/articles/notable-01-2021.jpg");
   background-size: 103%;
   transition: 0.1s ease-in;
+  position: relative;
 }
 .article-3 .title-img::after {
   content: " ";
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -3530,7 +3559,7 @@ header .container img {
 }
 @media (max-width: 992px) {
   .newsletter .nl-check {
-    height: 120px;
+    height: 200px;
   }
 }
 .newsletter .custom-checkbox::before {
@@ -3579,6 +3608,7 @@ footer .container {
 @media (max-width: 767px) {
   footer .container {
     height: 800px;
+    width: 100% !important;
   }
 }
 footer .container ul {

@@ -12,9 +12,10 @@ footer {
 
     color: white;
 
-    @media (max-width: $media-s) {     //--------- SMALL BREAKPOINT CHANGES
-        height: 800px;
-    }
+        @media (max-width: $media-s) {     //--------- SMALL BREAKPOINT CHANGES
+            height: 800px;
+            width: 100% !important;
+        }
 
 
 //-----  MAIN STYLING FOOTER SECTIONS

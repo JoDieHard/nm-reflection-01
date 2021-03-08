@@ -7,7 +7,6 @@
     .container {
         width: 550px;
         margin-left: 250px;
-        padding-top: 25px;
         letter-spacing: .6px;
         line-height: 2em;
 
@@ -24,7 +23,7 @@
         }
 
         @media (max-width: $media-s) {          // MEDIUM BREAKPOINT CHANGES
-            width: 95%;
+            width: 90%;
             margin: 0 20px;
         }
 
@@ -35,7 +34,7 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         font-weight: 400;
-
+        margin-top: 0;
     }
 
     strong {
