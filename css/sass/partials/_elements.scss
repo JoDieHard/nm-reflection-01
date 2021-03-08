@@ -140,6 +140,7 @@
         li:nth-child(5)::after {
             content: " — ";
             margin-left: $margin;
+            width: 30px;
         }
 
         li:first-child {

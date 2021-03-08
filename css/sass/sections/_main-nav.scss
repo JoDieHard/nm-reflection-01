@@ -95,14 +95,31 @@
 
 // THIS IS THE NAVIGATION DROP DOWN MENU
 
-.nav-drop.wd-drop {   @include nav-drop-item($wd-dt-theme, 90%, 30px);   }
+.nav-drop.wd-drop {   @include nav-drop-item($wd-dt-theme, 1150px, 30px);   }
 
-.nav-drop.it-drop {   @include nav-drop-item($it-theme, 85%, 35px);      }
+.nav-drop.it-drop {   @include nav-drop-item($it-theme, 1170px, 35px);      }
 
-.nav-drop.ts-drop {   @include nav-drop-item($ts-theme, 90%, 27px);      }
+.nav-drop.ts-drop {   @include nav-drop-item($ts-theme, 1170px, 27px);      }
 
-.nav-drop.bs-drop {   @include nav-drop-item($bs-theme, 90%, 25px);      }
+.nav-drop.bs-drop {   @include nav-drop-item($bs-theme, 1170px, 25px);      }
 
-.nav-drop.dm-drop {   @include nav-drop-item($dm-theme, 80%, 35px);      }
+.nav-drop.dm-drop {   @include nav-drop-item($dm-theme, 1100px, 35px);      }
 
-.nav-drop.cs-drop {   @include nav-drop-item($cs-theme, 85%, 27px); }
+.nav-drop.cs-drop {   @include nav-drop-item($cs-theme, 1170px, 27px); }
+
+
+
+@media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
+
+    .nav-drop.wd-drop {   @include nav-drop-item($wd-dt-theme, 940px, 20px);   }
+
+    .nav-drop.it-drop {   @include nav-drop-item($it-theme, 940px, 30px);      }
+
+    .nav-drop.ts-drop {   @include nav-drop-item($ts-theme, 940px, 20px);      }
+
+    .nav-drop.bs-drop {   @include nav-drop-item($bs-theme, 940px, 15px);      }
+
+    .nav-drop.dm-drop {   @include nav-drop-item($dm-theme, 820px, 18px);      }
+
+    .nav-drop.cs-drop {   @include nav-drop-item($cs-theme, 940px, 20px); }
+}
