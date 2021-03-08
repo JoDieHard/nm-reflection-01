@@ -6,6 +6,14 @@
         margin: 0px auto;
         justify-content: space-around;
 
+        @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
+            width: 960px;
+        }
+
+        @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+            width: 720px;
+        }
+
         .client {
             position: relative;
             justify-content: center;
@@ -24,14 +32,30 @@
                     filter: grayscale(0%);
                     transition: .2s ease-in-out;
                 }
+
+                @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
+                    height: 80px;
+                }
+
+                @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+                    height: 65px;
+                }
             }
 
             // THIS IS THE STYLING FOR THE POP-UP INFO BOX.
 
             .info-box {
                 position: absolute;
-                bottom: 135px;
+                bottom: 125px;
                 z-index: 10;
+
+                @media (max-width: $media-l) {      //-------------- LARGE BREAKPOINT CHANGE
+                    bottom: 115px;
+                  }
+
+                  @media (max-width: $media-m) {      //-------------- SMALL BREAKPOINT CHANGE
+                    bottom: 100px;
+                  }
 
                 width: 280px;
 

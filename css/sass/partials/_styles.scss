@@ -50,6 +50,7 @@ $bs-theme:     #67809f;      //     Bespoke Software                 -- Light Bl
 }
 
 .flex-break {
-  flex-basis: 1200px;
+  // flex-basis: 1200px;
+  flex-basis: 100%;     //--------  CHANGEED THIS RULE TO HAVE A PERCENTAGE VALUE, Need to check if it breaks.
   height: 0;
 }

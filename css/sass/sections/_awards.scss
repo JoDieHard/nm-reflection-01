@@ -9,17 +9,26 @@
         width: 1200px;
         margin: 0px auto;
 
+        @media (max-width: $media-l) {              // LARGE BREAKPOINT CHANGE
+            width: 100%;
+        }
+
         img {
             padding: 20px 40px;
 
-            .img-line-1 {
-                height: 100px;
+            height: 100px;
+            width: auto;
+
+            @media (max-width: $media-l) {          //  LARGE BREAKPOINT CHANGE
+                height: 120px;
                 width: auto;
+                padding: 20px 30px;
             }
 
-            .img-line-2 {
-                height: 70px;
+            @media (max-width: $media-m) {          //MEDIUM BREAKPOINT CHANGE
+                height: 90px;
                 width: auto;
+                padding: 15px 20px;
             }
 
             filter: grayscale(100%);
@@ -30,7 +39,6 @@
                 transition: .2s ease-in-out;
             }
 
-            
         }
     }
 }

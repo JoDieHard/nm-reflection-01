@@ -1,11 +1,31 @@
 
 .about-us {
+
+    @media (max-width: $media-s) {          // MEDIUM BREAKPOINT CHANGES
+        width: 100%;
+    }
     .container {
         width: 550px;
         margin-left: 250px;
-        padding-top: 25px;
-        letter-spacing: 1px;
-        line-height: 1.8em;
+        letter-spacing: .6px;
+        line-height: 2em;
+
+        @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
+            width: 970px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+            width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: $media-s) {          // MEDIUM BREAKPOINT CHANGES
+            width: 90%;
+            margin: 0 20px;
+        }
 
     color: white;
 
@@ -14,7 +34,7 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         font-weight: 400;
-
+        margin-top: 0;
     }
 
     strong {
@@ -22,17 +42,14 @@
     }
     .au-body {
         font-size: 1em;
-
     }
 
-
-
         .btn-arrw {
-            @include btn-default(225px, 62px, white, row);
+            @include btn-default(165px, 45px, white, row);
             margin-top: 35px;
             border-radius: 3px;
             color: black;
-            font-size: 1.25em;
+            font-size: 1em;
             align-items: center;
 
             i {

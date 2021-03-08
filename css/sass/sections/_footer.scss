@@ -12,21 +12,27 @@ footer {
 
     color: white;
 
+        @media (max-width: $media-s) {     //--------- SMALL BREAKPOINT CHANGES
+            height: 800px;
+            width: 100% !important;
+        }
+
+
 //-----  MAIN STYLING FOOTER SECTIONS
 
     ul {
         list-style-type: none;
         letter-spacing: .4px;
-        line-height: 1.35em;
+        line-height: 1.55em;
 
         h2 {
-            font-size: .9em;
+            font-size: 1em;
             text-transform: uppercase;
             font-weight: 400;
         }
 
         li {
-            font-size: .75em;
+            font-size: .85em;
 
             & a:hover {
                 text-decoration: underline;
@@ -61,14 +67,87 @@ footer {
         i {
             flex-basis: 60%;
             width: 110px;
-            height: 50px;
-            padding: 5px 10px;
-            margin: 0px 30px 30px 0px;
+            height: 55px;
+            // padding: 5px 10px;
+            margin-bottom: 30px;
 
             background-color: rgba(0,0,0,.25);
             text-align: center;
             padding-top: 15px;
             font-size: 1.45rem;
+
+           
+        }
+
+        .soc-fb {
+            margin-right: 30px;
+        }
+
+        .soc-lin {
+            align-self: flex-end;
+        }
+    }
+
+    //----------- THIS IS WHERE THE MEDIA QUERIES ARE ----------
+    //----------------------------------------------------------
+
+    @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
+
+         & {
+            flex-wrap: wrap;
+            // align-items: center;
+            width: 1200px;
+            margin-top: 0px;
+            padding: 15px 40px;
+        }
+
+        .ft-contact,
+        .ft-about,
+        .ft-website {
+            flex-basis: 50%;
+            width: 300px;
+            padding-left: 0;
+        }
+    
+    
+        .ft-social {
+            flex-basis: 50%;
+            width: 300px;
+            padding-left: 0;
+
+            & i {
+                width: 212.5px;
+            }
+        }
+    }  //----------------------------------- LARGE BREAKPOINT CHANGE --- END
+
+
+    @media (max-width: $media-m) {     //--------- MEDIUM BREAKPOINT CHANGES
+        .ft-social i {
+            width: 150px;
+        }
+    }
+
+    @media (max-width: $media-s) {     //--------- SMALL BREAKPOINT CHANGES
+        flex-direction: row;
+
+        .ft-contact,
+        .ft-about,
+        .ft-website {
+            flex-basis: 100%;
+        }
+
+        .ft-social {
+            flex-basis: 100%;
+            justify-content: space-between;
+        }
+
+        .ft-social li {
+            width: calc(50% - 15px);   // CALC FUNCTION FOR MARGIN
+        }
+
+        .ft-social i {
+            width: 100%;
         }
     }
 

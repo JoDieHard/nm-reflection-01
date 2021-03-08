@@ -13,6 +13,18 @@
         padding: 35px 0px;
         filter: drop-shadow(0px 10px 20px #e6e6e6) ;
 
+        @media (max-width: $media-l)      {     // BREAKPOINT LARGE
+            width: 970px;
+        }        
+
+        @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+            width: 720px;
+        }        
+
+        @media (max-width: $media-s)      {     // BREAKPOINT MEDIUM
+            width: 100%;
+        }        
+
         .btn-theme {
             @include btn-theme();
         }
@@ -20,37 +32,107 @@
         .s-card.s-bs {
             @include card-s($width: 375px);
             @include s-theme($bs-theme);
+
+            @media (max-width: $media-l)      {     // BREAKPOINT LARGE
+                @include card-s(300px, 400px);
+            }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(720px);
+            }
         }
 
         .s-card.s-it {
             @include card-s($width: 375px);
             @include s-theme($it-theme);
+
+            @media (max-width: $media-l)      {     // BREAKPOINT LARGE
+                @include card-s(300px, 400px);
+            }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(720px);
+            }
         }
 
         .s-card.s-dm {
             @include card-s($width: 375px);
             @include s-theme($dm-theme);
+
+            @media (max-width: $media-l)      {     // BREAKPOINT LARGE
+                @include card-s(310px, 400px);
+            }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(720px);
+            }
         }
 
 
         .s-card.s-ts {
             @include card-s();
             @include s-theme($ts-theme);
+
+            @media (max-width: $media-l)      {     // BREAKPOINT LARGE
+                @include card-s(470px);
+            }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(345px);
+            }
         }
 
         .s-card.s-wd {
             @include card-s();
             @include s-theme($wd-dt-theme);
+
+            @media (max-width: $media-l)      {     // BREAKPOINT LARGE
+                @include card-s(470px);
+            }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(345px);
+            }
         }
 
         .s-card.s-cs {
             @include card-s();
             @include s-theme($cs-theme);
+
+            @media (max-width: $media-l)      {     // BREAKPOINT LARGE
+                @include card-s(470px);
+            }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(345px);
+            }
         }
 
         .s-card.s-dt {
             @include card-s();
             @include s-theme($wd-dt-theme);
+
+            @media (max-width: $media-l)      {     // BREAKPOINT LARGE
+                @include card-s(470px);
+            }
+
+            @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+                @include card-s(345px);
+            }
+        }
+
+        .s-card.s-bs,
+        .s-card.s-it,
+        .s-card.s-dm,
+        .s-card.s-ts,
+        .s-card.s-wd,
+        .s-card.s-cs,
+        .s-card.s-dt, {
+
+            @media (max-width: $media-s)      {     // BREAKPOINT SMALL
+                @include card-s(100%, 290px);
+                margin: 0 15px;
+            }
         }
 
     }

@@ -22,6 +22,10 @@ header {
     background-color: white;
 
     height: 110px;
+
+    @media (max-width: $media-s) {      // MEDIUM SCREEN SIZE
+        height: 170px;
+     }
 }
 
 .main-nav {
@@ -38,7 +42,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
 
-    height: 750px;
+    padding: 200px 0px;
     overflow: hidden;
 }
 
@@ -47,6 +51,18 @@ header {
     background-color: white;
 
     height: 755px;
+
+    @media (max-width: $media-l)      {     // BREAKPOINT LARGE
+        height: 1180px;
+    }
+
+    @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
+        height: 1780px;
+    }
+
+    @media (max-width: $media-s)      {     // BREAKPOINT SMALL
+        height: 2300px;
+    }
 }
 
 .about-us {
@@ -56,7 +72,11 @@ header {
     background-size: auto 100%;
     background-position: right center; 
 
-    height: 553px;
+    padding: 50px 0px;
+
+    @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+        background: $primary-colour;
+    }
 }
 
 .a-split {
@@ -70,15 +90,13 @@ header {
     background-color: white;
     box-shadow: inset 0 10px 30px 10px rgba(#666, 0.1);
 
-    height: 706px;
+    padding: 30px 0px;
 }
 
 .clients {
     grid-area: clients;
     background: white;
     box-shadow: inset 0 10px 25px 5px rgba(#666, 0.15);
-
-    // overflow: hidden;
 
     .container {
         display: flex;
@@ -92,7 +110,6 @@ header {
     grid-area: newsletter;
     background-color: $grey;
 
-    height: 381px;
     padding: 50px 0px;
 
     overflow: hidden;
@@ -103,6 +120,14 @@ footer {
     background-color: $primary-colour;
 
     height: 310px;
+
+    @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGE
+       height: 550px;
+    }
+
+    @media (max-width: $media-s) {     //--------- SMALL BREAKPOINT CHANGES
+        height: 1000px;
+    }
 }
 
 .awards {
@@ -112,43 +137,12 @@ footer {
 
     height: 265px;
     overflow: hidden;
+
+    @media (max-width: $media-l)      {     // BREAKPOINT LARGE CHANGE
+        height: 300px;
+    }
+
+    @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM CHANGE 
+        height: 240px;
+    }
 }
-
-// //--------------------------------------------------------------------
-// //--------------- GRID CONTROLLER ------------------------------------
-
-// .grid {
-//     height: 100vh;
-//     display: grid;
-
-//     grid-template-rows: 110px                   //  Header 
-//                         100px                    //  Main-nav 
-//                         750px                   //  Banner 
-//                         755px                   //  Services List 
-//                         553px                   //  About Us 
-//                         104px
-//                         706px                   //  Latest Articles  
-//                         170px                   //  Clients
-//                         381px                   //  Newsletter Sign-Up
-//                         310px                   //  Footer
-//                         265px;                  //  Awards/Accreditations
-                        
-
-
-//     grid-template-columns: 1fr;
-//     grid-gap: 0px;                              //This controls the Grid's gutter
-
-//     grid-template-areas:     "head"             //This generates the websites core structure
-//                              "main-nav" 
-//                              "banner" 
-//                              "services"
-//                              "about-us" 
-//                              "a-split"       
-//                              "articles" 
-//                              "clients" 
-//                              "newsletter" 
-//                              "footer" 
-//                              "awards";
-// }
-
-// //--------------------------------------------------------------------

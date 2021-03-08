@@ -9,10 +9,31 @@ header .container {
     justify-content: center;
     align-items: center;
 
+    @media (max-width: $media-s) {      // SMALL BREAKPOINT CHANGE
+      flex-wrap: wrap;
+      justify-content: right;
+      align-content:space-around;
+      padding: 0px 5px;
+   }
+
      img {
          padding-right: 85px;
          height: 65px;
          width: auto;
+
+          @media (max-width: $media-m) {
+            padding-right: 45px;
+            height: 60px;
+        }
+
+        @media (max-width: $media-s) {
+          height: auto; 
+          max-width: 457px;
+          width: calc(100% - 120px);
+          margin-right: auto;
+          padding-left: 10px;
+      }
+
      }
 }
 
@@ -83,6 +104,16 @@ header .container {
 
         font-size: .85rem;
         padding: 5px 5px 5px 15px;
+
+        @media (max-width: $media-m) {      // MEDIUM BREAKPOINT CHANGE 
+          width: 180px;
+       }
+       @media (max-width: $media-s) {      // MEDIUM BREAKPOINT CHANGE 
+        width: 100%;
+        background: transparent;
+        padding-bottom: 16px;
+        color: rgba(0, 0, 0, .6);
+     }
     }
 
     .search-btn {
@@ -93,8 +124,41 @@ header .container {
 
         i {
         font-size: 2.3rem;
+
+        @media (max-width: $media-s) {      //-------------- SMALL BREAKPOINT CHANGE
+          margin-top: -12px;
+          font-size: 1.8rem;
+        }
+
+        
     }
+
+    @media (max-width: $media-s) {    //-------------- SMALL BREAKPOINT CHANGE
+      @include btn-default(63px, 56px, transparent, row);
+      color: $primary-colour;
+      right: 7.5px;
+      position: absolute;
+   }
   }
+
+    @media (max-width: $media-l) {     // LARGE SCREEN SIZE
+     width: 62px;
+  }
+
+  @media (max-width: $media-m) {      // MEDIUM SCREEN SIZE
+    width: 243px;
+ }
+
+ @media (max-width: $media-s) {      //-------------- SMALL BREAKPOINT CHANGE
+    order: 5;
+    flex-basis: 100%;
+    border: solid 2px rgba(0, 0, 0, .1);
+    background: rgba(0, 0, 0, .1);
+    height: 47px;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
 }
 
 
@@ -119,3 +183,22 @@ header .container {
 
 
 //--------------------------------------------------------------------------------------------------
+
+.phone-btn {
+  @include btn-theme(20px, 20px);
+  color: $primary-colour;
+  margin-right: 16px;
+  cursor: pointer;
+
+  &:hover {                            // HOVER STYLE
+    text-decoration: underline;       
+  }
+
+  i {
+    font-size: 2rem;
+  }
+
+  @media (min-width: $media-s) {      // MAKES THE BUTTON DISAPPEAR IF NOT SMALL BREAKPOINT
+    display: none;
+  }
+}
