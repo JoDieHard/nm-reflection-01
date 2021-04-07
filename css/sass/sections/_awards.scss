@@ -3,45 +3,77 @@
     .container {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-wrap: wrap;
 
-        width: 1200px;
+        width: 1300px;
         margin: 0px auto;
 
         @media (max-width: $media-l) {              // LARGE BREAKPOINT CHANGE
-            width: 100%;
+            width: 90%;
         }
 
-        .google {
-            filter: grayscale(0%);
-        }
-
-        img {
-            padding: 20px 40px;
-
-            height: 100px;
-            width: auto;
+        div {
+            padding: 20px 30px;
 
             @media (max-width: $media-l) {          //  LARGE BREAKPOINT CHANGE
-                height: 120px;
-                width: auto;
-                padding: 20px 30px;
+                padding: 10px 15px;
             }
 
             @media (max-width: $media-m) {          //MEDIUM BREAKPOINT CHANGE
-                height: 90px;
-                width: auto;
-                padding: 15px 20px;
+                .silver {
+                    height: 50px;
+                }
+
+                .princess {
+                    height: 50px !important; 
+                }
             }
 
-            filter: grayscale(100%);
+            .line-1 {
+                height: 70px;
+                width: auto;
+    
+                @media (max-width: $media-l) {          //  LARGE BREAKPOINT CHANGE
+                    height: 80px;
+                    width: auto;
+                }
+    
+                @media (max-width: $media-m) {          //MEDIUM BREAKPOINT CHANGE
+                    height: 55px;
+                    width: auto;
+                }
+            }
 
+            .line-2 {
+                height: 50px;
+                width: auto;
+    
+                @media (max-width: $media-l) {          //  LARGE BREAKPOINT CHANGE
+                    height: 70px;
+                    width: auto;
+                }
+     
+                @media (max-width: $media-m) {          //MEDIUM BREAKPOINT CHANGE
+                    height: 60px;
+                    width: auto;
+                }
+            }
+
+            .col {
+                display: none;
+            }
 
             &:hover {
-                filter: grayscale(0%);
-                transition: .2s ease-in-out;
+                .col {
+                    display: inline;
+                }
+                .bw {
+                    display: none;
+                }
             }
+
         }
+
     }
 }

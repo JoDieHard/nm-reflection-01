@@ -166,7 +166,7 @@ footer {
   grid-area: awards;
   background-color: white;
   padding-top: 15px;
-  height: 265px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 @media (max-width: 1260px) {
@@ -3403,20 +3403,20 @@ header .container img {
   position: relative;
   justify-content: center;
 }
+.clients .container .client .col {
+  display: none;
+}
+.clients .container .client:hover .col {
+  display: inline;
+}
+.clients .container .client:hover .bw {
+  display: none;
+}
 .clients .container .client img {
   padding: 10px 20px;
   height: 90px;
   width: auto;
   background-size: contain;
-}
-.clients .container .client img .col {
-  display: none;
-}
-.clients .container .client img:hover .col {
-  display: inline;
-}
-.clients .container .client img:hover .bw {
-  display: none;
 }
 @media (max-width: 1260px) {
   .clients .container .client img {
@@ -3772,40 +3772,70 @@ footer .container .ft-website {
 .awards .container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  width: 1200px;
+  width: 1300px;
   margin: 0px auto;
 }
 @media (max-width: 1260px) {
   .awards .container {
-    width: 100%;
+    width: 90%;
   }
 }
-.awards .container .google {
-  filter: grayscale(0%);
-}
-.awards .container img {
-  padding: 20px 40px;
-  height: 100px;
-  width: auto;
-  filter: grayscale(100%);
+.awards .container div {
+  padding: 20px 30px;
 }
 @media (max-width: 1260px) {
-  .awards .container img {
-    height: 120px;
-    width: auto;
-    padding: 20px 30px;
+  .awards .container div {
+    padding: 10px 15px;
   }
 }
 @media (max-width: 992px) {
-  .awards .container img {
-    height: 90px;
-    width: auto;
-    padding: 15px 20px;
+  .awards .container div .silver {
+    height: 50px;
+  }
+  .awards .container div .princess {
+    height: 50px !important;
   }
 }
-.awards .container img:hover {
-  filter: grayscale(0%);
-  transition: 0.2s ease-in-out;
+.awards .container div .line-1 {
+  height: 70px;
+  width: auto;
+}
+@media (max-width: 1260px) {
+  .awards .container div .line-1 {
+    height: 80px;
+    width: auto;
+  }
+}
+@media (max-width: 992px) {
+  .awards .container div .line-1 {
+    height: 55px;
+    width: auto;
+  }
+}
+.awards .container div .line-2 {
+  height: 50px;
+  width: auto;
+}
+@media (max-width: 1260px) {
+  .awards .container div .line-2 {
+    height: 70px;
+    width: auto;
+  }
+}
+@media (max-width: 992px) {
+  .awards .container div .line-2 {
+    height: 60px;
+    width: auto;
+  }
+}
+.awards .container div .col {
+  display: none;
+}
+.awards .container div:hover .col {
+  display: inline;
+}
+.awards .container div:hover .bw {
+  display: none;
 }

@@ -21,18 +21,18 @@
 
             // THIS IS THE STYLING FOR THE IMAGES -------------------------
 
+            .col { display: none;   }               // THIS IS CLIENT HOVER STYLES ((REPLACED GRAYSCALE WITH ACTUAL GRAYSCALE IMAGES))
+                                                    //
+            &:hover {                               //
+                .col { display: inline; }           //
+                 .bw { display: none;   }           //
+}                                       //--------  END OF CLIENT HOVER STYLE
+
             img {
                 padding: 10px 20px;
                 height: 90px;
                 width: auto;
                 background-size: contain;
-
-                .col { display: none;   }               // THIS IS CLIENT HOVER STYLES ((REPLACED GRAYSCALE WITH ACTUAL GRAYSCALE IMAGES))
-                                                        //
-                &:hover {                               //
-                    .col { display: inline; }           //
-                    .bw { display: none;    }           //
-                }                                       //--------  END OF CLIENT HOVER STYLE
 
                 @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
                     height: 80px;
