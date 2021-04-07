@@ -3591,7 +3591,7 @@ header .container img {
 }
 
 footer .container {
-  width: 1200px;
+  width: 1180px;
   align-items: baseline;
   margin-top: 15px;
   justify-content: space-between;
@@ -3602,6 +3602,12 @@ footer .container {
     height: 800px;
     width: 100% !important;
   }
+}
+footer .container .ft-contact {
+  padding-left: 0px;
+}
+footer .container .ft-social h2 {
+  width: 250px;
 }
 footer .container ul {
   list-style-type: none;
@@ -3626,7 +3632,7 @@ footer .container ul :link, footer .container ul :visited {
 footer .container .ft-social {
   display: flex;
   flex-wrap: wrap;
-  width: 350px;
+  width: 300px;
   cursor: pointer;
 }
 footer .container .ft-social h2 {
@@ -3677,6 +3683,9 @@ footer .container .ft-website {
   }
   footer .container .ft-social i {
     width: 212.5px;
+  }
+  footer .container .ft-website, footer .container .ft-about {
+    padding-left: 0px;
   }
 }
 @media (max-width: 992px) {

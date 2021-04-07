@@ -4,7 +4,7 @@
 footer {
     .container {                //-----  FOOTER CONTAINER STYLES
 
-        width: 1200px;
+        width: 1180px;
         align-items: baseline;
         margin-top: 15px;
         justify-content: space-between;
@@ -17,6 +17,13 @@ footer {
             width: 100% !important;
         }
 
+        .ft-contact {
+            padding-left: 0px;
+        }
+
+        .ft-social h2 {
+            width: 250px;
+        }
 
 //-----  MAIN STYLING FOOTER SECTIONS
 
@@ -50,7 +57,7 @@ footer {
     .ft-social {
         display: flex;
         flex-wrap: wrap;
-        width: 350px;
+        width: 300px;
 
         cursor: pointer;
 
@@ -116,6 +123,10 @@ footer {
             & i {
                 width: 212.5px;
             }
+        }
+
+        .ft-website, .ft-about {
+            padding-left: 0px;
         }
     }  //----------------------------------- LARGE BREAKPOINT CHANGE --- END
 
