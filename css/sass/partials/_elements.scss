@@ -321,6 +321,11 @@
 
             box-shadow:  -2px 2px 6px rgba(23, 23, 23, .1);
 
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
             @media (max-width: $media-s) {           // SMALL BREAKPOINT CHANGE
                 top: 30px;
             }
