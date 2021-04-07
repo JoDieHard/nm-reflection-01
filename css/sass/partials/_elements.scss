@@ -259,7 +259,7 @@
 //--------------------------------------------------------------------------------------------------
 //-----------------------------   ARTICLES CARD MIXIN   --------------------------------------------
 
-@mixin card-a($width: 400px, $height: 614px) {
+@mixin card-a($width: 367px, $height: 610px) {
 
     width: $width;
     height: $height;
@@ -285,7 +285,7 @@
     }
 
     .title-img {
-        height: 235px;
+        height: 215px;
         width: 100%;
         overflow: hidden;
         position: relative;

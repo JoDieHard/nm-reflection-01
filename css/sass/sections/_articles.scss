@@ -13,17 +13,19 @@
     h2 {
         padding-top: 40px;
         border-bottom: solid 6px $primary-colour;
-        height: 100%;
+        height: 104px;
         margin: 0px;
+        margin-top: 0px;
         font-size: 1.2rem;
-        margin-right: 1230px;
+        position: absolute;
+        left: 250px;
 
         @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGE
-            margin-right: 790px;
+            // margin-right: 790px;
         }
 
         @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGE
-            margin-right: 690px;
+            // margin-right: 690px;
         }
 
         @media (max-width: $media-s) {          // SMALL BREAKPOINT CHANGE
@@ -79,7 +81,7 @@
 
             .desc {
                 margin-top: 20px;
-                color: $dark-grey;
+                color: #666;
                 line-height: 1.6rem;
                 font-size: .9em;
             }
