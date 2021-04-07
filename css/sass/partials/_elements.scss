@@ -210,7 +210,7 @@
           text-align: center;
           letter-spacing: .6px;
           line-height: 1.3rem; 
-        //   width: 250px;
+          width: 100%;                        // !!! THIS SHOULD FIX INTERNET EXPLORER ISSUE
         padding: 0px 5px;
         }
 

@@ -26,12 +26,13 @@
                 height: 90px;
                 width: auto;
                 background-size: contain;
-                filter: grayscale(100%);
-    
-                &:hover {
-                    filter: grayscale(0%);
-                    transition: 0s ease-in-out;
-                }
+
+                .col { display: none;   }               // THIS IS CLIENT HOVER STYLES ((REPLACED GRAYSCALE WITH ACTUAL GRAYSCALE IMAGES))
+                                                        //
+                &:hover {                               //
+                    .col { display: inline; }           //
+                    .bw { display: none;    }           //
+                }                                       //--------  END OF CLIENT HOVER STYLE
 
                 @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
                     height: 80px;
