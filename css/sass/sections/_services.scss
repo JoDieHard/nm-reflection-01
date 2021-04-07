@@ -34,7 +34,7 @@
             @include s-theme($bs-theme);
 
             @media (max-width: $media-l)      {     // BREAKPOINT LARGE
-                @include card-s(300px, 400px);
+                @include card-s(300px, 350px);
             }
 
             @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
@@ -47,7 +47,7 @@
             @include s-theme($it-theme);
 
             @media (max-width: $media-l)      {     // BREAKPOINT LARGE
-                @include card-s(300px, 400px);
+                @include card-s(300px, 350px);
             }
 
             @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
@@ -60,7 +60,7 @@
             @include s-theme($dm-theme);
 
             @media (max-width: $media-l)      {     // BREAKPOINT LARGE
-                @include card-s(310px, 400px);
+                @include card-s(310px, 350px);
             }
 
             @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM
@@ -127,7 +127,7 @@
         .s-card.s-ts,
         .s-card.s-wd,
         .s-card.s-cs,
-        .s-card.s-dt, {
+        .s-card.s-dt {
 
             @media (max-width: $media-s)      {     // BREAKPOINT SMALL
                 @include card-s(100%, 290px);

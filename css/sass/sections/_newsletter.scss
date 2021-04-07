@@ -43,8 +43,8 @@
             width: 670px; 
         }
 
-        @media (max-width: $media-m) {      //  MEDIUM BREAKPOINT CHANGE
-            width: 80%; 
+        @media (max-width: $media-s) {      //  SMALL BREAKPOINT CHANGE
+            width: 85%; 
         }
 
         input[type="text"] {
@@ -61,7 +61,7 @@
                 width: 680px; 
             }
 
-            @media (max-width: $media-s) {      //  MEDIUM BREAKPOINT CHANGE
+            @media (max-width: $media-s) {      //  SMALL BREAKPOINT CHANGE
                 width: 100%; 
             }
         }

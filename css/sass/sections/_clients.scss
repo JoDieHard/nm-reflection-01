@@ -30,7 +30,7 @@
     
                 &:hover {
                     filter: grayscale(0%);
-                    transition: .2s ease-in-out;
+                    transition: 0s ease-in-out;
                 }
 
                 @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES

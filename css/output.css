@@ -1322,6 +1322,11 @@ header .container img {
   color: white;
   letter-spacing: 1px;
 }
+@media (max-width: 1050px) {
+  .banner .banner-content {
+    margin-left: 70px;
+  }
+}
 @media (max-width: 992px) {
   .banner .banner-content {
     width: 100%;
@@ -1331,7 +1336,7 @@ header .container img {
 }
 @media (max-width: 400px) {
   .banner .banner-content {
-    width: 88%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -1495,7 +1500,7 @@ header .container img {
 @media (max-width: 1260px) {
   .services-list .container .s-card.s-bs {
     width: 300px;
-    height: 400px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -1680,7 +1685,7 @@ header .container img {
 @media (max-width: 1260px) {
   .services-list .container .s-card.s-it {
     width: 300px;
-    height: 400px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -1865,7 +1870,7 @@ header .container img {
 @media (max-width: 1260px) {
   .services-list .container .s-card.s-dm {
     width: 310px;
-    height: 400px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -3247,7 +3252,7 @@ header .container img {
   background-repeat: no-repeat;
   background-image: url("../assets/articles/10-tips.jpg");
   background-size: 103%;
-  transition: 0.1s ease-in;
+  transition: 0.1s ease-in-out;
   position: relative;
 }
 .article-1 .title-img::after {
@@ -3286,7 +3291,7 @@ header .container img {
   background-repeat: no-repeat;
   background-image: url("../assets/articles/it-call-handler.jpg");
   background-size: 103%;
-  transition: 0.1s ease-in;
+  transition: 0.1s ease-in-out;
   position: relative;
 }
 .article-2 .title-img::after {
@@ -3325,7 +3330,7 @@ header .container img {
   background-repeat: no-repeat;
   background-image: url("../assets/articles/notable-01-2021.jpg");
   background-size: 103%;
-  transition: 0.1s ease-in;
+  transition: 0.1s ease-in-out;
   position: relative;
 }
 .article-3 .title-img::after {
@@ -3385,7 +3390,7 @@ header .container img {
 }
 .clients .container .client img:hover {
   filter: grayscale(0%);
-  transition: 0.2s ease-in-out;
+  transition: 0s ease-in-out;
 }
 @media (max-width: 1260px) {
   .clients .container .client img {
@@ -3522,9 +3527,9 @@ header .container img {
     width: 670px;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   .newsletter .container {
-    width: 80%;
+    width: 85%;
   }
 }
 .newsletter .container input[type=text] {
