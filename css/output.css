@@ -488,6 +488,11 @@ header .container img {
   margin-bottom: -18px;
   font-size: 2.5rem;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #menu-btn i {
+    margin-top: -7px;
+  }
+}
 
 .phone-btn {
   height: 20px;
@@ -2946,6 +2951,25 @@ header .container img {
   font-weight: 400;
   letter-spacing: 0.6px;
   color: #333645;
+  width: 1186px;
+  margin: 0px auto;
+  position: relative;
+}
+@media (max-width: 1260px) {
+  .a-split {
+    width: 770px;
+  }
+}
+@media (max-width: 992px) {
+  .a-split {
+    width: 740px;
+  }
+}
+@media (max-width: 767px) {
+  .a-split {
+    width: 300px;
+    margin: 0px 5%;
+  }
 }
 .a-split h2 {
   padding-top: 40px;
@@ -2955,12 +2979,12 @@ header .container img {
   margin-top: 0px;
   font-size: 1.2rem;
   position: absolute;
-  left: 250px;
+  left: 0px;
 }
 @media (max-width: 767px) {
   .a-split h2 {
     margin-right: auto;
-    margin-left: 10px;
+    margin-left: 0px;
   }
 }
 

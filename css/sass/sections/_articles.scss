@@ -8,7 +8,23 @@
     font-weight: 400;
     letter-spacing: .6px;
     color: $primary-colour;
+    width: 1186px;
+    margin: 0px auto;
+    position: relative;
+
+    @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGE
+        width: 770px;
+    }
     
+    @media (max-width: $media-m) {          // LARGE BREAKPOINT CHANGE
+        width: 740px;
+    }
+
+    @media (max-width: $media-s) {          // LARGE BREAKPOINT CHANGE
+        width: 300px;
+        margin: 0px 5%;
+    }
+
 
     h2 {
         padding-top: 40px;
@@ -18,7 +34,7 @@
         margin-top: 0px;
         font-size: 1.2rem;
         position: absolute;
-        left: 250px;
+        left: 0px;
 
         @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGE
             // margin-right: 790px;
@@ -30,7 +46,7 @@
 
         @media (max-width: $media-s) {          // SMALL BREAKPOINT CHANGE
             margin-right: auto;
-            margin-left: 10px;
+            margin-left: 0px;
             
         }
         
