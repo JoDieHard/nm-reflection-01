@@ -133,14 +133,15 @@ footer {
 .awards {
     grid-area: awards;
     background-color: white;
-    padding-top: 15px;
-    margin-bottom: 10px;
+    padding-top: 40px;
+    margin-bottom: 35px;
 
     // height: 265px;
     overflow: hidden;
 
     @media (max-width: $media-l)      {     // BREAKPOINT LARGE CHANGE
         height: 300px;
+        margin-bottom: 10px;
     }
 
     @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM CHANGE 

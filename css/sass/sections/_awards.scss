@@ -14,10 +14,18 @@
         }
 
         div {
-            padding: 20px 30px;
+            padding: 10px 30px;
+
+            .line-2.bw {
+                opacity: 50%;
+            }
+
+            .princess {
+                height: 43px !important; 
+            }
 
             @media (max-width: $media-l) {          //  LARGE BREAKPOINT CHANGE
-                padding: 10px 15px;
+                padding: 15px 15px;
             }
 
             @media (max-width: $media-m) {          //MEDIUM BREAKPOINT CHANGE
@@ -46,8 +54,9 @@
             }
 
             .line-2 {
-                height: 50px;
+                height: 57.5px;
                 width: auto;
+                
     
                 @media (max-width: $media-l) {          //  LARGE BREAKPOINT CHANGE
                     height: 70px;

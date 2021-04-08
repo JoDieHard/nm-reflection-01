@@ -165,13 +165,14 @@ footer {
 .awards {
   grid-area: awards;
   background-color: white;
-  padding-top: 15px;
-  margin-bottom: 10px;
+  padding-top: 40px;
+  margin-bottom: 35px;
   overflow: hidden;
 }
 @media (max-width: 1260px) {
   .awards {
     height: 300px;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 992px) {
@@ -3783,11 +3784,17 @@ footer .container .ft-website {
   }
 }
 .awards .container div {
-  padding: 20px 30px;
+  padding: 10px 30px;
+}
+.awards .container div .line-2.bw {
+  opacity: 50%;
+}
+.awards .container div .princess {
+  height: 43px !important;
 }
 @media (max-width: 1260px) {
   .awards .container div {
-    padding: 10px 15px;
+    padding: 15px 15px;
   }
 }
 @media (max-width: 992px) {
@@ -3815,7 +3822,7 @@ footer .container .ft-website {
   }
 }
 .awards .container div .line-2 {
-  height: 50px;
+  height: 57.5px;
   width: auto;
 }
 @media (max-width: 1260px) {
