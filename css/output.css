@@ -11,6 +11,7 @@
 }
 @media (max-width: 992px) {
   .show-m {
+    display: -ms-inline-flexbox;
     display: inline-flex;
   }
 }
@@ -21,6 +22,7 @@
 }
 @media (max-width: 767px) {
   .show-s {
+    display: -ms-inline-flexbox;
     display: inline-flex;
   }
 }
@@ -34,10 +36,12 @@
 }
 
 .flexy {
+  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-c {
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -134,9 +138,13 @@ header {
   box-shadow: inset 0 10px 25px 5px rgba(102, 102, 102, 0.15);
 }
 .clients .container {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -192,15 +200,22 @@ header {
 }
 
 header .container {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 @media (max-width: 767px) {
   header .container {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -ms-flex-pack: right;
     justify-content: right;
+    -ms-flex-line-pack: space-around;
     align-content: space-around;
     padding: 0px 5px;
   }
@@ -230,9 +245,13 @@ header .container img {
   height: 56px;
   width: 135px;
   background: #4183d7;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.2px;
   text-transform: uppercase;
@@ -272,9 +291,13 @@ header .container img {
   height: 56px;
   width: 145px;
   background: #999aa2;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.2px;
   text-transform: uppercase;
@@ -314,6 +337,7 @@ header .container img {
 }
 
 #search-box {
+  display: -ms-flexbox;
   display: flex;
   width: 303px;
   height: 56px;
@@ -347,9 +371,13 @@ header .container img {
   height: 56px;
   width: 63px;
   background: #999aa2;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.2px;
   text-transform: uppercase;
@@ -392,9 +420,13 @@ header .container img {
     height: 56px;
     width: 63px;
     background: transparent;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-align: center;
     align-items: center;
     letter-spacing: 0.2px;
     text-transform: uppercase;
@@ -437,6 +469,7 @@ header .container img {
 }
 @media (max-width: 767px) {
   #search-box {
+    -ms-flex-order: 5;
     order: 5;
     -ms-flex: 1 0 100%;
     flex-basis: 100%;
@@ -452,9 +485,13 @@ header .container img {
   height: 56px;
   width: 63px;
   background: #333645;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.2px;
   text-transform: uppercase;
@@ -499,9 +536,13 @@ header .container img {
 .phone-btn {
   height: 20px;
   width: 20px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.2px;
   text-transform: uppercase;
@@ -525,7 +566,9 @@ header .container img {
 }
 
 .main-nav {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
   justify-content: center;
   border-bottom: solid 1px #999aa2;
 }
@@ -533,11 +576,15 @@ header .container img {
   height: 100px;
   width: 100%;
   padding: 0px 0px 30px 0px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: center;
   justify-content: center;
   color: white;
   text-decoration: none;
+  -ms-flex-align: center;
   align-items: center;
   border-right: 1px solid rgba(0, 0, 0, 0.25);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -547,8 +594,11 @@ header .container img {
   height: 99px;
   width: 195px;
   padding: 20px 5px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   text-align: center;
   text-transform: uppercase;
@@ -649,7 +699,9 @@ header .container img {
   left: 0;
   top: 209px;
   background: #724f91;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .nav-drop.wd-drop :link, .nav-drop.wd-drop :visited {
@@ -657,7 +709,9 @@ header .container img {
   text-decoration: none;
 }
 .nav-drop.wd-drop .contain {
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 1150px;
   margin-left: -55px;
@@ -700,7 +754,9 @@ header .container img {
   left: 0;
   top: 209px;
   background: #2664b3;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .nav-drop.it-drop :link, .nav-drop.it-drop :visited {
@@ -708,7 +764,9 @@ header .container img {
   text-decoration: none;
 }
 .nav-drop.it-drop .contain {
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 1170px;
   margin-left: -35px;
@@ -751,7 +809,9 @@ header .container img {
   left: 0;
   top: 209px;
   background: #b12a26;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .nav-drop.ts-drop :link, .nav-drop.ts-drop :visited {
@@ -759,7 +819,9 @@ header .container img {
   text-decoration: none;
 }
 .nav-drop.ts-drop .contain {
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 1170px;
   margin-left: -40px;
@@ -802,7 +864,9 @@ header .container img {
   left: 0;
   top: 209px;
   background: #4d617a;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .nav-drop.bs-drop :link, .nav-drop.bs-drop :visited {
@@ -810,7 +874,9 @@ header .container img {
   text-decoration: none;
 }
 .nav-drop.bs-drop .contain {
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 1170px;
   margin-left: -35px;
@@ -853,7 +919,9 @@ header .container img {
   left: 0;
   top: 209px;
   background: #229854;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .nav-drop.dm-drop :link, .nav-drop.dm-drop :visited {
@@ -861,7 +929,9 @@ header .container img {
   text-decoration: none;
 }
 .nav-drop.dm-drop .contain {
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 1100px;
   margin-left: -110px;
@@ -904,7 +974,9 @@ header .container img {
   left: 0;
   top: 209px;
   background: #d2093b;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .nav-drop.cs-drop :link, .nav-drop.cs-drop :visited {
@@ -912,7 +984,9 @@ header .container img {
   text-decoration: none;
 }
 .nav-drop.cs-drop .contain {
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 1170px;
   margin-left: -35px;
@@ -956,7 +1030,9 @@ header .container img {
     left: 0;
     top: 209px;
     background: #724f91;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .nav-drop.wd-drop :link, .nav-drop.wd-drop :visited {
@@ -964,7 +1040,9 @@ header .container img {
     text-decoration: none;
   }
   .nav-drop.wd-drop .contain {
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     width: 940px;
     margin-left: -25px;
@@ -1016,7 +1094,9 @@ header .container img {
     left: 0;
     top: 209px;
     background: #2664b3;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .nav-drop.it-drop :link, .nav-drop.it-drop :visited {
@@ -1024,7 +1104,9 @@ header .container img {
     text-decoration: none;
   }
   .nav-drop.it-drop .contain {
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     width: 940px;
     margin-left: -25px;
@@ -1076,7 +1158,9 @@ header .container img {
     left: 0;
     top: 209px;
     background: #b12a26;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .nav-drop.ts-drop :link, .nav-drop.ts-drop :visited {
@@ -1084,7 +1168,9 @@ header .container img {
     text-decoration: none;
   }
   .nav-drop.ts-drop .contain {
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     width: 940px;
     margin-left: -25px;
@@ -1136,7 +1222,9 @@ header .container img {
     left: 0;
     top: 209px;
     background: #4d617a;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .nav-drop.bs-drop :link, .nav-drop.bs-drop :visited {
@@ -1144,7 +1232,9 @@ header .container img {
     text-decoration: none;
   }
   .nav-drop.bs-drop .contain {
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     width: 940px;
     margin-left: -25px;
@@ -1196,7 +1286,9 @@ header .container img {
     left: 0;
     top: 209px;
     background: #229854;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .nav-drop.dm-drop :link, .nav-drop.dm-drop :visited {
@@ -1204,7 +1296,9 @@ header .container img {
     text-decoration: none;
   }
   .nav-drop.dm-drop .contain {
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     width: 820px;
     margin-left: -145px;
@@ -1256,7 +1350,9 @@ header .container img {
     left: 0;
     top: 209px;
     background: #d2093b;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .nav-drop.cs-drop :link, .nav-drop.cs-drop :visited {
@@ -1264,7 +1360,9 @@ header .container img {
     text-decoration: none;
   }
   .nav-drop.cs-drop .contain {
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     width: 940px;
     margin-left: -25px;
@@ -1307,8 +1405,11 @@ header .container img {
   }
 }
 .banner {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .banner h1 {
@@ -1354,15 +1455,20 @@ header .container img {
   height: 62px;
   width: 225px;
   background: #926fb1;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.2px;
   text-transform: uppercase;
   border: none;
   border-radius: 3px;
   position: relative;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   font-size: 1.3em;
   padding: 5px 15px;
@@ -1397,15 +1503,22 @@ header .container img {
 }
 
 .services-list {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .services-list .container {
   width: 1185px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 35px 0px;
   filter: drop-shadow(0px 10px 20px #e6e6e6);
@@ -1428,9 +1541,13 @@ header .container img {
 .services-list .container .btn-theme {
   height: 50px;
   width: 130px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.2px;
   text-transform: uppercase;
@@ -1441,9 +1558,13 @@ header .container img {
 .services-list .container .s-card.s-bs {
   width: 375px;
   height: 312px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-align: center;
   align-items: center;
   border: solid 1px #d1d1d1;
   border-radius: 3px;
@@ -1510,9 +1631,13 @@ header .container img {
   .services-list .container .s-card.s-bs {
     width: 300px;
     height: 350px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -1570,9 +1695,13 @@ header .container img {
   .services-list .container .s-card.s-bs {
     width: 720px;
     height: 312px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -1629,9 +1758,13 @@ header .container img {
 .services-list .container .s-card.s-it {
   width: 375px;
   height: 312px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-align: center;
   align-items: center;
   border: solid 1px #d1d1d1;
   border-radius: 3px;
@@ -1698,9 +1831,13 @@ header .container img {
   .services-list .container .s-card.s-it {
     width: 300px;
     height: 350px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -1758,9 +1895,13 @@ header .container img {
   .services-list .container .s-card.s-it {
     width: 720px;
     height: 312px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -1817,9 +1958,13 @@ header .container img {
 .services-list .container .s-card.s-dm {
   width: 375px;
   height: 312px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-align: center;
   align-items: center;
   border: solid 1px #d1d1d1;
   border-radius: 3px;
@@ -1886,9 +2031,13 @@ header .container img {
   .services-list .container .s-card.s-dm {
     width: 310px;
     height: 350px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -1946,9 +2095,13 @@ header .container img {
   .services-list .container .s-card.s-dm {
     width: 720px;
     height: 312px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -2005,9 +2158,13 @@ header .container img {
 .services-list .container .s-card.s-ts {
   width: 270px;
   height: 312px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-align: center;
   align-items: center;
   border: solid 1px #d1d1d1;
   border-radius: 3px;
@@ -2074,9 +2231,13 @@ header .container img {
   .services-list .container .s-card.s-ts {
     width: 470px;
     height: 312px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -2134,9 +2295,13 @@ header .container img {
   .services-list .container .s-card.s-ts {
     width: 345px;
     height: 312px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -2193,9 +2358,13 @@ header .container img {
 .services-list .container .s-card.s-wd {
   width: 270px;
   height: 312px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-align: center;
   align-items: center;
   border: solid 1px #d1d1d1;
   border-radius: 3px;
@@ -2262,9 +2431,13 @@ header .container img {
   .services-list .container .s-card.s-wd {
     width: 470px;
     height: 312px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -2322,9 +2495,13 @@ header .container img {
   .services-list .container .s-card.s-wd {
     width: 345px;
     height: 312px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -2381,9 +2558,13 @@ header .container img {
 .services-list .container .s-card.s-cs {
   width: 270px;
   height: 312px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-align: center;
   align-items: center;
   border: solid 1px #d1d1d1;
   border-radius: 3px;
@@ -2450,9 +2631,13 @@ header .container img {
   .services-list .container .s-card.s-cs {
     width: 470px;
     height: 312px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -2510,9 +2695,13 @@ header .container img {
   .services-list .container .s-card.s-cs {
     width: 345px;
     height: 312px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -2569,9 +2758,13 @@ header .container img {
 .services-list .container .s-card.s-dt {
   width: 270px;
   height: 312px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-align: center;
   align-items: center;
   border: solid 1px #d1d1d1;
   border-radius: 3px;
@@ -2638,9 +2831,13 @@ header .container img {
   .services-list .container .s-card.s-dt {
     width: 470px;
     height: 312px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -2698,9 +2895,13 @@ header .container img {
   .services-list .container .s-card.s-dt {
     width: 345px;
     height: 312px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -2764,9 +2965,13 @@ header .container img {
 .services-list .container .s-card.s-dt {
     width: 100%;
     height: 290px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     border: solid 1px #d1d1d1;
     border-radius: 3px;
@@ -2907,9 +3112,13 @@ header .container img {
   height: 45px;
   width: 165px;
   background: white;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.2px;
   text-transform: uppercase;
@@ -2920,6 +3129,7 @@ header .container img {
   border-radius: 3px;
   color: black;
   font-size: 1em;
+  -ms-flex-align: center;
   align-items: center;
 }
 .about-us .container .btn-arrw i, .about-us .container .btn-arrw p {
@@ -2948,6 +3158,7 @@ header .container img {
 .a-split {
   justify-content: center;
   padding-left: 25px;
+  -ms-flex-align: stretch;
   align-items: stretch;
   text-transform: uppercase;
   font-weight: 400;
@@ -2992,6 +3203,7 @@ header .container img {
 
 @media (max-width: 767px) {
   .articles {
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
@@ -3000,6 +3212,7 @@ header .container img {
 .articles .article-item {
   width: 367px;
   height: 610px;
+  -ms-flex-align: center;
   align-items: center;
   margin: 40px 20px;
   overflow: hidden;
@@ -3014,7 +3227,9 @@ header .container img {
   }
 }
 .articles .article-item .a-section {
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .articles .article-item :visited, .articles .article-item :link {
@@ -3065,6 +3280,7 @@ header .container img {
   .articles .article-item {
     width: 350px;
     height: 600px;
+    -ms-flex-align: center;
     align-items: center;
     margin: 40px 20px;
     overflow: hidden;
@@ -3080,7 +3296,9 @@ header .container img {
 }
 @media (max-width: 992px) {
   .articles .article-item .a-section {
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 }
@@ -3138,12 +3356,14 @@ header .container img {
   .articles .article-item {
     width: 90%;
     height: 100%;
+    -ms-flex-align: center;
     align-items: center;
     margin: 40px 20px;
     overflow: hidden;
     background: white;
     border: solid #ddd 1px;
     border-radius: 3px;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -3154,7 +3374,9 @@ header .container img {
 }
 @media (max-width: 767px) {
   .articles .article-item .a-section {
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 }
@@ -3210,7 +3432,9 @@ header .container img {
 }
 .articles .article-desc {
   height: 280px;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: flex-start;
   justify-content: flex-start;
   padding: 10px 30px;
 }
@@ -3229,9 +3453,13 @@ header .container img {
 .articles .article-desc .btn {
   height: 47px;
   width: 130px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.2px;
   text-transform: uppercase;
@@ -3464,6 +3692,7 @@ header .container img {
   text-align: center;
   background: #333645;
   padding: 5px 20px 10px;
+  -ms-flex-direction: column;
   flex-direction: column;
   visibility: hidden;
 }
@@ -3509,8 +3738,11 @@ header .container img {
 }
 
 .newsletter {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #333645;
   letter-spacing: 1px;
@@ -3530,9 +3762,13 @@ header .container img {
   height: 46px;
   width: 120px;
   background: #333645;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.2px;
   text-transform: uppercase;
@@ -3607,7 +3843,9 @@ header .container img {
   }
 }
 .newsletter .nl-input {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
   -ms-flexpack: justify;
   justify-content: space-between;
@@ -3618,6 +3856,7 @@ header .container img {
 }
 @media (max-width: 992px) {
   .newsletter .nl-input {
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -3676,7 +3915,9 @@ header .container img {
 footer .container {
   width: 1180px;
   margin-top: 15px;
+  -ms-flex-align: baseline;
   align-items: baseline;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   color: white;
 }
@@ -3713,7 +3954,9 @@ footer .container ul :link, footer .container ul :visited {
   text-decoration: none;
 }
 footer .container .ft-social {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 300px;
   cursor: pointer;
@@ -3750,6 +3993,7 @@ footer .container .ft-social .soc-lin {
 }
 @media (max-width: 1260px) {
   footer .container {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 1200px;
     margin-top: 0px;
@@ -3782,6 +4026,7 @@ footer .container .ft-website {
 }
 @media (max-width: 767px) {
   footer .container {
+    -ms-flex-direction: row;
     flex-direction: row;
   }
   footer .container .ft-contact,
@@ -3793,6 +4038,7 @@ footer .container .ft-website {
   footer .container .ft-social {
     -ms-flex: 1 0 100%;
     flex-basis: 100%;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   footer .container .ft-social li {
@@ -3804,9 +4050,13 @@ footer .container .ft-website {
 }
 
 .awards .container {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 1300px;
   margin: 0px auto;
