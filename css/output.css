@@ -78,7 +78,7 @@ header {
 
 .banner {
   grid-area: banner;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../../assets/carousel/web.jpg);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/web.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 200px 0px;
@@ -108,7 +108,7 @@ header {
 
 .about-us {
   grid-area: about-us;
-  background: #333645 url(../../assets/nm-brand-bg.png);
+  background: #333645 url(../assets/nm-brand-bg.png);
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: right center;
