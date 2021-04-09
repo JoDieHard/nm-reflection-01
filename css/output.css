@@ -60,7 +60,6 @@
 }
 
 header {
-  grid-area: head;
   background-color: white;
   height: 110px;
 }
@@ -71,13 +70,11 @@ header {
 }
 
 .main-nav {
-  grid-area: main-nav;
   background-color: #333645;
   height: 100px;
 }
 
 .banner {
-  grid-area: banner;
   background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/web.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -86,7 +83,6 @@ header {
 }
 
 .services-list {
-  grid-area: services;
   background-color: white;
   height: 755px;
 }
@@ -107,7 +103,6 @@ header {
 }
 
 .about-us {
-  grid-area: about-us;
   background: #333645 url(../assets/nm-brand-bg.png);
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -121,19 +116,16 @@ header {
 }
 
 .a-split {
-  grid-area: a-split;
   height: 104px;
 }
 
 .articles {
-  grid-area: articles;
   background-color: white;
   box-shadow: inset 0 10px 30px 10px rgba(102, 102, 102, 0.1);
   padding: 30px 0px;
 }
 
 .clients {
-  grid-area: clients;
   background: white;
   box-shadow: inset 0 10px 25px 5px rgba(102, 102, 102, 0.15);
 }
@@ -149,14 +141,12 @@ header {
 }
 
 .newsletter {
-  grid-area: newsletter;
   background-color: #ddd;
   padding: 50px 0px;
   overflow: hidden;
 }
 
 footer {
-  grid-area: footer;
   background-color: #333645;
   height: 310px;
 }
@@ -172,7 +162,6 @@ footer {
 }
 
 .awards {
-  grid-area: awards;
   background-color: white;
   padding-top: 40px;
   margin-bottom: 35px;
