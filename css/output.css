@@ -528,7 +528,7 @@ header .container img {
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   #menu-btn i {
-    margin-top: -7px;
+    margin-top: -6px;
   }
 }
 
@@ -3742,6 +3742,20 @@ header .container img {
 .clients .container .client img:hover ~ .info-box,
 .clients .container .client .info-box:hover {
   visibility: visible;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .clients .container .client .pop-bu {
+    left: -25px;
+  }
+  .clients .container .client .pop-c {
+    left: 0px;
+  }
+  .clients .container .client .pop-b {
+    left: -80px;
+  }
+  .clients .container .client .pop-nd {
+    left: 40px;
+  }
 }
 
 .newsletter {

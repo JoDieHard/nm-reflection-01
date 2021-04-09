@@ -115,6 +115,15 @@
                             .info-box:hover {         // <------- Example of a :HOVER rule that effects a SIBLING ELEMENT.
                                 visibility: visible;
                             }
+
+                            //  THIS FIXES THE POSITION OF POP UPS ON IE11
+
+                            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                                .pop-bu {  left: -25px; }
+                                .pop-c {   left: 0px; }
+                                .pop-b {   left: -80px; }
+                                .pop-nd {  left: 40px; }
+                           }                                                        // IE specific media query
         }
 
     }
