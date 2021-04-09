@@ -22,6 +22,7 @@ $media-l: 1260px;
 
 @media (max-width: $media-m)  {
     .show-m {
+        display: -ms-inline-flexbox;
         display: inline-flex;
     }
 }
@@ -36,6 +37,7 @@ $media-l: 1260px;
 
 @media (max-width: $media-s)  {
     .show-s {
+        display: -ms-inline-flexbox;
         display: inline-flex;
     }
 }

@@ -1,6 +1,11 @@
 .newsletter {
+    display: -ms-flexbox;
     display: flex;
+
+    -ms-flex-pack: center;
     justify-content: center;
+
+    -ms-flex-align: center;
     align-items: center;
 
     color: $primary-colour;
@@ -68,8 +73,13 @@
     }
 
     .nl-input {
+        display: -ms-flexbox;
         display: flex;
+
+        -ms-flex-direction: row;
         flex-direction: row;
+
+        -ms-flexpack: justify;
         justify-content: space-between;
 
         strong::after {
@@ -78,6 +88,7 @@
         }
 
         @media (max-width: $media-m) {      //  MEDIUM BREAKPOINT CHANGE
+            -ms-flex-direction: column;
             flex-direction: column;
         }
     }

@@ -1,9 +1,16 @@
 .awards {
     
     .container {
+        display: -ms-flexbox;
         display: flex;
+
+        -ms-flex-direction: row;
         flex-direction: row;
+
+        -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
+
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 
         width: 1300px;

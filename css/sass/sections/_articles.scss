@@ -2,6 +2,8 @@
 .a-split {
     justify-content: center;
     padding-left: 25px;
+
+    -ms-flex-align: stretch;
     align-items: stretch;
 
     text-transform: uppercase;
@@ -58,7 +60,10 @@
     //Universal Article Styles 
 
     @media (max-width: $media-s)  {                 // SMALL BREAKPOINT CHANGE
+
+            -ms-flex-direction: column;
             flex-direction: column;
+
             width: 100%;
             margin: 0 auto;
     }
@@ -72,6 +77,8 @@
 
         @media (max-width: $media-s) {                  // MEDIUM BREAKPOINT CHANGE
             @include card-a(90%, 100%);
+            
+            -ms-flex-direction: column;
             flex-direction: column;
         }
 
@@ -82,7 +89,11 @@
 
         .article-desc {
             height: 280px;
+
+            -ms-flex-direction: column;
             flex-direction: column;
+
+            -ms-flex-pack: flex-start;
             justify-content: flex-start;
 
             padding: 10px 30px;

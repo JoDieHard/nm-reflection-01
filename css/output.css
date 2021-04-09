@@ -42,6 +42,7 @@
 }
 
 .flex-break {
+  -ms-flex: 1 0 100%;
   flex-basis: 100%;
   height: 0;
 }
@@ -135,8 +136,8 @@ header {
 .clients .container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .newsletter {
@@ -437,6 +438,7 @@ header .container img {
 @media (max-width: 767px) {
   #search-box {
     order: 5;
+    -ms-flex: 1 0 100%;
     flex-basis: 100%;
     border: solid 2px rgba(0, 0, 0, 0.1);
     background: rgba(0, 0, 0, 0.1);
@@ -656,13 +658,13 @@ header .container img {
 }
 .nav-drop.wd-drop .contain {
   justify-content: space-between;
+  flex-wrap: nowrap;
   width: 1150px;
   margin-left: -55px;
   list-style-type: none;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.6px;
-  flex-wrap: nowrap;
 }
 @media (max-width: 1260px) {
   .nav-drop.wd-drop .contain {
@@ -707,13 +709,13 @@ header .container img {
 }
 .nav-drop.it-drop .contain {
   justify-content: space-between;
+  flex-wrap: nowrap;
   width: 1170px;
   margin-left: -35px;
   list-style-type: none;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.6px;
-  flex-wrap: nowrap;
 }
 @media (max-width: 1260px) {
   .nav-drop.it-drop .contain {
@@ -758,13 +760,13 @@ header .container img {
 }
 .nav-drop.ts-drop .contain {
   justify-content: space-between;
+  flex-wrap: nowrap;
   width: 1170px;
   margin-left: -40px;
   list-style-type: none;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.6px;
-  flex-wrap: nowrap;
 }
 @media (max-width: 1260px) {
   .nav-drop.ts-drop .contain {
@@ -809,13 +811,13 @@ header .container img {
 }
 .nav-drop.bs-drop .contain {
   justify-content: space-between;
+  flex-wrap: nowrap;
   width: 1170px;
   margin-left: -35px;
   list-style-type: none;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.6px;
-  flex-wrap: nowrap;
 }
 @media (max-width: 1260px) {
   .nav-drop.bs-drop .contain {
@@ -860,13 +862,13 @@ header .container img {
 }
 .nav-drop.dm-drop .contain {
   justify-content: space-between;
+  flex-wrap: nowrap;
   width: 1100px;
   margin-left: -110px;
   list-style-type: none;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.6px;
-  flex-wrap: nowrap;
 }
 @media (max-width: 1260px) {
   .nav-drop.dm-drop .contain {
@@ -911,13 +913,13 @@ header .container img {
 }
 .nav-drop.cs-drop .contain {
   justify-content: space-between;
+  flex-wrap: nowrap;
   width: 1170px;
   margin-left: -35px;
   list-style-type: none;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.6px;
-  flex-wrap: nowrap;
 }
 @media (max-width: 1260px) {
   .nav-drop.cs-drop .contain {
@@ -963,13 +965,13 @@ header .container img {
   }
   .nav-drop.wd-drop .contain {
     justify-content: space-between;
+    flex-wrap: nowrap;
     width: 940px;
     margin-left: -25px;
     list-style-type: none;
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 0.6px;
-    flex-wrap: nowrap;
   }
 }
 @media (max-width: 1260px) and (max-width: 1260px) {
@@ -1023,13 +1025,13 @@ header .container img {
   }
   .nav-drop.it-drop .contain {
     justify-content: space-between;
+    flex-wrap: nowrap;
     width: 940px;
     margin-left: -25px;
     list-style-type: none;
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 0.6px;
-    flex-wrap: nowrap;
   }
 }
 @media (max-width: 1260px) and (max-width: 1260px) {
@@ -1083,13 +1085,13 @@ header .container img {
   }
   .nav-drop.ts-drop .contain {
     justify-content: space-between;
+    flex-wrap: nowrap;
     width: 940px;
     margin-left: -25px;
     list-style-type: none;
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 0.6px;
-    flex-wrap: nowrap;
   }
 }
 @media (max-width: 1260px) and (max-width: 1260px) {
@@ -1143,13 +1145,13 @@ header .container img {
   }
   .nav-drop.bs-drop .contain {
     justify-content: space-between;
+    flex-wrap: nowrap;
     width: 940px;
     margin-left: -25px;
     list-style-type: none;
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 0.6px;
-    flex-wrap: nowrap;
   }
 }
 @media (max-width: 1260px) and (max-width: 1260px) {
@@ -1203,13 +1205,13 @@ header .container img {
   }
   .nav-drop.dm-drop .contain {
     justify-content: space-between;
+    flex-wrap: nowrap;
     width: 820px;
     margin-left: -145px;
     list-style-type: none;
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 0.6px;
-    flex-wrap: nowrap;
   }
 }
 @media (max-width: 1260px) and (max-width: 1260px) {
@@ -1263,13 +1265,13 @@ header .container img {
   }
   .nav-drop.cs-drop .contain {
     justify-content: space-between;
+    flex-wrap: nowrap;
     width: 940px;
     margin-left: -25px;
     list-style-type: none;
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 0.6px;
-    flex-wrap: nowrap;
   }
 }
 @media (max-width: 1260px) and (max-width: 1260px) {
@@ -3607,6 +3609,7 @@ header .container img {
 .newsletter .nl-input {
   display: flex;
   flex-direction: row;
+  -ms-flexpack: justify;
   justify-content: space-between;
 }
 .newsletter .nl-input strong::after {
@@ -3672,8 +3675,8 @@ header .container img {
 
 footer .container {
   width: 1180px;
-  align-items: baseline;
   margin-top: 15px;
+  align-items: baseline;
   justify-content: space-between;
   color: white;
 }
@@ -3716,6 +3719,7 @@ footer .container .ft-social {
   cursor: pointer;
 }
 footer .container .ft-social h2 {
+  -ms-flex: 1 0 100%;
   flex-basis: 100%;
 }
 footer .container .ft-social .soc-fb:hover {
@@ -3728,6 +3732,7 @@ footer .container .ft-social .soc-lin:hover {
   background-color: rgba(0, 119, 181, 0.7);
 }
 footer .container .ft-social i {
+  -ms-flex: 1 0 60%;
   flex-basis: 60%;
   width: 110px;
   height: 55px;
@@ -3753,10 +3758,12 @@ footer .container .ft-social .soc-lin {
   footer .container .ft-contact,
 footer .container .ft-about,
 footer .container .ft-website {
+    -ms-flex: 1 0 50%;
     flex-basis: 50%;
     width: 300px;
   }
   footer .container .ft-social {
+    -ms-flex: 1 0 50%;
     flex-basis: 50%;
     width: 300px;
     padding-left: 0;
@@ -3780,9 +3787,11 @@ footer .container .ft-website {
   footer .container .ft-contact,
 footer .container .ft-about,
 footer .container .ft-website {
+    -ms-flex: 1 0 100%;
     flex-basis: 100%;
   }
   footer .container .ft-social {
+    -ms-flex: 1 0 100%;
     flex-basis: 100%;
     justify-content: space-between;
   }

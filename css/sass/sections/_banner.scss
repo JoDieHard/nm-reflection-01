@@ -1,7 +1,11 @@
 .banner {
-
+    display: -ms-flexbox;
     display: flex;
+
+    -ms-flex-direction: column;
     flex-direction: column;
+
+    -ms-flex-pack: center;
     justify-content: center;
 
 
@@ -48,7 +52,9 @@
     .btn-arrw {
         @include btn-default(225px, 62px, $wd-dt-theme);
 
+        -ms-flex-pack: distribute;
         justify-content: space-around;
+        
         font-size: 1.3em;
         padding: 5px 15px;
 
