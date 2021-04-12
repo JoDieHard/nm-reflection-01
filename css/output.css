@@ -3530,6 +3530,7 @@ header .container img {
 
 .article-1 .title-img-wrap {
   overflow: hidden;
+  position: relative;
 }
 .article-1 .title-img-wrap .title-img {
   background-position: center;
@@ -3571,6 +3572,7 @@ header .container img {
 }
 .article-2 .title-img-wrap {
   overflow: hidden;
+  position: relative;
 }
 .article-2 .title-img-wrap .title-img {
   background-position: center;
@@ -3612,6 +3614,7 @@ header .container img {
 }
 .article-3 .title-img-wrap {
   overflow: hidden;
+  position: relative;
 }
 .article-3 .title-img-wrap .title-img {
   background-position: center;
