@@ -1,6 +1,11 @@
 .newsletter {
+    display: -ms-flexbox;
     display: flex;
+
+    -ms-flex-pack: center;
     justify-content: center;
+
+    -ms-flex-align: center;
     align-items: center;
 
     color: $primary-colour;
@@ -33,7 +38,7 @@
     }
 
     .container{
-        width: 1170px;
+        width: 1120px;
         
         @media (max-width: $media-l) {      //  LARGE BREAKPOINT CHANGE
             width: 900px; 
@@ -43,8 +48,8 @@
             width: 670px; 
         }
 
-        @media (max-width: $media-m) {      //  MEDIUM BREAKPOINT CHANGE
-            width: 80%; 
+        @media (max-width: $media-s) {      //  SMALL BREAKPOINT CHANGE
+            width: 85%; 
         }
 
         input[type="text"] {
@@ -61,15 +66,20 @@
                 width: 680px; 
             }
 
-            @media (max-width: $media-s) {      //  MEDIUM BREAKPOINT CHANGE
+            @media (max-width: $media-s) {      //  SMALL BREAKPOINT CHANGE
                 width: 100%; 
             }
         }
     }
 
     .nl-input {
+        display: -ms-flexbox;
         display: flex;
+
+        -ms-flex-direction: row;
         flex-direction: row;
+
+        -ms-flexpack: justify;
         justify-content: space-between;
 
         strong::after {
@@ -78,6 +88,7 @@
         }
 
         @media (max-width: $media-m) {      //  MEDIUM BREAKPOINT CHANGE
+            -ms-flex-direction: column;
             flex-direction: column;
         }
     }

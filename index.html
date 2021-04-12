@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
+<html>
+
 <!-- -----------  HEAD    ------------------------------------------------------------- -->
 
 <head>
     <title>Netmatters  |  Full Service Digital Agency  |  Norwich, Norfolk  |  Netmatters</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="../assets/favicon.ico">
+    <link rel="shortcut icon" href="assets/favicon.ico">
 
     <script src="https://kit.fontawesome.com/4e7c93723f.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"> 
 
-    <link rel="stylesheet" href="../css/output.css"> 
+    <link rel="stylesheet" href="css/output.css"> 
     
 </head>
 
@@ -22,7 +24,6 @@
 <!-- ---------------------  NETMATTERS MAIN PAGE MARKUP CODE  ------------------------- -->
 <!-- ---------------------------------------------------------------------------------- -->
 
-<html>
     <body class="homepage">
         <div class="grid">
 
@@ -31,7 +32,7 @@
 
         <header>
             <div class="container flexy">
-                <img src="../assets/nm-logo.png" alt="Netmatters logo">
+                <img src="assets/nm-logo.png" alt="Netmatters logo">
 
                 <a class="btn-theme show-s phone-btn">    
                     <i class="material-icons">phone_in_talk</i>
@@ -287,8 +288,11 @@
 <!-------------------------  ARTICLE ITEM ONE  -------------------------------------------->
 
                     <div class="article-item a-section article-1">        
-                        <div class="title-img">
+                        <div class="title-img-wrap">
                             <span class="label">Insights</span>
+                            <div class="title-img">
+                                <!-- This probably shouldn't be empty but I moved my label -->
+                            </div>
                         </div>
 
                         <div class="article-desc a-section flexy">
@@ -298,7 +302,7 @@
                         </div>
 
                         <div class="article-credit a-section">
-                            <img src="../assets/netmatters-ltd.png">
+                            <img src="assets/netmatters-ltd.png" alt="Netmatter's Logo">
                             <strong>Posted by Netmatters Ltd</strong>
                             <p>18th February 2021</p>
                         </div>
@@ -306,9 +310,12 @@
 
 <!-------------------------  ARTICLE ITEM TWO  ------------------------------------------->
 
-                    <div class="article-item a-section article-2">        
-                        <div class="title-img">
-                            <span class="label">Careers</span>
+                    <div class="article-item a-section article-2">  
+                        <div class="title-img-wrap">    
+                            <span class="label">Careers</span>  
+                            <div class="title-img">
+                                <!-- This probably shouldn't be empty but I moved my label -->
+                            </div>
                         </div>
 
                         <div class="article-desc a-section flexy">
@@ -318,7 +325,7 @@
                         </div>
 
                         <div class="article-credit a-section">
-                            <img src="../assets/articles/bethany-shakespeare.jpg">
+                            <img src="assets/articles/bethany-shakespeare.jpg" alt="Profile Picture - Bethany Shakespeare">
                             <strong>Posted by Bethany Shakespeare</strong>
                             <p>18th February 2021</p>
                         </div>
@@ -326,9 +333,12 @@
 
 <!-------------------------  ARTICLE ITEM THREE  ------------------------------------------->
 
-                        <div class="article-item a-section article-3 hide-l show-s">        
-                            <div class="title-img">
-                                <span class="label">News</span>
+                        <div class="article-item a-section article-3 hide-l show-s">
+                            <div class="title-img-wrap">       
+                                <span class="label">News</span> 
+                                <div class="title-img">
+                                    <!-- This probably shouldn't be empty but I moved my label -->
+                                </div>
                             </div>
 
                             <div class="article-desc a-section flexy">
@@ -338,7 +348,7 @@
                             </div>
 
                             <div class="article-credit a-section">
-                                <img src="../assets/netmatters-ltd.png">
+                                <img src="assets/netmatters-ltd.png" alt="Netmatter's Logo">
                                 <strong>Posted by Netmatters Ltd</strong>
                                 <p>18th February 2021</p>
                             </div>
@@ -356,8 +366,9 @@
                     <div class="container">
 
                         <div class="client flexy flex-c">
-                        <img class="client-logo" src="../assets/logos/busseys.png" alt="Bussyes Logo">
-                        <div class="info-box flexy">
+                        <img class="client-logo col" src="assets/logos/busseys.png" alt="Bussyes Logo">
+                        <img class="client-logo bw" src="assets/logos/bw/busseys.png" alt="Bussyes Logo Black and White">
+                        <div class="info-box flexy pop-bu">
                             <h3>Busseys</h3>
                             <span class="break"></span>             <!--    THIS IS THE BORDER BOTTOM BREAK    -->
                             <p> One of the UK's leading Ford dealerships.</p>
@@ -366,8 +377,9 @@
                         </div>
 
                         <div class="client flexy flex-c">
-                        <img src="../assets/logos/crane.png" alt="Crane Garden Buildings">
-                        <div class="info-box flexy">
+                        <img class="client-logo col" src="assets/logos/crane.png" alt="Crane Garden Buildings">
+                        <img class="client-logo bw" src="assets/logos/bw/crane.png" alt="Crane Garden Buildings Black and White">
+                        <div class="info-box flexy pop-c">
                             <h3>Crane Garden Builders</h3>
                             <span class="break"></span>             <!--    THIS IS THE BORDER BOTTOM BREAK    -->
                             <p>Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops and sheds in the UK.</p>
@@ -376,8 +388,9 @@
                         </div>
 
                         <div class="client flexy flex-c">
-                        <img src="../assets/logos/beat.png" alt="Beat">
-                        <div class="info-box flexy">
+                        <img class="client-logo col" src="assets/logos/beat.png" alt="Beat Logo">
+                        <img class="client-logo bw" src="assets/logos/bw/beat.png" alt="Beat Logo Black and White">
+                        <div class="info-box flexy pop-b">
                             <h3>Beat</h3>
                             <span class="break"></span>             <!--    THIS IS THE BORDER BOTTOM BREAK    -->
                             <p>The UK's eating disorder charity founded in 1989.</p>
@@ -386,8 +399,9 @@
                         </div>
 
                         <div class="client flexy flex-c">
-                        <img src="../assets/logos/northern-diver.png" alt="Northern Diver Openwater Suits & Equipment">
-                        <div class="info-box flexy">
+                        <img class="client-logo col" src="assets/logos/northern-diver.png" alt="Northern Diver Openwater Suits & Equipment">
+                        <img class="client-logo bw" src="assets/logos/bw/northern-diver.png" alt="Northern Diver Openwater Suits & Equipment Black and White">
+                        <div class="info-box flexy pop-nd">
                             <h3>Northern Diver</h3>
                             <span class="break"></span>             <!--    THIS IS THE BORDER BOTTOM BREAK    -->
                             <p>Global water based equipment manufacturers for sport, military, commercial and rescue businesses.</p>
@@ -417,7 +431,7 @@
                         </div>
 
                         <br>
-                        <form action="" class="custom-checkbox">
+                        <form class="custom-checkbox">
                         <input type="checkbox" class="nl-check" id="nl-check"> 
                         <label for="nl-check">
                             <span class="check-select"></span>
@@ -441,17 +455,16 @@
                 <footer class="flexy flex-c">
                     <div class="container flexy">
                         <ul class="ft-contact">
-                            <h2>Contact Us</h2>
-                            <li>11 Penfold Drive </br>
-                                Wymondham        </br>
-                                Norfolk          </br>
-                                NR18 0WZ         </br> </li>
-                            </br>
+                            <li><h2>Contact Us</h2></li>
+                            <li>11 Penfold Drive <br>
+                                Wymondham        <br>
+                                Norfolk          <br>
+                                NR18 0WZ         <br> </li>
                             <li>Tel: <a href="tel:01603704020">01603 70 40 20</a></li>
                             <li>Email: <a href="mailto:support@netmatters.com">support@netmatters.com</a></li>
                         </ul>
                         <ul class="ft-about">
-                            <h2>About Netmatters</h2>
+                            <li><h2>About Netmatters</h2></li>
                             <li><a href="https://www.netmatters.co.uk/news">News</a></li>
                             <li><a href="https://www.netmatters.co.uk/our-careers">Our Careers</a></li>
                             <li><a href="https://www.netmatters.co.uk/team">Our Team</a></li>
@@ -462,16 +475,19 @@
                             <li><a href="https://www.netmatters.co.uk/terms-and-conditions/uk-domains">UK Domains</a></li>
                         </ul>
                         <ul class="ft-website">
-                            <h2>Website</h2>
+                            <li><h2>Website</h2></li>
                             <li><a href="https://www.netmatters.co.uk/sitemap.xml">Sitemap</a></li>
                             <li>&copy; Copyright Netmatters Ltd. 2021 <br> All rights reserved</li>
                         </ul>
                         <ul class="ft-social">
-                            <h2>Social Media</h2>
-                            <li><i class="fab fa-facebook-f soc-fb"></i></li>
-                            <li><i class="fab fa-twitter soc-twi"></i></li>
-                            <span class="flex-break"></span>
-                            <li><i class="fab fa-linkedin-in soc-lin"></i></li>
+                            <li> 
+                                <h2>Social Media</h2>
+                                <span class="flex-break"></span>
+                                <i class="fab fa-facebook-f soc-fb"></i>
+                                <i class="fab fa-twitter soc-twi"></i>
+                                <span class="flex-break"></span>
+                                <i class="fab fa-linkedin-in soc-lin"></i> 
+                            </li>
                         </ul>
 
                     </div>
@@ -483,21 +499,47 @@
                 
             <div class="awards hide-s">
                 <div class="container">
-                    <span class="img-line-1">
-                        <img src="../assets/logos/PartnerBadge.png" alt="Google Partner">
-                        <img src="../assets/logos/silver-microsoft-partner.jpg" alt="Silver Microsoft Partner">
-                        <img src="../assets/logos/future-50.jpg" alt="Future 50">
-                        <img src="../assets/logos/qms.jpg" alt="QMS">
-                        <img src="../assets/logos/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter Award">
-                    </span>
+                       
+                        <div>
+                            <img class="google" src="assets/logos/PartnerBadge.png" alt="Google Partner">
+                        </div>
+
+                        <div>
+                            <img class="silver" src="assets/logos/silver-microsoft-partner.jpg" alt="Silver Microsoft Partner">
+                        </div>
+
+                        <div>
+                            <img class="bw line-1" src="assets/logos/bw/future-50.jpg" alt="Future 50">
+                            <img class="col line-1" src="assets/logos/future-50.jpg" alt="Future 50">
+                        </div>
+
+                        <div>
+                            <img class="bw line-1" src="assets/logos/bw/qms.jpg" alt="QMS">
+                            <img class="col line-1" src="assets/logos/qms.jpg" alt="QMS">
+                        </div>
+
+                        <div>
+                            <img class="bw line-1" src="assets/logos/bw/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter Award">
+                            <img class="col line-1" src="assets/logos/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter Award">
+                        </div>
+
 
                     <span class="flex-break"></span>
 
-                    <span class="img-line-2">
-                        <img src="../assets/logos/investing-in-future-growth.jpg" alt="Investing in Future Growth Winner">
-                        <img src="../assets/logos/princess-royal-training.jpg" alt="Princess Royal Training Award 2020">
-                        <img src="../assets/logos/skills-of-tomorrow.jpg" alt="Skills of Tomorrow Winner">
-                    </span>
+                        <div>
+                            <img class="bw line-2" src="assets/logos/bw/investing-in-future-growth.jpg" alt="Investing in Future Growth Winner">
+                            <img class="col line-2" src="assets/logos/investing-in-future-growth.jpg" alt="Investing in Future Growth Winner">
+                        </div>
+
+                        <div>
+                            <img class="bw line-2 princess" src="assets/logos/bw/princess-royal-training.jpg" alt="Princess Royal Training Award 2020">
+                            <img class="col line-2 princess" src="assets/logos/princess-royal-training.jpg" alt="Princess Royal Training Award 2020">
+                        </div>
+
+                        <div>
+                            <img class="bw line-2" src="assets/logos/bw/skills-of-tomorrow.jpg" alt="Skills of Tomorrow Winner">
+                            <img class="col line-2" src="assets/logos/skills-of-tomorrow.jpg" alt="Skills of Tomorrow Winner">
+                        </div>
 
                 </div>
             </div>

@@ -23,6 +23,8 @@
         position: absolute;
         background: $colour;
         opacity: 0;
+        left: 0;
+        top: 0;
 
         transition: opacity .05s linear;            //OVERLAY TRANSITION 
     }
@@ -42,11 +44,18 @@
     width: $width;
     background: $background;
 
+    display: -ms-flexbox;
     display: flex;
+
+    -ms-flex-direction: $flex-direction;
     flex-direction: $flex-direction;
+
+    -ms-flex-pack: center;
     justify-content: center;
 
+    -ms-flex-align: center;
     align-items: center;
+
     letter-spacing: .2px;
     text-transform: uppercase;
 
@@ -68,11 +77,18 @@
     height: $height;
     width: $width;
 
+    display: -ms-flexbox;
     display: flex;
+
+    -ms-flex-direction: $flex-direction;
     flex-direction: $flex-direction;
+
+    -ms-flex-pack: center;
     justify-content: center;
 
+    -ms-flex-align: center;
     align-items: center;
+
     letter-spacing: .2px;
     text-transform: uppercase;
 
@@ -100,7 +116,7 @@
 
 //  THIS IS THE MAIN-NAV DROP DOWN MENU MIXIN
 
-@mixin nav-drop-item($theme: $primary-colour, $width: 1200px, $margin: 40px) {
+@mixin nav-drop-item($theme: $primary-colour, $width: 1200px, $margin: 40px, $margin-l: -55px) {
 
     width: 100%;
     height: 45px;
@@ -111,7 +127,11 @@
     top: 209px;
 
     background: darken($theme, 12.5%);
+
+    -ms-flex-align: center;
     align-items: center;
+
+    -ms-flex-pack: center;
     justify-content: center;
 
     :link, :visited {
@@ -120,14 +140,18 @@
     }
 
     .contain {
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    width: $width;
-    list-style-type: none;
 
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+
+    width: $width;
+    margin-left: $margin-l;                   // THIS IS A NEW VARIABLE TO ALIGN DROPDOWN TO LEFT
+    list-style-type: none;
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: .6px;
-    flex-wrap: nowrap;
 
     @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
         font-size: .8rem;
@@ -166,9 +190,16 @@
     width: $width;
     height: $height;
 
+    display: -ms-flexbox;
     display: flex;
+
+    -ms-flex-direction: $flex-dir;
     flex-direction: $flex-dir;
+
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+
+    -ms-flex-align: center;
     align-items: center;
 
     border: solid 1px #d1d1d1;
@@ -209,7 +240,7 @@
           text-align: center;
           letter-spacing: .6px;
           line-height: 1.3rem; 
-        //   width: 250px;
+          width: 100%;                        // !!! THIS SHOULD FIX INTERNET EXPLORER ISSUE
         padding: 0px 5px;
         }
 
@@ -259,11 +290,14 @@
 //--------------------------------------------------------------------------------------------------
 //-----------------------------   ARTICLES CARD MIXIN   --------------------------------------------
 
-@mixin card-a($width: 400px, $height: 614px) {
+@mixin card-a($width: 367px, $height: 610px) {
 
     width: $width;
     height: $height;
+
+    -ms-flex-align: center;
     align-items: center;
+
     margin: 40px 20px;
     overflow: hidden;
 
@@ -276,7 +310,10 @@
     }
 
     .a-section {
+        -ms-flex-direction: column;
         flex-direction: column;
+        
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 
@@ -284,8 +321,37 @@
         color: inherit;
     }
 
+    .label { 
+        height: 20px;
+        z-index: 20;
+
+        text-transform: uppercase;
+        padding: 1px 15px 16px 10px;
+
+        color: white;
+
+        font-weight: 600;
+        font-size: .75rem;
+        letter-spacing: .4px;
+
+        position: absolute;
+        right: 0px;
+        top: 20px;
+
+        box-shadow:  -2px 2px 6px rgba(23, 23, 23, .1);
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        @media (max-width: $media-s) {           // SMALL BREAKPOINT CHANGE
+            top: 30px;
+        }
+       }
+
     .title-img {
-        height: 235px;
+        height: 215px;
         width: 100%;
         overflow: hidden;
         position: relative;
@@ -299,31 +365,6 @@
             height: 0;
             padding-top: 60%;
         }
-        
-
-        .label { 
-            height: 20px;
-            z-index: 20;
-
-            text-transform: uppercase;
-            padding: 1px 15px 16px 10px;
-
-            color: white;
-
-            font-weight: 600;
-            font-size: .75rem;
-            letter-spacing: .4px;
-
-            position: absolute;
-            right: 0px;
-            top: 20px;
-
-            box-shadow:  -2px 2px 6px rgba(23, 23, 23, .1);
-
-            @media (max-width: $media-s) {           // SMALL BREAKPOINT CHANGE
-                top: 30px;
-            }
-           }
 
     }
 }
@@ -332,39 +373,47 @@
 
 @mixin article-theme($theme, $img-url) {
 
-    .title-img {
-        background-position: center;
-        background-repeat: no-repeat;
+    .title-img-wrap {
 
-        background-image: url($img-url); 
-        background-size: 103%;
-
-        transition: .1s ease-in;
+        overflow: hidden;
         position: relative;
 
-        &::after {
-            content:" ";
+        .title-img {
+            background-position: center;
+            background-repeat: no-repeat;
 
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background-color: $white;
-            opacity: 0;
-
-            transition: opacity .2s ease-in-out;
-        }
-
-        &:hover::after {
-            opacity: 0.15;
-        }
-
-
-        &:hover {
             background-image: url($img-url); 
-            background-size: 110%;
+            background-size: 103%;
+
+            transition: .1s ease-in-out;
+            position: relative;
+
+            &::after {
+                content:" ";
+
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background-color: $white;
+                opacity: 0;
+
+                transition: opacity .2s ease-in-out;
+            }
+
+            &:hover::after {
+                opacity: 0.15;
+            }
+
+
+            &:hover {
+                // background-image: url($img-url); 
+                // background-size: 110%;
+                transform: scale(1.075);
+            }
         }
+
     }
 
     .title {
@@ -374,10 +423,9 @@
         font-weight: 600;
     }
 
-     & .label, .btn {
+    & .label, .btn {
         background-color: $theme;
     }
-
 }
 
 //------------------------------------------------------

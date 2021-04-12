@@ -1,7 +1,11 @@
 .banner {
-
+    display: -ms-flexbox;
     display: flex;
+
+    -ms-flex-direction: column;
     flex-direction: column;
+
+    -ms-flex-pack: center;
     justify-content: center;
 
 
@@ -27,6 +31,10 @@
         color: white;
         letter-spacing: 1px;
 
+            @media (max-width: 1050px) {
+                margin-left: 70px;
+            }
+
             @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
                 width: 100%;
                 margin-left: 0px;
@@ -34,7 +42,7 @@
             }
 
             @media (max-width: 400px) {          // EXTRA SMALL BREAKPOINT CHANGES
-                width: 88%;
+                width: 85%;
                 margin-left: auto;
                 margin-right: auto;
                 text-align: center;
@@ -44,7 +52,9 @@
     .btn-arrw {
         @include btn-default(225px, 62px, $wd-dt-theme);
 
+        -ms-flex-pack: distribute;
         justify-content: space-around;
+        
         font-size: 1.3em;
         padding: 5px 15px;
 

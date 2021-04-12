@@ -4,10 +4,14 @@
 footer {
     .container {                //-----  FOOTER CONTAINER STYLES
 
-        width: 1200px;
-        align-items: baseline;
+        width: 1180px;
         margin-top: 15px;
-        justify-content: space-around;
+
+        -ms-flex-align: baseline;
+        align-items: baseline;
+
+        -ms-flex-pack: justify;
+        justify-content: space-between;
 
 
     color: white;
@@ -17,6 +21,13 @@ footer {
             width: 100% !important;
         }
 
+        .ft-contact {
+            padding-left: 0px;
+        }
+
+        .ft-social h2 {
+            width: 250px;
+        }
 
 //-----  MAIN STYLING FOOTER SECTIONS
 
@@ -48,13 +59,18 @@ footer {
 //-----  THIS IS THE SOCIAL SECTION     
 
     .ft-social {
+        display: -ms-flexbox;
         display: flex;
+
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        width: 350px;
+
+        width: 300px;
 
         cursor: pointer;
 
         h2 {
+            -ms-flex: 1 0 100%;
             flex-basis: 100%;
         }
 
@@ -65,7 +81,9 @@ footer {
         .soc-lin:hover { background-color: rgba(0, 119, 181, .7);  }
 
         i {
+            -ms-flex: 1 0 60%;
             flex-basis: 60%;
+
             width: 110px;
             height: 55px;
             // padding: 5px 10px;
@@ -94,6 +112,7 @@ footer {
     @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
 
          & {
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
             // align-items: center;
             width: 1200px;
@@ -104,20 +123,25 @@ footer {
         .ft-contact,
         .ft-about,
         .ft-website {
+            -ms-flex: 1 0 50%;
             flex-basis: 50%;
             width: 300px;
-            padding-left: 0;
-        }
-    
+        }   
     
         .ft-social {
+            -ms-flex: 1 0 50%;
             flex-basis: 50%;
+
             width: 300px;
             padding-left: 0;
 
             & i {
                 width: 212.5px;
             }
+        }
+
+        .ft-website, .ft-about {
+            padding-left: 0px;
         }
     }  //----------------------------------- LARGE BREAKPOINT CHANGE --- END
 
@@ -129,16 +153,21 @@ footer {
     }
 
     @media (max-width: $media-s) {     //--------- SMALL BREAKPOINT CHANGES
+        -ms-flex-direction: row;
         flex-direction: row;
 
         .ft-contact,
         .ft-about,
         .ft-website {
+            -ms-flex: 1 0 100%;
             flex-basis: 100%;
         }
 
         .ft-social {
+            -ms-flex: 1 0 100%;
             flex-basis: 100%;
+
+            -ms-flex-pack: justify;
             justify-content: space-between;
         }
 

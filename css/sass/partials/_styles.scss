@@ -42,15 +42,18 @@ $bs-theme:     #67809f;      //     Bespoke Software                 -- Light Bl
 //---------------------     FLEX CLASSES    --------------------------------------------------------------------
 
 .flexy {
+  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-c {
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .flex-break {
   // flex-basis: 1200px;
+  -ms-flex: 1 0 100%;
   flex-basis: 100%;     //--------  CHANGEED THIS RULE TO HAVE A PERCENTAGE VALUE, Need to check if it breaks.
   height: 0;
 }
