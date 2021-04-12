@@ -3534,7 +3534,7 @@ header .container img {
 .article-1 .title-img-wrap .title-img {
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../../assets/articles/10-tips.jpg");
+  background-image: url("../assets/articles/10-tips.jpg");
   background-size: 103%;
   transition: 0.1s ease-in-out;
   position: relative;
@@ -3575,7 +3575,7 @@ header .container img {
 .article-2 .title-img-wrap .title-img {
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../../assets/articles/it-call-handler.jpg");
+  background-image: url("../assets/articles/it-call-handler.jpg");
   background-size: 103%;
   transition: 0.1s ease-in-out;
   position: relative;
@@ -3616,7 +3616,7 @@ header .container img {
 .article-3 .title-img-wrap .title-img {
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../../assets/articles/notable-01-2021.jpg");
+  background-image: url("../assets/articles/notable-01-2021.jpg");
   background-size: 103%;
   transition: 0.1s ease-in-out;
   position: relative;

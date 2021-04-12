@@ -168,16 +168,16 @@
 //--------- This is the styling for each Article 
 
         .article-1 {
-            @include article-theme($wd-dt-theme, "../../assets/articles/10-tips.jpg");
+            @include article-theme($wd-dt-theme, "../assets/articles/10-tips.jpg");
         }
 
         .article-2 {
-            @include article-theme($btn-primary, "../../assets/articles/it-call-handler.jpg");
+            @include article-theme($btn-primary, "../assets/articles/it-call-handler.jpg");
             background: $btn-primary;
         }
 
         .article-3 {
-            @include article-theme($btn-primary, "../../assets/articles/notable-01-2021.jpg");
+            @include article-theme($btn-primary, "../assets/articles/notable-01-2021.jpg");
             background: $btn-primary;
         }
 
