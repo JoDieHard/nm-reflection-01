@@ -65,7 +65,7 @@ footer {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 
-        width: 300px;
+        width: 315px;
 
         cursor: pointer;
 
@@ -84,7 +84,7 @@ footer {
             -ms-flex: 1 0 60%;
             flex-basis: 60%;
 
-            width: 110px;
+            width: 120px;
             height: 55px;
             // padding: 5px 10px;
             margin-bottom: 30px;
@@ -172,11 +172,12 @@ footer {
         }
 
         .ft-social li {
-            width: calc(50% - 15px);   // CALC FUNCTION FOR MARGIN
+            // width: calc(50% - 15px);   // CALC FUNCTION FOR MARGIN
+            width: 100%;
         }
 
         .ft-social i {
-            width: 100%;
+            width: 40%;
         }
     }
 

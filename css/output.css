@@ -4167,7 +4167,7 @@ footer .container .ft-social {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 300px;
+  width: 315px;
   cursor: pointer;
 }
 footer .container .ft-social h2 {
@@ -4186,7 +4186,7 @@ footer .container .ft-social .soc-lin:hover {
 footer .container .ft-social i {
   -ms-flex: 1 0 60%;
   flex-basis: 60%;
-  width: 110px;
+  width: 120px;
   height: 55px;
   margin-bottom: 30px;
   background-color: rgba(0, 0, 0, 0.25);
@@ -4251,10 +4251,10 @@ footer .container .ft-website {
     justify-content: space-between;
   }
   footer .container .ft-social li {
-    width: calc(50% - 15px);
+    width: 100%;
   }
   footer .container .ft-social i {
-    width: 100%;
+    width: 40%;
   }
 }
 
