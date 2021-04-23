@@ -1,23 +1,28 @@
 
 .about-us {
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-pack: center;
+    justify-content: center;
 
     @media (max-width: $media-s) {          // MEDIUM BREAKPOINT CHANGES
         width: 100%;
     }
     .container {
         width: 550px;
-        margin-left: 250px;
+        margin-right: 635px;
         letter-spacing: .6px;
         line-height: 2em;
 
         @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
-            width: 970px;
+            width: 915px;
             margin-left: auto;
             margin-right: auto;
         }
 
         @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
-            width: 750px;
+            width: 720px;
             margin-left: auto;
             margin-right: auto;
         }

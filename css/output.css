@@ -1409,6 +1409,8 @@ header .container img {
   flex-direction: column;
   -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .banner h1 {
   font-size: 3em;
@@ -1424,14 +1426,13 @@ header .container img {
 .banner .banner-content {
   height: 247px;
   width: 1170px;
-  margin-left: 250px;
   margin-bottom: 100px;
   color: white;
   letter-spacing: 1px;
 }
-@media (max-width: 1050px) {
+@media (max-width: 1260px) {
   .banner .banner-content {
-    margin-left: 70px;
+    margin-left: 250px;
   }
 }
 @media (max-width: 992px) {
@@ -1525,7 +1526,12 @@ header .container img {
 }
 @media (max-width: 1260px) {
   .services-list .container {
-    width: 970px;
+    width: 920px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1260px) {
+  .services-list .container {
+    padding: 60px 0px;
   }
 }
 @media (max-width: 992px) {
@@ -1629,8 +1635,8 @@ header .container img {
 }
 @media (max-width: 1260px) {
   .services-list .container .s-card.s-bs {
-    width: 300px;
-    height: 350px;
+    width: 285px;
+    height: 356px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1829,7 +1835,7 @@ header .container img {
 }
 @media (max-width: 1260px) {
   .services-list .container .s-card.s-it {
-    width: 300px;
+    width: 285px;
     height: 350px;
     display: -ms-flexbox;
     display: flex;
@@ -2029,7 +2035,7 @@ header .container img {
 }
 @media (max-width: 1260px) {
   .services-list .container .s-card.s-dm {
-    width: 310px;
+    width: 285px;
     height: 350px;
     display: -ms-flexbox;
     display: flex;
@@ -2229,7 +2235,7 @@ header .container img {
 }
 @media (max-width: 1260px) {
   .services-list .container .s-card.s-ts {
-    width: 470px;
+    width: 445px;
     height: 312px;
     display: -ms-flexbox;
     display: flex;
@@ -2429,7 +2435,7 @@ header .container img {
 }
 @media (max-width: 1260px) {
   .services-list .container .s-card.s-wd {
-    width: 470px;
+    width: 445px;
     height: 312px;
     display: -ms-flexbox;
     display: flex;
@@ -2629,7 +2635,7 @@ header .container img {
 }
 @media (max-width: 1260px) {
   .services-list .container .s-card.s-cs {
-    width: 470px;
+    width: 445px;
     height: 312px;
     display: -ms-flexbox;
     display: flex;
@@ -2829,7 +2835,7 @@ header .container img {
 }
 @media (max-width: 1260px) {
   .services-list .container .s-card.s-dt {
-    width: 470px;
+    width: 445px;
     height: 312px;
     display: -ms-flexbox;
     display: flex;
@@ -3063,6 +3069,12 @@ header .container img {
   }
 }
 
+.about-us {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 @media (max-width: 767px) {
   .about-us {
     width: 100%;
@@ -3070,21 +3082,21 @@ header .container img {
 }
 .about-us .container {
   width: 550px;
-  margin-left: 250px;
+  margin-right: 635px;
   letter-spacing: 0.6px;
   line-height: 2em;
   color: white;
 }
 @media (max-width: 1260px) {
   .about-us .container {
-    width: 970px;
+    width: 915px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media (max-width: 992px) {
   .about-us .container {
-    width: 750px;
+    width: 720px;
     margin-left: auto;
     margin-right: auto;
   }
