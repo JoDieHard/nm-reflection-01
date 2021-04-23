@@ -209,9 +209,10 @@ header .container {
   }
 }
 header .container img {
-  padding-right: 85px;
+  padding-right: 80px;
   height: 65px;
   width: auto;
+  margin-left: 6px;
 }
 @media (max-width: 992px) {
   header .container img {
@@ -345,6 +346,11 @@ header .container img {
   border: none;
   font-size: 0.85rem;
   padding: 5px 5px 5px 15px;
+}
+#search-box .search-field:focus {
+  box-shadow: insettset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+  outline: 0;
+  border: 1px solid #5bc0de;
 }
 @media (max-width: 992px) {
   #search-box .search-field {
@@ -521,8 +527,8 @@ header .container img {
   opacity: 0.15;
 }
 #menu-btn i {
-  margin-top: 7px;
-  margin-bottom: -18px;
+  margin-top: -3px;
+  margin-bottom: -6px;
   font-size: 2.5rem;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -605,6 +611,7 @@ header .container img {
   margin-top: 30px;
   line-height: 16px;
   letter-spacing: 0.5px;
+  cursor: pointer;
 }
 @media (max-width: 1260px) {
   .main-nav .container .main-li {
@@ -729,7 +736,7 @@ header .container img {
 .nav-drop.wd-drop .contain li:nth-child(4)::after,
 .nav-drop.wd-drop .contain li:nth-child(5)::after {
   content: " — ";
-  margin-left: 30px;
+  margin-left: 25px;
   width: 30px;
 }
 .nav-drop.wd-drop .contain li:first-child {
@@ -894,7 +901,7 @@ header .container img {
 .nav-drop.bs-drop .contain li:nth-child(4)::after,
 .nav-drop.bs-drop .contain li:nth-child(5)::after {
   content: " — ";
-  margin-left: 25px;
+  margin-left: 22.5px;
   width: 30px;
 }
 .nav-drop.bs-drop .contain li:first-child {
@@ -1004,7 +1011,7 @@ header .container img {
 .nav-drop.cs-drop .contain li:nth-child(4)::after,
 .nav-drop.cs-drop .contain li:nth-child(5)::after {
   content: " — ";
-  margin-left: 27px;
+  margin-left: 25px;
   width: 30px;
 }
 .nav-drop.cs-drop .contain li:first-child {
@@ -4030,6 +4037,11 @@ header .container img {
   padding: 5px 15px 5px 5px;
   margin-bottom: 0px;
   padding-left: 20px;
+}
+.newsletter .container input[type=text]:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+  outline: 0;
+  border: 1px solid #5bc0de;
 }
 @media (max-width: 1260px) {
   .newsletter .container input[type=text] {
