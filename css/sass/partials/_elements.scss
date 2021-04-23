@@ -206,6 +206,8 @@
     border-radius: 3px;
     padding: 20px;
 
+    cursor: pointer;
+
     @media (max-width: $media-s)      {     // BREAKPOINT SMALL CHANGE
         padding: 30px 20px;
     }        
@@ -290,7 +292,7 @@
 //--------------------------------------------------------------------------------------------------
 //-----------------------------   ARTICLES CARD MIXIN   --------------------------------------------
 
-@mixin card-a($width: 367px, $height: 610px) {
+@mixin card-a($width: 367px, $height: 580px) {
 
     width: $width;
     height: $height;
@@ -304,6 +306,10 @@
     background: white;
     border: solid $grey 1px;
     border-radius: 3px;
+
+    @media (min-width: $media-s) and (max-width: $media-m) {                  // MEDIUM BREAKPOINT CHANGE
+        margin: 40px 15px;
+    }
 
     @media (max-width: $media-s) {           // SMALL BREAKPOINT CHANGE
         margin: 15px auto;
@@ -355,9 +361,14 @@
         width: 100%;
         overflow: hidden;
         position: relative;
+
+        @media (max-width: $media-l) {                  // LARGE BREAKPOINT CHANGE
+           height: 270px;
+        }
         
         @media (max-width: $media-m) {           // MEDIUM BREAKPOINT CHANGE
-            margin-top: -15px;
+            margin-top: -8px;
+            height: 210px;
         }
 
         @media (max-width: $media-s) {           // SMALL BREAKPOINT CHANGE
@@ -419,8 +430,9 @@
     .title {
         color: $theme;
         font-size: 1rem;
-        letter-spacing: .6px;
+        letter-spacing: .5px;
         font-weight: 600;
+        margin-bottom: 0px;
     }
 
     & .label, .btn {

@@ -10,12 +10,12 @@
     font-weight: 400;
     letter-spacing: .6px;
     color: $primary-colour;
-    width: 1186px;
+    width: 1180px;
     margin: 0px auto;
     position: relative;
 
     @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGE
-        width: 770px;
+        width: 950px;
     }
     
     @media (max-width: $media-m) {          // LARGE BREAKPOINT CHANGE
@@ -42,8 +42,9 @@
             // margin-right: 790px;
         }
 
-        @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGE
+        @media (min-width: $media-s) and (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGE
             // margin-right: 690px;
+            left: 10px;
         }
 
         @media (max-width: $media-s) {          // SMALL BREAKPOINT CHANGE
@@ -71,8 +72,12 @@
     .article-item {
         @include card-a();
 
+        @media (max-width: $media-l) {                  // MEDIUM BREAKPOINT CHANGE
+            @include card-a(455px, 630px);
+        }
+
         @media (max-width: $media-m) {                  // MEDIUM BREAKPOINT CHANGE
-            @include card-a(350px, 600px);
+            @include card-a(350px, 560px);
         }
 
         @media (max-width: $media-s) {                  // MEDIUM BREAKPOINT CHANGE
@@ -88,7 +93,7 @@
         }
 
         .article-desc {
-            height: 280px;
+            height: 270px;
 
             -ms-flex-direction: column;
             flex-direction: column;
@@ -97,6 +102,10 @@
             justify-content: flex-start;
 
             padding: 10px 30px;
+
+            @media (max-width: $media-s) {                  // MEDIUM BREAKPOINT CHANGE
+                height: 230px;
+            }
 
             .title a {
                 text-decoration: none;
@@ -107,10 +116,15 @@
             }
 
             .desc {
-                margin-top: 20px;
+                // margin-top: 20px;
                 color: #666;
                 line-height: 1.6rem;
                 font-size: .9em;
+                height: 80px;
+
+                @media (max-width: $media-s) {                  // MEDIUM BREAKPOINT CHANGE
+                    height: auto;
+                }
             }
 
             .btn {
@@ -126,7 +140,7 @@
 
             &::after  {
                 content: " ";
-                margin-top: 10px;
+                margin-top: auto;
                 border-bottom: solid 1px $grey;
             }
         }

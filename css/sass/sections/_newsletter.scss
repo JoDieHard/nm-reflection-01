@@ -57,6 +57,7 @@
             height: 47px;
             padding: 5px 15px 5px 5px;
             margin-bottom: 0px;
+            padding-left: 20px;
 
             @media (max-width: $media-l) {      //  LARGE BREAKPOINT CHANGE
                 width: 425px; 
@@ -104,10 +105,16 @@
         margin-right: 10px;
         position: relative;
         visibility: hidden;
+        
 
         @media (max-width: $media-m) {      //  MEDIUM BREAKPOINT CHANGE
-            height: 200px; 
+            height: 40px; 
+            margin-bottom: 80px;
         }
+    }
+
+    strong {
+        cursor: pointer;
     }
 
     .custom-checkbox::before {
@@ -142,6 +149,7 @@
         // border: solid 1px red;      //Use this to see the checkmark's select boundary
         width: 34px;
         height: 34px;
+        cursor: pointer;
     }
 
 
