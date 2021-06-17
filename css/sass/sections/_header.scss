@@ -29,6 +29,9 @@ header .container {
       align-content:space-around;
       padding: 0px 5px;
    }
+   @media ( max-width: $media-xs ) {    // EXTRA SMALL BREAKPOINT CHANGE
+    margin-top: 5px;
+ }
 
      img {
          padding-right: 80px;
@@ -36,17 +39,24 @@ header .container {
          width: auto;
          margin-left: 6px;
 
-          @media (max-width: $media-m) {
+          @media (max-width: $media-m) {    // MEDIUM BREAKPOINT CHANGE
             padding-right: 45px;
             height: 60px;
         }
 
-        @media (max-width: $media-s) {
+        @media (max-width: $media-s) {      // SMALL BREAKPOINT CHANGE
           height: auto; 
           max-width: 457px;
-          width: calc(100% - 120px);
+          width: calc(100% - 140px);
           margin-right: auto;
           padding-left: 10px;
+      }
+
+      @media ( max-width: $media-xs ) {     // EXTRA SMALL BREAKPOINT CHANGE
+          padding-right: 15px;
+          padding-left: 2px;
+          margin-left: 8px; 
+          width: 65%;
       }
 
      }
@@ -107,10 +117,11 @@ header .container {
   height: 56px;
   margin: 0px 10px;
 
-  overflow: hidden;
+  // overflow: hidden;
 
   border: solid 1px $grey;
   border-radius: 3px;
+  // z-index: 10;
 
     .search-field {
         width: 240px;
@@ -122,19 +133,21 @@ header .container {
         padding: 5px 5px 5px 15px;
 
         &:focus {
-          box-shadow: insettset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
           outline: 0;
-          border: 1px solid #5bc0de;
+          border-color: #5bc0de;
+          box-shadow: 0px 0px 7px 3px rgba(91,192,222,0.2);
         }
 
         @media (max-width: $media-m) {      // MEDIUM BREAKPOINT CHANGE 
           width: 180px;
+          border: solid 1px #e5e5e5;
        }
        @media (max-width: $media-s) {      // MEDIUM BREAKPOINT CHANGE 
         width: 100%;
         background: transparent;
         padding-bottom: 16px;
         color: rgba(0, 0, 0, .6);
+        border: none;
      }
     }
 
@@ -155,12 +168,18 @@ header .container {
         
     }
 
-    @media (max-width: $media-s) {    //-------------- SMALL BREAKPOINT CHANGE
-      @include btn-default(63px, 56px, transparent, row);
-      color: $primary-colour;
-      right: 7.5px;
-      position: absolute;
-   }
+      @media ( max-width: $media-m ) {
+          border: solid 1px #999aa2;
+          border-radius: 0px 3px 3px 0px ;
+      }
+
+      @media (max-width: $media-s) {    //-------------- SMALL BREAKPOINT CHANGE
+        @include btn-default(63px, 56px, transparent, row);
+        color: $primary-colour;
+        right: 7.5px;
+        position: absolute;
+        border: none;
+    }
   }
 
     @media (max-width: $media-l) {     // LARGE SCREEN SIZE
@@ -169,6 +188,7 @@ header .container {
 
   @media (max-width: $media-m) {      // MEDIUM SCREEN SIZE
     width: 243px;
+    border: none;
  }
 
  @media (max-width: $media-s) {      //-------------- SMALL BREAKPOINT CHANGE
@@ -184,6 +204,9 @@ header .container {
     height: 47px;
     margin-top: 10px;
     border-radius: 2px;
+}
+@media ( max-width: $media-xs ) {    // EXTRA SMALL BREAKPOINT CHANGE
+  margin-top: 17.5px;
 }
 
 }

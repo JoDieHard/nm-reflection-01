@@ -67,6 +67,11 @@ header {
     height: 170px;
   }
 }
+@media (max-width: 420px) {
+  header {
+    height: 168px;
+  }
+}
 
 .main-nav {
   background-color: #333645;
@@ -208,6 +213,11 @@ header .container {
     padding: 0px 5px;
   }
 }
+@media (max-width: 420px) {
+  header .container {
+    margin-top: 5px;
+  }
+}
 header .container img {
   padding-right: 80px;
   height: 65px;
@@ -224,9 +234,17 @@ header .container img {
   header .container img {
     height: auto;
     max-width: 457px;
-    width: calc(100% - 120px);
+    width: calc(100% - 140px);
     margin-right: auto;
     padding-left: 10px;
+  }
+}
+@media (max-width: 420px) {
+  header .container img {
+    padding-right: 15px;
+    padding-left: 2px;
+    margin-left: 8px;
+    width: 65%;
   }
 }
 
@@ -335,7 +353,6 @@ header .container img {
   width: 303px;
   height: 56px;
   margin: 0px 10px;
-  overflow: hidden;
   border: solid 1px #ddd;
   border-radius: 3px;
 }
@@ -348,13 +365,14 @@ header .container img {
   padding: 5px 5px 5px 15px;
 }
 #search-box .search-field:focus {
-  box-shadow: insettset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
   outline: 0;
-  border: 1px solid #5bc0de;
+  border-color: #5bc0de;
+  box-shadow: 0px 0px 7px 3px rgba(91, 192, 222, 0.2);
 }
 @media (max-width: 992px) {
   #search-box .search-field {
     width: 180px;
+    border: solid 1px #e5e5e5;
   }
 }
 @media (max-width: 767px) {
@@ -363,6 +381,7 @@ header .container img {
     background: transparent;
     padding-bottom: 16px;
     color: rgba(0, 0, 0, 0.6);
+    border: none;
   }
 }
 #search-box .search-btn {
@@ -415,6 +434,12 @@ header .container img {
     font-size: 1.8rem;
   }
 }
+@media (max-width: 992px) {
+  #search-box .search-btn {
+    border: solid 1px #999aa2;
+    border-radius: 0px 3px 3px 0px;
+  }
+}
 @media (max-width: 767px) {
   #search-box .search-btn {
     height: 56px;
@@ -436,6 +461,7 @@ header .container img {
     color: #333645;
     right: 7.5px;
     position: absolute;
+    border: none;
   }
   #search-box .search-btn i, #search-box .search-btn p {
     z-index: 5;
@@ -467,6 +493,7 @@ header .container img {
 @media (max-width: 992px) {
   #search-box {
     width: 243px;
+    border: none;
   }
 }
 @media (max-width: 767px) {
@@ -480,6 +507,11 @@ header .container img {
     height: 47px;
     margin-top: 10px;
     border-radius: 2px;
+  }
+}
+@media (max-width: 420px) {
+  #search-box {
+    margin-top: 17.5px;
   }
 }
 
@@ -4185,6 +4217,7 @@ footer .container .ft-social {
 footer .container .ft-social h2 {
   -ms-flex: 1 0 100%;
   flex-basis: 100%;
+  margin-bottom: 17px;
 }
 footer .container .ft-social .soc-fb:hover {
   background-color: rgba(66, 103, 178, 0.7);

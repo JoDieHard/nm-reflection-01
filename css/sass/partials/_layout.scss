@@ -26,6 +26,9 @@ header {
     @media (max-width: $media-s) {      // MEDIUM SCREEN SIZE
         height: 170px;
      }
+     @media ( max-width: $media-xs ) {    // EXTRA SMALL BREAKPOINT CHANGE
+        height: 168px;
+     }
 }
 
 .main-nav {
