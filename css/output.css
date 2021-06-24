@@ -244,7 +244,7 @@ header .container img {
     padding-right: 15px;
     padding-left: 2px;
     margin-left: 8px;
-    width: 65%;
+    width: 58%;
   }
 }
 
@@ -3723,6 +3723,15 @@ header .container img {
   margin-top: auto;
   border-bottom: solid 1px #ddd;
 }
+@media (max-width: 420px) {
+  .articles .article-desc {
+    display: block;
+    padding: 0px;
+    padding-bottom: 10px;
+    margin: 10px 30px;
+    border-bottom: solid 1px #ddd;
+  }
+}
 .articles .article-credit {
   height: 100px;
   padding-top: 20px;
@@ -3744,6 +3753,11 @@ header .container img {
   color: #333645;
   font-weight: 600;
   font-size: 0.9em;
+}
+@media (max-width: 420px) {
+  .articles .article-credit strong {
+    margin-right: 25px;
+  }
 }
 .articles .article-credit p {
   line-height: 0px;
