@@ -54,8 +54,23 @@
   box-sizing: border-box;
 }
 
+.sidebar {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+}
+
+.website {
+  background: white;
+  transform: translate3d(0, 0, 50px);
+  transform: translate3d(-350px, 0, 50px);
+  transition: ease-in-out 0.25s;
+}
+
 .homepage {
   margin: 0px;
+  overflow-x: hidden;
 }
 
 header {
@@ -168,7 +183,7 @@ footer {
 .awards {
   background-color: white;
   padding-top: 40px;
-  margin-bottom: 35px;
+  padding-bottom: 35px;
   overflow: hidden;
 }
 @media (max-width: 1260px) {
@@ -1457,6 +1472,56 @@ header .container img {
     transition: color 0.1s ease-in-out;
   }
 }
+.sidebar {
+  width: 350px;
+  height: 100%;
+  text-transform: uppercase;
+  color: white;
+  line-height: 1.1rem;
+  background: #333645;
+  cursor: pointer;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+.sidebar ul li {
+  background: rgba(102, 102, 102, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  display: block;
+  margin: 0px;
+}
+.sidebar ul li a {
+  padding: 20px 20px 20px 20px;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+  letter-spacing: 0.025rem;
+  height: 56px;
+}
+.sidebar ul li ul li {
+  background-color: #282a36;
+}
+.sidebar ul li ul li a {
+  height: 51px;
+  font-size: 0.875rem;
+}
+.sidebar ul li ul li:hover {
+  background-color: #282a36;
+}
+.sidebar ul li ul li a::before {
+  content: "»";
+  color: white;
+  margin-right: 20px;
+}
+.sidebar ul li:hover {
+  background: rgba(102, 102, 102, 0.25);
+}
+
 .banner {
   display: -ms-flexbox;
   display: flex;
