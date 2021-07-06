@@ -1563,6 +1563,22 @@ header .container img {
   background: rgba(102, 102, 102, 0.25);
 }
 
+.slidingNav {
+  position: sticky;
+  top: 0px;
+  z-index: 500;
+  height: 0px;
+  transition: 0.5s ease-in-out;
+  transform: translateY(-210px);
+}
+.slidingNav header, .slidingNav .main-nav {
+  position: relative;
+  top: 0px;
+}
+.slidingNav header .nav-drop, .slidingNav .main-nav .nav-drop {
+  transform: translateY(-110px);
+}
+
 .banner {
   display: -ms-flexbox;
   display: flex;

@@ -1,0 +1,18 @@
+
+.slidingNav {
+    position: sticky;
+    top: 0px;
+    z-index: 500;
+    height: 0px;
+    transition: .5s ease-in-out;
+    transform: translateY(-210px);
+
+    header, .main-nav {
+        position: relative; 
+        top: 0px;
+
+        .nav-drop {
+            transform: translateY(-110px);
+        }
+    }
+}
