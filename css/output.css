@@ -57,15 +57,34 @@
 .sidebar {
   overflow-x: hidden;
   overflow-y: auto;
-  position: absolute;
+  position: fixed;
   right: 0;
 }
 
 .website {
   background: white;
   transform: translate3d(0, 0, 50px);
-  transform: translate3d(-350px, 0, 50px);
   transition: ease-in-out 0.25s;
+}
+.website::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  z-index: 10;
+  transition: 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.website.active {
+  transform: translate3d(-350px, 0, 50px);
+}
+.website.active::before {
+  pointer-events: all;
+  cursor: pointer;
+  opacity: 0.4;
 }
 
 .homepage {
@@ -76,6 +95,7 @@
 header {
   background-color: white;
   height: 110px;
+  transition: 2s ease-in-out;
 }
 @media (max-width: 767px) {
   header {
@@ -608,16 +628,16 @@ header .container img {
   transition: transform 150ms ease-in-out 0ms, opacity 100ms ease-in-out 160ms;
 }
 
-.hamburger-box.active .hb-inner, .hamburger-box.active .hb-top, .hamburger-box.active .hb-bottom {
+.website.active header .container #menu-btn .hamburger-box .hb-inner, .website.active header .container #menu-btn .hamburger-box .hb-top, .website.active header .container #menu-btn .hamburger-box .hb-bottom {
   transition: transform 160ms ease-in-out 160ms, opacity 100ms ease-in-out 0s;
 }
-.hamburger-box.active .hb-top {
+.website.active header .container #menu-btn .hamburger-box .hb-top {
   transform: translate3d(0px, 7.7px, 0px) rotate(45deg) scaleY(0.75);
 }
-.hamburger-box.active .hb-inner {
+.website.active header .container #menu-btn .hamburger-box .hb-inner {
   opacity: 0;
 }
-.hamburger-box.active .hb-bottom {
+.website.active header .container #menu-btn .hamburger-box .hb-bottom {
   transform: translate3d(0px, -7.7px, 0px) rotate(-45deg) scaleY(0.75);
 }
 

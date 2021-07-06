@@ -266,13 +266,13 @@ header .container {
     }
   }
 
-  .hamburger-box.active {
-
-    .hb-inner, .hb-top, .hb-bottom {  transition: transform 160ms ease-in-out 160ms, opacity 100ms ease-in-out 0s; } // Transition Property From X
-
-    .hb-top {   transform: translate3d(0px, 7.7px, 0px) rotate(45deg) scaleY(0.75);  }
-    .hb-inner {   opacity: 0; }
-    .hb-bottom {  transform: translate3d(0px, -7.7px, 0px) rotate(-45deg ) scaleY(0.75);  }
+//---------   HAMBURGER ICON & ANIMATION { FROM WEBSITE CLASS }
+  .website.active header .container #menu-btn .hamburger-box {
+      .hb-inner, .hb-top, .hb-bottom {  transition: transform 160ms ease-in-out 160ms, opacity 100ms ease-in-out 0s; } // Transition Property From X
+  
+      .hb-top {   transform: translate3d(0px, 7.7px, 0px) rotate(45deg) scaleY(0.75);  }
+      .hb-inner {   opacity: 0; }
+      .hb-bottom {  transform: translate3d(0px, -7.7px, 0px) rotate(-45deg ) scaleY(0.75);  }
   }
 
 //--------------------------------------------------------------------------------------------------
@@ -295,3 +295,4 @@ header .container {
     display: none;
   }
 }
+
