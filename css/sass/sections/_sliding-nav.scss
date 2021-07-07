@@ -1,11 +1,12 @@
 
 .slidingNav {
-    position: sticky;
-    top: 0px;
-    z-index: 500;
-    height: 0px;
+    position: fixed;
+    top: -210px;
+    z-index: 50;
+    height: 210px;
+    width: 100%;
     transition: .5s ease-in-out;
-    transform: translateY(-210px);
+    transform: translateY(210px);
 
     header, .main-nav {
         position: relative; 
