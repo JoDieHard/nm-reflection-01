@@ -2,7 +2,7 @@
 .slidingNav {
     position: fixed;
     top: -210px;
-    z-index: 50;
+    z-index: 19;
     height: 210px;
     width: 100%;
     transition: .5s ease-in-out;
@@ -17,3 +17,10 @@
         }
     }
 }
+
+
+//----- Styling if Sidebar menu is active 
+
+// .website.active .slidingNav {
+//     transform: translateX(-350px) !important;
+// }

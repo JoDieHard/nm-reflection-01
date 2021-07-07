@@ -14,12 +14,12 @@ $( window ).scroll( function(event) {
         }, 500);
 
         if ( $('.slidingNav').length === 0) {   // Check there is no navSliders befor making another
-            console.log('There is no slidingNav!');
+            // console.log('There is no slidingNav!');
             createDiv();
             setTimeout(function(){ 
                 $('header').clone().appendTo('.slidingNav');
                 $('.main-nav').clone().appendTo('.slidingNav');
-                console.log('cloned the shits');
+                // console.log('cloned the menus');
             }, 1000);
         }
         // console.log('scrolling down...');

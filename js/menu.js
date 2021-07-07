@@ -7,9 +7,11 @@ const homepage = $('.homepage'); // Homepage {Event Handler}
         // If Event Target is menuBtn AND Website does NOT have the class 'active'
         if  ( event.target.classList.contains('headerBtn') && !website.hasClass('active') ) {   
             website.addClass('active');
+            $( 'html' ).css('overflow', 'hidden');
 
         // Else If Event Target is website AND website does have the class 'active'
         } else if ( event.target.classList.contains('website') && website.hasClass('active') ) {
             website.removeClass('active');
+            $( 'html' ).css('overflow', 'auto');
         };
     });

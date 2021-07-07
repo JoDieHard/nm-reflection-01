@@ -1,0 +1,224 @@
+
+//All Cookie Application Styling 
+#cookie-app {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+
+    background: rgba(0,0,0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //Cookie Container Styles
+    .cookie-container {
+        // position: relative;
+        background: white;
+        // margin: auto;
+        width: 480px;
+        border-radius: 3px;
+        border: 1px solid rgba(0,0,0,.2);
+        box-shadow: 0 5px 15px rgb(0,0,0,0.5);
+    }
+}
+
+// Modal Header Styles
+.modal-header {
+    border-bottom: 1px solid #e5e5e5;
+    h3 {
+        padding: 11px 17px;
+        // text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1.325rem;
+        margin: 0;
+        color: #333645;
+    }
+
+}
+// Modal Body Styles
+.modal-body {
+    padding: 3px 16px;
+    p {
+        font-size: .8rem;
+        line-height: 1.5rem;
+        letter-spacing: .3px;
+        color: #666;
+    }
+    p:nth-child(1) {
+        margin-bottom: 20px;
+    }
+}
+// Cookie Modal Footer
+.modal-footer {
+    padding: 15px 17.5px;
+    border-top: 1px solid #e5e5e5;
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+// Cookies Setttings Styles -------------------------
+
+.cookie-settings {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.settings-container {
+    width: 935px;
+    margin-bottom: 10px;
+    color: #333645;
+
+    // Text Styling ------------------------
+    h1, h3, h5 {
+        font-weight: 400;
+        margin: 0;
+        letter-spacing: .3px;
+        margin-bottom: 8px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+    }
+
+    h3 {
+        font-size: 1.32rem;
+        margin-bottom: 8px;
+        margin-top: 20px;
+    }
+
+    h5, ul li {
+        font-size: 0.7rem;
+        letter-spacing: .3px;
+        line-height: .8rem;
+        color: #666;
+    }
+    h4 {
+        font-size: .8rem;
+        margin-top: 0px;
+        margin-bottom: 3px;
+        line-height: 13px;
+        letter-spacing: .4px;
+    }
+
+    ul {
+        margin-top: 12px;
+        margin-bottom: 0px;
+        li {
+            margin-left: -10px;
+            line-height: 1.2rem;
+            font-size: .8rem;
+
+            a, a:link, a:visited {
+                color: #333645;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+
+}
+
+.settings-buttons {
+    width: auto; 
+    margin-top: 0px;
+    margin-bottom: 10px;
+    height: 38px;
+
+}
+
+
+
+//Cookies Button Styling ---------------------------
+
+    // Shared Cookie Modal Button Styles
+    .cookies-accept-btn, .cookies-settings-btn, .disable-btn, .enable-btn, .table-btn {
+        padding: 9px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        border-radius: 3px;
+        font-size: .85rem;
+        letter-spacing: .3px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    // Accept Button Styling
+    .cookies-accept-btn, .disable-btn, .accept {
+        background: #926fb1;
+        margin-left: 12.5px; 
+        border: solid 1px #7e57a0;
+
+        &:hover {
+            background-color: #7e57a0;
+            border-color: #735093;
+        }
+    }
+
+    // Cookie Settings Button Styling
+    .cookies-settings-btn, .enable-btn {
+        background: #999aa2;
+        border: solid 1px #84858f;
+        margin-right: 12.5px; 
+
+        &:hover {
+            background-color: #84858f;
+            border-color: #797a85;
+        }
+    }
+
+    .disable-btn, .enable-btn {
+        padding: 8px 11px;
+        width: auto;
+        float: right;
+        margin: 0px 2.5px;
+    }
+
+    .table-btn {
+        float: left;
+        width: auto;
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+
+    .enable-btn {
+        background-color: white;
+        color: #AAA;
+        border-color: #eee;
+
+        &:hover {
+            background-color: inherit;
+            border-color: #eee;
+        }
+    }
+
+    .accept, .cancel {
+        width: auto;
+        float: right;
+        margin: 2px 2px 17.5px;
+        padding: 8px 12px;
+    }
+    
