@@ -234,9 +234,8 @@ footer {
   height: 100%;
   z-index: 30;
   opacity: 0;
-  visibility: hidden;
+  display: none;
   background: rgba(0, 0, 0, 0.6);
-  display: flex;
   justify-content: center;
   align-items: center;
   transition: opacity 0.2s ease-in-out;
@@ -286,7 +285,7 @@ footer {
 }
 
 .cookie-settings {
-  visibility: hidden;
+  display: none;
   width: 100%;
   height: 100%;
   overflow-y: auto;
@@ -294,7 +293,6 @@ footer {
   left: 0;
   top: 0;
   background: white;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -319,7 +317,7 @@ footer {
 .settings-container h3 {
   font-size: 1.625rem;
   margin-bottom: 9px;
-  margin-top: 300px;
+  margin-top: 320px;
 }
 .settings-container h5, .settings-container ul li {
   font-size: 0.875rem;
@@ -434,6 +432,35 @@ footer {
 .active-setting:hover {
   background-color: #7e57a0 !important;
   border-color: #735093 !important;
+}
+
+table, th, td {
+  background: #eee;
+  margin: 5px;
+  border: solid 1px white;
+  border-collapse: collapse;
+  color: #666;
+}
+
+td {
+  background: #ddd;
+  padding: 15px;
+  height: 20px;
+}
+td .settings-buttons {
+  margin: 0px;
+}
+
+th {
+  background: #aaa;
+  color: white;
+  padding: 5px;
+  text-align: left;
+}
+
+.table {
+  float: left;
+  display: none;
 }
 
 .sidebar {

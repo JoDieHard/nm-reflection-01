@@ -6,11 +6,12 @@
     height: 100%;
     z-index: 30;
     opacity: 0;
-    visibility: hidden;
+    // visibility: hidden;
+    display: none;
 
     background: rgba(0,0,0, 0.6);
 
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
 
@@ -73,7 +74,8 @@
 // Cookies Setttings Styles -------------------------
 
 .cookie-settings {
-    visibility: hidden;  // Don't display the settings
+    // visibility: hidden;  // Don't display the settings
+    display: none;
 
     width: 100%;
     height: 100%;
@@ -85,7 +87,7 @@
     
     background: white;
 
-    display: flex;
+    // display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -114,7 +116,7 @@
     h3 {
         font-size: 1.625rem;
         margin-bottom: 9px;
-        margin-top: 300px;      // Moves Settings into screen
+        margin-top: 320px;      // Moves Settings into screen
     }
 
     h5, ul li {
@@ -249,3 +251,36 @@
             border-color: #735093 !important;
         }
     }
+
+
+table, th, td {
+    background: #eee;
+    margin: 5px;
+    border: solid 1px white;
+    border-collapse: collapse;
+    color: #666;
+
+}
+
+td {
+    background: #ddd;
+    padding: 15px;
+    height: 20px;
+
+    .settings-buttons {
+        margin: 0px;
+
+    }
+}
+
+th {
+    background: #aaa;
+    color: white;
+    padding: 5px;
+    text-align: left;
+}
+
+.table {
+    float: left;
+    display: none;
+}

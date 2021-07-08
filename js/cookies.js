@@ -24,7 +24,7 @@
 
         if ( cookiesCheck === "true") {
             // console.log('Cookies are allowed!');
-            $('#cookie-app').css("visibility", "hidden");
+            $('#cookie-app').css("display", "none");
             $('#cookie-app').css("opacity", "0");
 
             localStorage.setItem('fcSetting', fcSetting);
@@ -32,8 +32,9 @@
 
         } else { 
             // console.log('cookies haven't been accepted');
-            $('#cookie-app').css("visibility", "visible");
+            $('#cookie-app').css("display", "flex");
             $('#cookie-app').css("opacity", "1");
+            $( 'html' ).css('overflow', 'hidden');      // Disable scrolling
 
             // Disable Advanced Cookie Settings
             localStorage.setItem('fcSetting', "disabled");
@@ -41,27 +42,35 @@
         }
     });
 
-
-
-
-
-
     // Clicked COOKIES ACCEPT Buttton
     $('.cookies-accept-btn').on("click", function () {
         localStorage.setItem('cookies', true);
         localStorage.setItem('fcSetting', fcSetting)
         localStorage.setItem('paSetting', paSetting)
         $('#cookie-app').css('opacity', '0');
+        $('#cookie-app').css("display", "none");
+        $( 'html' ).css('overflow', 'auto');      // Enable scrolling
     });
 
     // Clicked COOKIES SETTINGS Button
     $('#cookies-settings').on("click", function () {
-        $('#cookieSettings').css('visibility', 'visible');
+        $('#cookieSettings').css('display', 'flex');
     });
 
     // Clicked the SETTINGS CANCEL Button
     $('#cancelSettings').on("click", function () {
-        $('#cookieSettings').css('visibility', 'hidden');
+        $('#cookieSettings').css('display', 'none');
+    });
+
+    // Clicked the DETAILED PREFERENCES Button
+    $('.table-btn').on("click", function () {
+        if ( $('.table').css('display') == 'none' ) {
+        $('.table').css('display', 'flex');
+        $('.settings-container h3').css('marginTop', '850px')
+        } else {
+            $('.table').css('display', 'none');
+            $('.settings-container h3').css('marginTop', '320px')
+        }
     });
 
 
