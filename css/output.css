@@ -233,14 +233,17 @@ footer {
   width: 100%;
   height: 100%;
   z-index: 30;
+  opacity: 0;
+  visibility: hidden;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.2s ease-in-out;
 }
 #cookie-app .cookie-container {
   background: white;
-  width: 480px;
+  width: 600px;
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -248,40 +251,46 @@ footer {
 
 .modal-header {
   border-bottom: 1px solid #e5e5e5;
+  width: 100%;
 }
 .modal-header h3 {
-  padding: 11px 17px;
+  padding: 20px 20px 15px;
   font-weight: 300;
-  font-size: 1.325rem;
+  font-size: 1.625rem;
   margin: 0;
+  margin-top: -5px;
   color: #333645;
 }
 
 .modal-body {
-  padding: 3px 16px;
+  padding: 3px 22px;
+  margin: 0px 1px;
 }
 .modal-body p {
-  font-size: 0.8rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.875rem;
   letter-spacing: 0.3px;
   color: #666;
 }
 .modal-body p:nth-child(1) {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .modal-footer {
-  padding: 15px 17.5px;
+  padding: 15px 20px 20px;
   border-top: 1px solid #e5e5e5;
+  height: 100%;
+  padding-top: 20px;
   display: flex;
   flex-direction: row;
 }
 
 .cookie-settings {
+  visibility: hidden;
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   background: white;
@@ -292,7 +301,7 @@ footer {
 }
 
 .settings-container {
-  width: 935px;
+  width: 1170px;
   margin-bottom: 10px;
   color: #333645;
 }
@@ -300,40 +309,46 @@ footer {
   font-weight: 400;
   margin: 0;
   letter-spacing: 0.3px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 .settings-container h1 {
-  font-size: 1.8rem;
-  margin-bottom: 16px;
+  font-size: 2.25rem;
+  margin-bottom: 20px;
+  margin-top: 5px;
 }
 .settings-container h3 {
-  font-size: 1.32rem;
-  margin-bottom: 8px;
-  margin-top: 20px;
+  font-size: 1.625rem;
+  margin-bottom: 9px;
+  margin-top: 300px;
 }
 .settings-container h5, .settings-container ul li {
-  font-size: 0.7rem;
-  letter-spacing: 0.3px;
-  line-height: 0.8rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.4px;
+  line-height: 1.1;
   color: #666;
 }
 .settings-container h4 {
-  font-size: 0.8rem;
-  margin-top: 0px;
+  font-size: 1rem;
+  margin-top: 5px;
   margin-bottom: 3px;
   line-height: 13px;
   letter-spacing: 0.4px;
 }
 .settings-container ul {
-  margin-top: 12px;
+  margin-top: 17px;
   margin-bottom: 0px;
+  margin-left: 10px;
 }
 .settings-container ul li {
   margin-left: -10px;
   line-height: 1.2rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+.settings-container ul li span {
+  font-size: 1rem;
 }
 .settings-container ul li a, .settings-container ul li a:link, .settings-container ul li a:visited {
+  font-size: 1rem;
   color: #333645;
   text-decoration: none;
 }
@@ -343,46 +358,46 @@ footer {
 
 .settings-buttons {
   width: auto;
-  margin-top: 0px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 40px;
   height: 38px;
 }
 
-.cookies-accept-btn, .cookies-settings-btn, .disable-btn, .enable-btn, .table-btn {
+.cookies-accept-btn, .cookies-settings-btn, .toggle-btn, .table-btn {
   padding: 9px;
   width: 100%;
   text-align: center;
   color: white;
   text-transform: uppercase;
   border-radius: 3px;
-  font-size: 0.85rem;
+  font-size: 1.063rem;
   letter-spacing: 0.3px;
   cursor: pointer;
   outline: none;
 }
 
-.cookies-accept-btn, .disable-btn, .accept {
+.cookies-accept-btn, .accept {
   background: #926fb1;
   margin-left: 12.5px;
   border: solid 1px #7e57a0;
 }
-.cookies-accept-btn:hover, .disable-btn:hover, .accept:hover {
+.cookies-accept-btn:hover, .accept:hover {
   background-color: #7e57a0;
   border-color: #735093;
 }
 
-.cookies-settings-btn, .enable-btn {
+.cookies-settings-btn, .toggle-btn {
   background: #999aa2;
   border: solid 1px #84858f;
   margin-right: 12.5px;
 }
-.cookies-settings-btn:hover, .enable-btn:hover {
+.cookies-settings-btn:hover, .toggle-btn:hover {
   background-color: #84858f;
   border-color: #797a85;
 }
 
-.disable-btn, .enable-btn {
-  padding: 8px 11px;
+.toggle-btn {
+  padding: 10px 14px;
   width: auto;
   float: right;
   margin: 0px 2.5px;
@@ -395,12 +410,12 @@ footer {
   margin-top: 15px;
 }
 
-.enable-btn {
+.toggle-btn {
   background-color: white;
   color: #AAA;
   border-color: #eee;
 }
-.enable-btn:hover {
+.toggle-btn:hover {
   background-color: inherit;
   border-color: #eee;
 }
@@ -409,7 +424,16 @@ footer {
   width: auto;
   float: right;
   margin: 2px 2px 17.5px;
-  padding: 8px 12px;
+  padding: 9px 15px;
+}
+
+.active-setting {
+  background-color: #926fb1 !important;
+  color: white !important;
+}
+.active-setting:hover {
+  background-color: #7e57a0 !important;
+  border-color: #735093 !important;
 }
 
 .sidebar {

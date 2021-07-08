@@ -30,7 +30,7 @@
         <div id="cookie-app">
             <div class="cookie-container">
                 <!-- Cookies Settings -->
-                <div class="cookie-settings">
+                <div class="cookie-settings" id="cookieSettings">
 
                     <!-- Settings Container 1 -->
                     <div class="settings-container">
@@ -46,9 +46,9 @@
                         <h5>Functional cookies allow our website to remember choices you make, such as your user name, log in details or language preferences, and any customisations you make to pages on our website during your visit.</h5>
                         <h4>Examples of how we use these cookies include:</h4>
                         <ul><li>Live chat</li></ul>
-                        <div class="settings-buttons">
-                            <button type="button" class="enable-btn">Enable</button>
-                            <button type="button" class="disable-btn">Disable</button>
+                        <div class="settings-buttons" id="functionalCookies">
+                            <button type="button" class="enable-btn toggle-btn">Enable</button>
+                            <button type="button" class="disable-btn toggle-btn active-setting">Disable</button>
                         </div>
                     </div>
 
@@ -58,13 +58,13 @@
                         <h5>These cookies help us understand how people use our website. They collect information such as which pages on our website visitors go to most often, which features they use, and which websites people have visited before they visit ours. We use this information to improve our website and provide a better user experience.</h5>
                         <h4>Examples of how we use these cookies include:</h4>
                         <ul>
-                            <li>Monitoring and providing statistics on how our website is used.</li>
-                            <li>Helping us improve our website by measuring any errors that occur.</li>
-                            <li>Testing the website's design and operability</li>
+                            <li><span>Monitoring and providing statistics on how our website is used.</span></li>
+                            <li><span>Helping us improve our website by measuring any errors that occur.</span></li>
+                            <li><span>Testing the website's design and operability</span></li>
                         </ul>
-                        <div class="settings-buttons">
-                            <button type="button" class="enable-btn">Enable</button>
-                            <button type="button" class="disable-btn">Disable</button>
+                        <div class="settings-buttons" id="performanceAnalytics">
+                            <button type="button" class="enable-btn toggle-btn">Enable</button>
+                            <button type="button" class="disable-btn toggle-btn active-setting">Disable</button>
 
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                     <div class="settings-container">
                         <div class="settings-buttons">
                             <button type="button" class="cookies-accept-btn accept">Accept Cookies</button>
-                            <button type="button" class="cookies-settings-btn cancel">Cancel</button>
+                            <button type="button" class="cookies-settings-btn cancel" id="cancelSettings">Cancel</button>
                         </div>
                     </div>
                 </div>
@@ -105,8 +105,8 @@
                         <p>You can see a list of the other companies who use cookies on this website, by visiting cookie settings at the bottom of each page. For full details of how we use your personal information, and your rights in relation to it, view our privacy policy.</p>
                     </div>
                     <div class="modal-footer">
-                        <a class="cookies-settings-btn">Change Settings</a>
-                        <a class="cookies-accept-btn">Accept Cookies</a>
+                        <a class="cookies-settings-btn" id="cookies-settings">Change Settings</a>
+                        <a class="cookies-accept-btn" id="cookies-accept">Accept Cookies</a>
                     </div>
                 </div>
             </div>
