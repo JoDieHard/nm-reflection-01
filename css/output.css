@@ -119,10 +119,6 @@ header {
 }
 
 .banner {
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/web.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 200px 0px;
   overflow: hidden;
 }
 
@@ -1821,14 +1817,7 @@ header .container img {
   }
 }
 .banner {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
+  position: relative;
 }
 .banner h1 {
   font-size: 3em;
@@ -1842,9 +1831,9 @@ header .container img {
   line-height: 2em;
 }
 .banner .banner-content {
-  height: 247px;
-  width: 1170px;
   margin-bottom: 100px;
+  margin-left: 200px;
+  margin-right: auto;
   color: white;
   letter-spacing: 1px;
 }
@@ -1869,6 +1858,47 @@ header .container img {
   }
 }
 .banner .btn-arrw {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  font-size: 1.3em;
+  padding: 5px 15px;
+}
+.banner .btn-arrw p {
+  font-size: 1.3rem;
+  padding-top: 4px;
+  margin-right: 10px;
+}
+.banner .btn-arrw i {
+  margin-top: 5px;
+}
+@media (max-width: 992px) {
+  .banner .btn-arrw {
+    margin: 0 auto;
+  }
+}
+
+.banner-container {
+  min-height: 500px;
+  height: 80vh;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  padding: 200px 0px;
+  color: white;
+  position: absolute;
+  width: 100%;
+  min-height: 500px;
+  height: 80vh;
+}
+
+.banner-container .carousel-item:nth-of-type(1) {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/web.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-container .carousel-item:nth-of-type(1) .banner-content .btn-arrw {
   height: 62px;
   width: 225px;
   background: #926fb1;
@@ -1885,19 +1915,15 @@ header .container img {
   border: none;
   border-radius: 3px;
   position: relative;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  font-size: 1.3em;
-  padding: 5px 15px;
 }
-.banner .btn-arrw i, .banner .btn-arrw p {
+.banner-container .carousel-item:nth-of-type(1) .banner-content .btn-arrw i, .banner-container .carousel-item:nth-of-type(1) .banner-content .btn-arrw p {
   z-index: 5;
 }
-.banner .btn-arrw {
+.banner-container .carousel-item:nth-of-type(1) .banner-content .btn-arrw {
   overflow: hidden;
   cursor: pointer;
 }
-.banner .btn-arrw::before {
+.banner-container .carousel-item:nth-of-type(1) .banner-content .btn-arrw::before {
   content: " ";
   width: 100%;
   height: 100%;
@@ -1908,17 +1934,277 @@ header .container img {
   top: 0;
   transition: opacity 0.05s linear;
 }
-.banner .btn-arrw:hover::before {
+.banner-container .carousel-item:nth-of-type(1) .banner-content .btn-arrw:hover::before {
   opacity: 0.15;
 }
-.banner .btn-arrw p {
-  font-size: 1.3rem;
-  padding-top: 4px;
+
+.banner-container .carousel-item:nth-of-type(2) {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/it-support.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(100%);
 }
-@media (max-width: 992px) {
-  .banner .btn-arrw {
-    margin: 0 auto;
-  }
+.banner-container .carousel-item:nth-of-type(2) .banner-content .btn-arrw {
+  height: 62px;
+  width: 225px;
+  background: #4183d7;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  position: relative;
+}
+.banner-container .carousel-item:nth-of-type(2) .banner-content .btn-arrw i, .banner-container .carousel-item:nth-of-type(2) .banner-content .btn-arrw p {
+  z-index: 5;
+}
+.banner-container .carousel-item:nth-of-type(2) .banner-content .btn-arrw {
+  overflow: hidden;
+  cursor: pointer;
+}
+.banner-container .carousel-item:nth-of-type(2) .banner-content .btn-arrw::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.banner-container .carousel-item:nth-of-type(2) .banner-content .btn-arrw:hover::before {
+  opacity: 0.15;
+}
+
+.banner-container .carousel-item:nth-of-type(3) {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/telecoms.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(200%);
+}
+.banner-container .carousel-item:nth-of-type(3) .banner-content .btn-arrw {
+  height: 62px;
+  width: 225px;
+  background: #d64541;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  position: relative;
+}
+.banner-container .carousel-item:nth-of-type(3) .banner-content .btn-arrw i, .banner-container .carousel-item:nth-of-type(3) .banner-content .btn-arrw p {
+  z-index: 5;
+}
+.banner-container .carousel-item:nth-of-type(3) .banner-content .btn-arrw {
+  overflow: hidden;
+  cursor: pointer;
+}
+.banner-container .carousel-item:nth-of-type(3) .banner-content .btn-arrw::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.banner-container .carousel-item:nth-of-type(3) .banner-content .btn-arrw:hover::before {
+  opacity: 0.15;
+}
+
+.banner-container .carousel-item:nth-of-type(4) {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/software.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(300%);
+}
+.banner-container .carousel-item:nth-of-type(4) .banner-content .btn-arrw {
+  height: 62px;
+  width: 225px;
+  background: #67809f;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  position: relative;
+}
+.banner-container .carousel-item:nth-of-type(4) .banner-content .btn-arrw i, .banner-container .carousel-item:nth-of-type(4) .banner-content .btn-arrw p {
+  z-index: 5;
+}
+.banner-container .carousel-item:nth-of-type(4) .banner-content .btn-arrw {
+  overflow: hidden;
+  cursor: pointer;
+}
+.banner-container .carousel-item:nth-of-type(4) .banner-content .btn-arrw::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.banner-container .carousel-item:nth-of-type(4) .banner-content .btn-arrw:hover::before {
+  opacity: 0.15;
+}
+
+.banner-container .carousel-item:nth-of-type(5) {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/digital.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(400%);
+}
+.banner-container .carousel-item:nth-of-type(5) .banner-content .btn-arrw {
+  height: 62px;
+  width: 225px;
+  background: #2ecc71;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  position: relative;
+}
+.banner-container .carousel-item:nth-of-type(5) .banner-content .btn-arrw i, .banner-container .carousel-item:nth-of-type(5) .banner-content .btn-arrw p {
+  z-index: 5;
+}
+.banner-container .carousel-item:nth-of-type(5) .banner-content .btn-arrw {
+  overflow: hidden;
+  cursor: pointer;
+}
+.banner-container .carousel-item:nth-of-type(5) .banner-content .btn-arrw::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.banner-container .carousel-item:nth-of-type(5) .banner-content .btn-arrw:hover::before {
+  opacity: 0.15;
+}
+
+.banner-container .carousel-item:nth-of-type(6) {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/cyber.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(500%);
+}
+.banner-container .carousel-item:nth-of-type(6) .banner-content .btn-arrw {
+  height: 62px;
+  width: 225px;
+  background: #f62459;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  position: relative;
+}
+.banner-container .carousel-item:nth-of-type(6) .banner-content .btn-arrw i, .banner-container .carousel-item:nth-of-type(6) .banner-content .btn-arrw p {
+  z-index: 5;
+}
+.banner-container .carousel-item:nth-of-type(6) .banner-content .btn-arrw {
+  overflow: hidden;
+  cursor: pointer;
+}
+.banner-container .carousel-item:nth-of-type(6) .banner-content .btn-arrw::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.banner-container .carousel-item:nth-of-type(6) .banner-content .btn-arrw:hover::before {
+  opacity: 0.15;
+}
+
+.carousel-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  width: 200px;
+  z-index: 10;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: space-evenly;
+  align-items: space-evenly;
+  -ms-justify-content: space-evenly;
+  justify-content: space-evenly;
+}
+.carousel-controls .carouselDot {
+  width: 10px;
+  height: 12px;
+  opacity: 0.5;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+}
+.carousel-controls .active {
+  opacity: 1;
+}
+.carousel-controls .active::after {
+  content: " ";
+  width: 21px;
+  height: 21px;
+  display: block;
+  position: absolute;
+  left: -7.4px;
+  bottom: -6px;
+  background: transparent;
+  border-radius: 50%;
+  border: solid 2px white;
 }
 
 .services-list {
