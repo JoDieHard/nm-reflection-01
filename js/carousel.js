@@ -1,35 +1,43 @@
 
 const carouselContainer = $('.banner-container');
 const item = $('carousel-item');
+const carouselControls = $('.carousel-controls');
+var autoSlides;         //setInterval Name
+
+const delay = 4500;     // Set time between automatic change
 let carouselPos = 1;
+const eq = (carouselPos - 1);
 
-const nextSlide = function () {
-
-    setInterval( function () {
-        if ( carouselPos > 0 && carouselPos !== 6 ) {
+const changeSlide = function () {
+    // console.log(carouselPos);
+    if ( carouselPos > 0 && carouselPos !== 6 ) {
         carouselPos += 1;
+        carouselControls.children().removeClass('active');
+
         } else {
             carouselPos = 1;
+            carouselControls.children().removeClass('active');
+            $('.carouselDot:eq(' + eq + ')').addClass('active');
         }
-        console.log(carouselPos);
 
         // Transforms for each slide
-        if ( carouselPos === 1 ) {
-            carouselContainer.css('transform', 'translateX(0%)');
-        } else if ( carouselPos === 2 ) {
-            carouselContainer.css('transform', 'translateX(-100%)');
-        } else if ( carouselPos === 3 ) {
-            carouselContainer.css('transform', 'translateX(-200%)');
-        } else if ( carouselPos === 4 ) {
-            carouselContainer.css('transform', 'translateX(-300%)');
-        } else if ( carouselPos === 4 ) {
-            carouselContainer.css('transform', 'translateX(-400%)');
-        } else if ( carouselPos === 5 ) {
-            carouselContainer.css('transform', 'translateX(-400%)');
-        } else if ( carouselPos === 6 ) {
-            carouselContainer.css('transform', 'translateX(-500%)');
-        }
-    }, 4000); // Set time between automatic change
+        let translate = (1 - carouselPos)*100;
+        
+        carouselContainer.css('transform', 'translateX(' + translate + '%)');
+        $(' .carouselDot:eq(' + ( carouselPos -1 ) + ')').addClass('active');
+
+        $('.carouselDot').on('click', function () {
+            carouselControls.children().removeClass('active');
+            carouselPos = $( this ).index();
+            changeSlide();
+            clearInterval(autoSlides);
+            startSlides();
+        });
 }
 
-// nextSlide();
+ //Auto Change all slides every X seconds
+ const startSlides = function () {
+    autoSlides = setInterval( function () {   changeSlide();   }, delay); 
+}
+
+startSlides();
