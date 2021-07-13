@@ -203,10 +203,10 @@ footer {
 
     @media (max-width: $media-l)      {     // BREAKPOINT LARGE CHANGE
         height: 300px;
-        margin-bottom: 10px;
+        margin-bottom: auto;
     }
 
     @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM CHANGE 
-        height: 240px;
+        height: 290px;
     }
 }
