@@ -58,4 +58,123 @@
             }
         }
     }
+
+    @media (max-width: $media-m) {
+
+            width: 275px;
+    }
 }
+
+
+
+// Mobile Styles
+
+.mob-nav {
+
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    @media (min-width: $media-m) {
+        display: none;
+}
+
+    .main-li {
+        display: -ms-flexbox;
+        display: flex;
+
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        -ms-justify-content: space-around;
+        justify-content: space-around;
+
+        -ms-flex-align: center;
+        align-items: center;
+
+        padding: 20px;
+        margin: 20px;
+        outline: 1px solid rgba(0,0,0,.25);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+        background: transparent;
+
+        span {
+            margin-top: 5px;
+        }
+    }
+
+    .main-li:first-of-type {
+        margin-bottom: 0px;
+    }
+
+
+
+
+
+    .mob-list {
+        margin: 0px 20px;
+        border-radius: 3px;
+        overflow: hidden;
+        border: none;
+        ul {
+            -ms-flex-direction: column;
+            flex-direction: column;
+            border-radius: 3px;
+
+            a::before {
+                content: none;
+            }
+
+            li {
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
+                text-align: center;
+                line-height: 6px;
+                height: 43px;
+                
+
+                a {
+                    font-size: 1rem;
+                    padding: 20px 0px 17px;
+                }
+            }
+
+            li:nth-of-type(1) {
+                border-top: none;
+            }
+
+            li:nth-of-type(6) {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .mob-list:last-of-type {
+        margin-bottom: 20px;
+    }
+
+
+
+
+
+
+
+}
+
+// USEFUL FLEX BOX WITH PREFIXES
+
+    // display: -ms-flexbox;
+    // display: flex;
+
+    // -ms-flex-direction: row;
+    // flex-direction: row;
+
+    // -ms-flex-align: space-evenly;
+    // align-items: space-evenly;
+
+    // -ms-justify-content: space-evenly;
+    // justify-content: space-evenly;

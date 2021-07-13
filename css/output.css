@@ -85,6 +85,11 @@
 .website.active {
   left: -350px;
 }
+@media (max-width: 992px) {
+  .website.active {
+    left: -275px;
+  }
+}
 .website.active::before {
   pointer-events: all;
   cursor: pointer;
@@ -507,6 +512,80 @@ th {
 }
 .sidebar ul li:hover {
   background: rgba(102, 102, 102, 0.25);
+}
+@media (max-width: 992px) {
+  .sidebar {
+    width: 275px;
+  }
+}
+
+.mob-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .mob-nav {
+    display: none;
+  }
+}
+.mob-nav .main-li {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  background: transparent;
+}
+.mob-nav .main-li span {
+  margin-top: 5px;
+}
+.mob-nav .main-li:first-of-type {
+  margin-bottom: 0px;
+}
+.mob-nav .mob-list {
+  margin: 0px 20px;
+  border-radius: 3px;
+  overflow: hidden;
+  border: none;
+}
+.mob-nav .mob-list ul {
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 3px;
+}
+.mob-nav .mob-list ul a::before {
+  content: none;
+}
+.mob-nav .mob-list ul li {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  line-height: 6px;
+  height: 43px;
+}
+.mob-nav .mob-list ul li a {
+  font-size: 1rem;
+  padding: 20px 0px 17px;
+}
+.mob-nav .mob-list ul li:nth-of-type(1) {
+  border-top: none;
+}
+.mob-nav .mob-list ul li:nth-of-type(6) {
+  border-bottom: none;
+}
+.mob-nav .mob-list:last-of-type {
+  margin-bottom: 20px;
 }
 
 .slidingNav {
@@ -2096,7 +2175,7 @@ header .container img {
 }
 .banner-container .carousel-item:nth-of-type(5) .banner-content .btn-arrw {
   height: 62px;
-  width: 225px;
+  width: 355px;
   background: #2ecc71;
   display: -ms-flexbox;
   display: flex;
@@ -2182,9 +2261,9 @@ header .container img {
 
 .carousel-controls {
   position: absolute;
-  left: 50%;
+  left: 0px;
   bottom: 50px;
-  width: 200px;
+  width: 100%;
   z-index: 10;
   display: -ms-flexbox;
   display: flex;
@@ -2192,12 +2271,13 @@ header .container img {
   flex-direction: row;
   -ms-flex-align: space-evenly;
   align-items: space-evenly;
-  -ms-justify-content: space-evenly;
-  justify-content: space-evenly;
+  -ms-justify-content: center;
+  justify-content: center;
 }
 .carousel-controls .carouselDot {
   width: 12px;
   height: 12px;
+  margin: 0px 10px;
   opacity: 0.5;
   border-radius: 50%;
   border: none;

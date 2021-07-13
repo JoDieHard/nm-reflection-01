@@ -38,6 +38,11 @@
 .website.active {
     // transform: translateX(-350px);        // Open Styling (Can test in browser)
     left: -350px;
+
+    @media (max-width: $media-m) {              // Medium Breakpoint Change
+        left: -275px;
+    }
+
     &::before {
         pointer-events: all;
         cursor: pointer;

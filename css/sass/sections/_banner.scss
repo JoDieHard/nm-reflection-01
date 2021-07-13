@@ -177,7 +177,7 @@
 
     .banner-content {
         .btn-arrw {
-            @include btn-default(225px, 62px, $dm-theme);
+            @include btn-default(355px, 62px, $dm-theme);
         }
     }
 }
@@ -199,9 +199,9 @@
 
 .carousel-controls {
     position: absolute;
-    left: 50%;
+    left: 0px;
     bottom: 50px;
-    width: 200px;
+    width: 100%;
     z-index: 10;
 
     display: -ms-flexbox;
@@ -210,12 +210,13 @@
     flex-direction: row;
     -ms-flex-align: space-evenly;
     align-items: space-evenly;
-    -ms-justify-content: space-evenly;
-    justify-content: space-evenly;
+    -ms-justify-content: center;
+    justify-content: center;
 
     .carouselDot {
         width: 12px;
         height: 12px;
+        margin: 0px 10px;
 
         opacity: 0.5;
         border-radius: 50%;
