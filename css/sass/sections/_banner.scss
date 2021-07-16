@@ -1,16 +1,17 @@
 .banner {
-    display: -ms-flexbox;
-    display: flex;
+    // display: -ms-flexbox;
+    // display: flex;
 
-    -ms-flex-direction: column;
-    flex-direction: column;
+    // -ms-flex-direction: column;
+    // flex-direction: column;
 
-    -ms-flex-pack: center;
-    justify-content: center;
+    // -ms-flex-pack: center;
+    // justify-content: center;
     
-    -ms-flex-align: center;
-    align-items: center;
+    // -ms-flex-align: center;
+    // align-items: center;
 
+    position: relative;
 
     h1 {
         font-size: 3em;
@@ -26,9 +27,13 @@
     }
 
     .banner-content {
-        height: 247px;
-        width: 1170px;
+        // height: 247px;
+        // width: 1170px;
+        // width: 100%;
+        // height: 100%;
         margin-bottom: 100px;
+        margin-left: 200px;
+        margin-right: auto;
 
         color: white;
         letter-spacing: 1px;
@@ -52,7 +57,7 @@
         }
 
     .btn-arrw {
-        @include btn-default(225px, 62px, $wd-dt-theme);
+        // @include btn-default(225px, 62px, $wd-dt-theme);
 
         -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -64,10 +69,182 @@
         p {
             font-size: 1.3rem;
             padding-top: 4px;
+            margin-right: 10px;
+        }
+
+        i {
+            margin-top: 5px;
         }
 
         @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
             margin: 0 auto;
         }
+    }
+}
+
+
+.banner-container {
+    // display: -ms-flexbox;
+    // display: flex;
+    // -ms-flex-direction: row;
+    // flex-direction: row;
+    // -ms-flex-pack: flex-start;
+    // justify-content: flex-start;
+    // -ms-flex-align: center;
+    // align-items: center;
+
+    // overflow: hidden;
+
+    min-height: 500px;
+    height: 80vh;
+    position: relative;
+    transition: transform .5s ease-in-out ;
+}
+
+.carousel-item {
+    padding: 200px 0px;
+    color: white;
+    position: absolute;
+    width: 100%;
+    min-height: 500px;
+    height: 80vh;
+    // height: 80vh;
+    // padding-right: 300px;
+    // width: 100%;
+}
+
+// Carousel Item 1
+.banner-container .carousel-item:nth-of-type(1) {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/web.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .banner-content {
+        .btn-arrw {
+            @include btn-default(225px, 62px, $wd-dt-theme);
+        }
+    }
+}
+
+// Carousel Item 2
+.banner-container .carousel-item:nth-of-type(2) {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/it-support.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(100%);
+
+    .banner-content {
+        .btn-arrw {
+            @include btn-default(225px, 62px, $it-theme);
+        }
+    }
+}
+
+// Carousel Item 3
+.banner-container .carousel-item:nth-of-type(3) {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/telecoms.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(200%);
+
+    .banner-content {
+        .btn-arrw {
+            @include btn-default(225px, 62px, $ts-theme);
+        }
+    }
+}
+
+// Carousel Item 4
+.banner-container .carousel-item:nth-of-type(4) {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/software.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(300%);
+
+    .banner-content {
+        .btn-arrw {
+            @include btn-default(225px, 62px, $bs-theme);
+        }
+    }
+}
+
+// Carousel Item 5
+.banner-container .carousel-item:nth-of-type(5) {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/digital.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(400%);
+
+    .banner-content {
+        .btn-arrw {
+            @include btn-default(355px, 62px, $dm-theme);
+        }
+    }
+}
+
+// Carousel Item 6
+.banner-container .carousel-item:nth-of-type(6) {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/cyber.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(500%);
+
+    .banner-content {
+        .btn-arrw {
+            @include btn-default(225px, 62px, $cs-theme);
+        }
+    }
+}
+
+
+.carousel-controls {
+    position: absolute;
+    left: 0px;
+    bottom: 50px;
+    width: 100%;
+    z-index: 10;
+
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: space-evenly;
+    align-items: space-evenly;
+    -ms-justify-content: center;
+    justify-content: center;
+
+    .carouselDot {
+        width: 12px;
+        height: 12px;
+        margin: 0px 10px;
+
+        opacity: 0.5;
+        border-radius: 50%;
+        border: none;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    // Active CarouselDot Styling
+    .active {
+        opacity: 1;
+    }
+
+    .active::after {
+        content: " ";
+        width: 12px;
+        height: 12px;
+        display: block;
+        position: absolute;
+        left: -6px;
+        bottom: -6px;
+        background: transparent;
+        border-radius: 50%;
+        border: solid 2px white;
+        padding: 4px;
     }
 }

@@ -3,8 +3,57 @@
     box-sizing: border-box;
 }
 
+.sidebar {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.website {
+    background: white;
+    // transform: translateX(0px);             // This is the Styling for when the menu is animated (Closed)
+    left: 0px;
+    transition: ease-in-out .25s;
+    z-index: 10;
+
+    position: relative;
+
+
+    &::before {
+        content: " ";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0;
+        z-index: 20;
+        transition: .2s ease-in-out;
+        pointer-events: none;
+    }
+}
+
+.website.active {
+    // transform: translateX(-350px);        // Open Styling (Can test in browser)
+    left: -350px;
+
+    @media (max-width: $media-m) {              // Medium Breakpoint Change
+        left: -275px;
+    }
+
+    &::before {
+        pointer-events: all;
+        cursor: pointer;
+        opacity: 0.4;
+    }
+}
+
 .homepage {
     margin: 0px;
+    overflow-x: hidden;
+    position: relative;
 }
 
 //--------------------------------------------------------------------
@@ -20,8 +69,10 @@
 header {
     // grid-area: head;
     background-color: white;
-
     height: 110px;
+    // position: fixed;
+    // top: none;
+    transition: 2s ease-in-out;
 
     @media (max-width: $media-s) {      // MEDIUM SCREEN SIZE
         height: 170px;
@@ -34,18 +85,18 @@ header {
 .main-nav {
     // grid-area: main-nav;
     background-color: $primary-colour;
-
+    // margin-top: 110px;
     height: 100px;
 }
 
 .banner {
     // grid-area: banner;
 
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/web.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/web.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
 
-    padding: 200px 0px;
+    // padding: 200px 0px;
     overflow: hidden;
 }
 
@@ -145,17 +196,17 @@ footer {
     // grid-area: awards;
     background-color: white;
     padding-top: 40px;
-    margin-bottom: 35px;
+    padding-bottom: 35px;
 
     // height: 265px;
     overflow: hidden;
 
     @media (max-width: $media-l)      {     // BREAKPOINT LARGE CHANGE
         height: 300px;
-        margin-bottom: 10px;
+        margin-bottom: auto;
     }
 
     @media (max-width: $media-m)      {     // BREAKPOINT MEDIUM CHANGE 
-        height: 240px;
+        height: 290px;
     }
 }

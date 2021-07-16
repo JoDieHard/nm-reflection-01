@@ -1,0 +1,26 @@
+
+.slidingNav {
+    position: fixed;
+    top: -210px;
+    z-index: 19;
+    height: 210px;
+    width: 100%;
+    transition: .5s ease-in-out;
+    transform: translateY(210px);
+
+    header, .main-nav {
+        position: relative; 
+        top: 0px;
+
+        .nav-drop {
+            transform: translateY(-110px);
+        }
+    }
+}
+
+
+//----- Styling if Sidebar menu is active 
+
+// .website.active .slidingNav {
+//     transform: translateX(-350px) !important;
+// }
