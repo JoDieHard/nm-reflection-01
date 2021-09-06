@@ -49,7 +49,7 @@
             }
 
             @media (max-width: 430px) {          // EXTRA SMALL BREAKPOINT CHANGES
-                width: 80%;
+                width: 95%;
                 margin-left: auto;
                 margin-right: auto;
                 text-align: center;
@@ -99,6 +99,10 @@
     height: 80vh;
     position: relative;
     transition: transform .5s ease-in-out ;
+
+    @media (max-width: $media-xs) {          // MEDIUM BREAKPOINT CHANGES
+        min-height: 600px;
+    }
 }
 
 .carousel-item {
@@ -111,6 +115,11 @@
     // height: 80vh;
     // padding-right: 300px;
     // width: 100%;
+
+    @media (max-width: $media-xs) {          // EXTRA SMALL BREAKPOINT CHANGES
+        padding: 20% 0px;
+        min-height: 600px;
+    }
 }
 
 // Carousel Item 1
@@ -178,6 +187,10 @@
     .banner-content {
         .btn-arrw {
             @include btn-default(355px, 62px, $dm-theme);
+
+            @media (max-width: $media-xs) {          // EXTRA SMALL BREAKPOINT CHANGES
+                @include btn-default(225px, 82px, $dm-theme);
+            }
         }
     }
 }
