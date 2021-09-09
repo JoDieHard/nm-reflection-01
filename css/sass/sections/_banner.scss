@@ -18,6 +18,7 @@
         text-transform: uppercase;
         font-weight: 400;
         margin-bottom: 5px; 
+        margin-top: 0px;
     }
 
     p {
@@ -140,7 +141,7 @@
     background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/it-support.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translateX(100%);
+    // transform: translateX(100%);
 
     .banner-content {
         .btn-arrw {
@@ -154,7 +155,7 @@
     background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/telecoms.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translateX(200%);
+    // transform: translateX(200%);
 
     .banner-content {
         .btn-arrw {
@@ -168,7 +169,7 @@
     background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/software.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translateX(300%);
+    // transform: translateX(300%);
 
     .banner-content {
         .btn-arrw {
@@ -182,7 +183,7 @@
     background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/digital.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translateX(400%);
+    // transform: translateX(400%);
 
     .banner-content {
         .btn-arrw {
@@ -200,7 +201,7 @@
     background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .95)), url(../assets/carousel/cyber.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translateX(500%);
+    // transform: translateX(500%);
 
     .banner-content {
         .btn-arrw {
@@ -209,7 +210,7 @@
     }
 }
 
-
+/*
 .carousel-controls {
     position: absolute;
     left: 0px;
@@ -260,4 +261,149 @@
         border: solid 2px white;
         padding: 4px;
     }
+} 
+*/
+
+
+
+.banner, .owl-carousel, .item  {
+    min-height: 200px;
 }
+
+
+.item {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 44px;
+    transform: scale(1.1);
+
+    .owl-dot {
+        margin: 0 2px;
+    }
+
+    .owl-dot.active span {
+        position: relative;
+        width: 11px;
+        height: 11px;
+        background: white !important;
+    }
+
+    .owl-dot.active span::after {
+        content: " ";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        border: solid 2.5px white;
+        border-radius: 50%;
+        left: -6px;  top: -6px;
+        padding: 4px;
+    }
+}
+
+.carousel-img {
+    height: 100%;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(270deg, transparent 25%, rgb(0, 0, 0));
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+    } 
+
+    img {
+        height: 100% !important;
+        width: auto !important;
+
+    }
+}
+
+.carousel-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    z-index: 2;
+    height: 250px;
+    width: 500px;
+
+    margin: auto auto auto 250px;
+
+    color: white;
+    letter-spacing: 1px;
+
+        @media (max-width: $media-l) {          // MEDIUM BREAKPOINT CHANGES
+            margin-left: 150px;
+        }
+
+        @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+            width: 100%;
+            margin-left: 0px;
+            text-align: center;
+        }
+
+        @media (max-width: 430px) {          // EXTRA SMALL BREAKPOINT CHANGES
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+}
+
+// BUTTON STYLES 
+.btn-wd-theme {
+    .btn-arrw {
+        @include btn-default(225px, 62px, $wd-dt-theme);
+    }
+}
+
+.btn-it-theme {
+    .btn-arrw {
+        @include btn-default(225px, 62px, $it-theme);
+    }
+}
+
+.btn-ts-theme {
+    .btn-arrw {
+        @include btn-default(225px, 62px, $ts-theme);
+    }
+}
+
+.btn-bs-theme {
+    .btn-arrw {
+        @include btn-default(225px, 62px, $bs-theme);
+    }
+}
+
+.btn-dm-theme {
+    .btn-arrw {
+        @include btn-default(355px, 62px, $dm-theme);
+
+    }
+}
+
+.btn-cs-theme {
+    .btn-arrw {
+        @include btn-default(225px, 62px, $cs-theme);
+    }
+}
+

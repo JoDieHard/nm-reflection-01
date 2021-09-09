@@ -123,8 +123,9 @@ header {
   height: 100px;
 }
 
-.banner {
-  overflow: hidden;
+.banner .owl-carousel {
+  height: 80vh;
+  width: 100%;
 }
 
 .services-list {
@@ -1915,6 +1916,7 @@ header .container img {
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 5px;
+  margin-top: 0px;
 }
 .banner p {
   font-size: 1.2em;
@@ -2044,7 +2046,6 @@ header .container img {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/it-support.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  transform: translateX(100%);
 }
 .banner-container .carousel-item:nth-of-type(2) .banner-content .btn-arrw {
   height: 62px;
@@ -2090,7 +2091,6 @@ header .container img {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/telecoms.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  transform: translateX(200%);
 }
 .banner-container .carousel-item:nth-of-type(3) .banner-content .btn-arrw {
   height: 62px;
@@ -2136,7 +2136,6 @@ header .container img {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/software.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  transform: translateX(300%);
 }
 .banner-container .carousel-item:nth-of-type(4) .banner-content .btn-arrw {
   height: 62px;
@@ -2182,7 +2181,6 @@ header .container img {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/digital.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  transform: translateX(400%);
 }
 .banner-container .carousel-item:nth-of-type(5) .banner-content .btn-arrw {
   height: 62px;
@@ -2269,7 +2267,6 @@ header .container img {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../assets/carousel/cyber.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  transform: translateX(500%);
 }
 .banner-container .carousel-item:nth-of-type(6) .banner-content .btn-arrw {
   height: 62px;
@@ -2311,49 +2308,393 @@ header .container img {
   opacity: 0.15;
 }
 
+/*
 .carousel-controls {
+    position: absolute;
+    left: 0px;
+    bottom: 50px;
+    width: 100%;
+    z-index: 10;
+
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: space-evenly;
+    align-items: space-evenly;
+    -ms-justify-content: center;
+    justify-content: center;
+
+    .carouselDot {
+        width: 12px;
+        height: 12px;
+        margin: 0px 10px;
+
+        opacity: 0.5;
+        border-radius: 50%;
+        border: none;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    // Active CarouselDot Styling
+    .active {
+        opacity: 1;
+    }
+
+    .active::after {
+        content: " ";
+        width: 12px;
+        height: 12px;
+        display: block;
+        position: absolute;
+        left: -6px;
+        bottom: -6px;
+        background: transparent;
+        border-radius: 50%;
+        border: solid 2px white;
+        padding: 4px;
+    }
+} 
+*/
+.banner, .owl-carousel, .item {
+  min-height: 200px;
+}
+
+.item {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-dots {
   position: absolute;
-  left: 0px;
-  bottom: 50px;
+  left: 0;
+  right: 0;
+  bottom: 44px;
+  transform: scale(1.1);
+}
+.owl-dots .owl-dot {
+  margin: 0 2px;
+}
+.owl-dots .owl-dot.active span {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  background: white !important;
+}
+.owl-dots .owl-dot.active span::after {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: solid 2.5px white;
+  border-radius: 50%;
+  left: -6px;
+  top: -6px;
+  padding: 4px;
+}
+
+.carousel-img {
+  height: 100%;
+  overflow: hidden;
+}
+.carousel-img::after {
+  content: "";
   width: 100%;
-  z-index: 10;
+  height: 100%;
+  background: linear-gradient(270deg, transparent 25%, black);
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.carousel-img img {
+  height: 100% !important;
+  width: auto !important;
+}
+
+.carousel-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  z-index: 2;
+  height: 250px;
+  width: 500px;
+  margin: auto auto auto 250px;
+  color: white;
+  letter-spacing: 1px;
+}
+@media (max-width: 1260px) {
+  .carousel-text {
+    margin-left: 150px;
+  }
+}
+@media (max-width: 992px) {
+  .carousel-text {
+    width: 100%;
+    margin-left: 0px;
+    text-align: center;
+  }
+}
+@media (max-width: 430px) {
+  .carousel-text {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
+.btn-wd-theme .btn-arrw {
+  height: 62px;
+  width: 225px;
+  background: #926fb1;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-align: space-evenly;
-  align-items: space-evenly;
-  -ms-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
-}
-.carousel-controls .carouselDot {
-  width: 12px;
-  height: 12px;
-  margin: 0px 10px;
-  opacity: 0.5;
-  border-radius: 50%;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
   border: none;
+  border-radius: 3px;
   position: relative;
+}
+.btn-wd-theme .btn-arrw i, .btn-wd-theme .btn-arrw p {
+  z-index: 5;
+}
+.btn-wd-theme .btn-arrw {
+  overflow: hidden;
   cursor: pointer;
 }
-.carousel-controls .carouselDot:hover {
-  opacity: 1;
-}
-.carousel-controls .active {
-  opacity: 1;
-}
-.carousel-controls .active::after {
+.btn-wd-theme .btn-arrw::before {
   content: " ";
-  width: 12px;
-  height: 12px;
-  display: block;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  left: -6px;
-  bottom: -6px;
-  background: transparent;
-  border-radius: 50%;
-  border: solid 2px white;
-  padding: 4px;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.btn-wd-theme .btn-arrw:hover::before {
+  opacity: 0.15;
+}
+
+.btn-it-theme .btn-arrw {
+  height: 62px;
+  width: 225px;
+  background: #4183d7;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  position: relative;
+}
+.btn-it-theme .btn-arrw i, .btn-it-theme .btn-arrw p {
+  z-index: 5;
+}
+.btn-it-theme .btn-arrw {
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn-it-theme .btn-arrw::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.btn-it-theme .btn-arrw:hover::before {
+  opacity: 0.15;
+}
+
+.btn-ts-theme .btn-arrw {
+  height: 62px;
+  width: 225px;
+  background: #d64541;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  position: relative;
+}
+.btn-ts-theme .btn-arrw i, .btn-ts-theme .btn-arrw p {
+  z-index: 5;
+}
+.btn-ts-theme .btn-arrw {
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn-ts-theme .btn-arrw::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.btn-ts-theme .btn-arrw:hover::before {
+  opacity: 0.15;
+}
+
+.btn-bs-theme .btn-arrw {
+  height: 62px;
+  width: 225px;
+  background: #67809f;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  position: relative;
+}
+.btn-bs-theme .btn-arrw i, .btn-bs-theme .btn-arrw p {
+  z-index: 5;
+}
+.btn-bs-theme .btn-arrw {
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn-bs-theme .btn-arrw::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.btn-bs-theme .btn-arrw:hover::before {
+  opacity: 0.15;
+}
+
+.btn-dm-theme .btn-arrw {
+  height: 62px;
+  width: 355px;
+  background: #2ecc71;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  position: relative;
+}
+.btn-dm-theme .btn-arrw i, .btn-dm-theme .btn-arrw p {
+  z-index: 5;
+}
+.btn-dm-theme .btn-arrw {
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn-dm-theme .btn-arrw::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.btn-dm-theme .btn-arrw:hover::before {
+  opacity: 0.15;
+}
+
+.btn-cs-theme .btn-arrw {
+  height: 62px;
+  width: 225px;
+  background: #f62459;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  position: relative;
+}
+.btn-cs-theme .btn-arrw i, .btn-cs-theme .btn-arrw p {
+  z-index: 5;
+}
+.btn-cs-theme .btn-arrw {
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn-cs-theme .btn-arrw::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.btn-cs-theme .btn-arrw:hover::before {
+  opacity: 0.15;
 }
 
 .services-list {

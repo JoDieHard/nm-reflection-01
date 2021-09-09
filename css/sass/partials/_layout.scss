@@ -97,7 +97,12 @@ header {
     // background-size: cover;
 
     // padding: 200px 0px;
-    overflow: hidden;
+    // overflow: hidden;
+
+    .owl-carousel {
+        height: 80vh;
+        width: 100%;
+    }
 }
 
 .services-list {
