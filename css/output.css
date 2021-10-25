@@ -228,6 +228,7 @@ footer {
 * {
   font-family: Poppins, sans-serif;
   font-family: "Poppins", sans-serif;
+  letter-spacing: 0.4px;
 }
 
 #cookie-app {
@@ -5137,21 +5138,167 @@ footer .container .ft-website {
   display: none;
 }
 
+.website {
+  background-color: #fff;
+}
+
 .breadcrumbs {
   height: 45px;
   width: 100%;
   margin: 0px;
   padding: 0px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   font-size: 0.8125rem;
+  display: flex;
+  justify-content: center;
+  color: #333645;
 }
 .breadcrumbs ul {
+  width: 1170px;
   margin: 0px;
-  padding: 12.5px 0px 12.5px 95px;
+  padding: 12.5px 0px 12.5px 0px;
   list-style-type: none;
   display: flex;
 }
 .breadcrumbs ul li:nth-of-type(2) {
   padding-left: 5px;
+}
+
+.page-head {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.page-head h1 {
+  font-weight: 400;
+  font-size: 36px;
+  width: 1170px;
+  color: #333645;
+}
+
+.office-addresses {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.office-addresses .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1170px;
+}
+
+.office {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+}
+.office .content {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.office .content .image {
+  width: 370px;
+  height: 167.59px;
+  overflow: hidden;
+}
+.office .content .image img {
+  width: 100%;
+  height: auto;
+}
+.office .content .office-info {
+  padding: 30px;
+}
+.office .content .office-info a {
+  text-decoration: none;
+}
+.office .content .office-info a h2 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #333645;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  letter-spacing: 0.4px;
+}
+.office .content .office-info a:hover {
+  text-decoration: underline;
+}
+.office .content .office-info ul {
+  list-style-type: none;
+  padding-left: 0px;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #666;
+  margin: 0px;
+  line-height: 22px;
+  letter-spacing: 0.4px;
+  margin-bottom: 10px;
+}
+.office .content .office-info .number, .office .content .office-info .number:visited, .office .content .office-info .number:link {
+  font-weight: 700;
+  text-decoration: none;
+  color: #926fb1;
+  margin-top: 5px;
+  letter-spacing: 0.4px;
+}
+.office .content .office-info .number:hover, .office .content .office-info .number:visited:hover, .office .content .office-info .number:link:hover {
+  text-decoration: underline;
+}
+.office .content .office-info .number h3, .office .content .office-info .number:visited h3, .office .content .office-info .number:link h3 {
+  margin: 0px;
+  font-size: 26px;
+}
+.office .content .office-info .btn-view-more {
+  height: 47px;
+  width: 144px;
+  background: #926fb1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  position: relative;
+  color: white;
+  margin-top: 10px;
+  font-size: 14.4px;
+}
+.office .content .office-info .btn-view-more i, .office .content .office-info .btn-view-more p {
+  z-index: 5;
+}
+.office .content .office-info .btn-view-more {
+  overflow: hidden;
+  cursor: pointer;
+}
+.office .content .office-info .btn-view-more::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.office .content .office-info .btn-view-more:hover::before {
+  opacity: 0.15;
+}
+.office .content .office-info .btn-view-more:hover {
+  text-decoration: none;
+}
+.office .map {
+  width: 370px;
+  height: 300px;
+  background: #fff;
 }
 
 .enquiry-form {
@@ -5162,13 +5309,55 @@ footer .container .ft-website {
   padding: 20px;
 }
 .enquiry-form .form {
-  width: 70%;
+  width: 770px;
+  height: 552px;
   display: flex;
   flex-direction: column;
   margin: 0px 15px;
   background: #e6e7e9;
   padding: 30px;
   border-radius: 10px;
+}
+.enquiry-form .form button {
+  height: 47px;
+  width: 149.2px;
+  background: #926fb1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  position: relative;
+  color: white;
+  font-size: 17.008px;
+}
+.enquiry-form .form button i, .enquiry-form .form button p {
+  z-index: 5;
+}
+.enquiry-form .form button {
+  overflow: hidden;
+  cursor: pointer;
+}
+.enquiry-form .form button::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transition: opacity 0.05s linear;
+}
+.enquiry-form .form button:hover::before {
+  opacity: 0.15;
 }
 .enquiry-form .form .form-row {
   display: flex;
@@ -5204,7 +5393,10 @@ footer .container .ft-website {
   background: #fff;
 }
 .enquiry-form .form-info {
-  width: 30%;
+  width: 33.33%;
+}
+.enquiry-form .form-info strong {
+  font-weight: 600;
 }
 .enquiry-form .form-info p {
   margin-bottom: 25px;
@@ -5212,8 +5404,20 @@ footer .container .ft-website {
 .enquiry-form .form-info a {
   text-decoration: none;
 }
-.enquiry-form .form-info a h3 {
+.enquiry-form .form-info a h3, .enquiry-form .form-info a h3:visited, .enquiry-form .form-info a h3:link {
   font-size: 1.62rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: #926fb1;
+}
+.enquiry-form .form-info a h3:hover, .enquiry-form .form-info a h3:visited:hover, .enquiry-form .form-info a h3:link:hover {
+  text-decoration: underline;
+}
+.enquiry-form .form-info .dropdown, .enquiry-form .form-info .dropdown:visited, .enquiry-form .form-info .dropdown:link {
+  color: #333645;
+}
+.enquiry-form .form-info .dropdown:hover, .enquiry-form .form-info .dropdown:visited:hover, .enquiry-form .form-info .dropdown:link:hover {
+  text-decoration: underline;
 }
 
 form.form-group {

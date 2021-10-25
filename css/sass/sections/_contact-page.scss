@@ -1,22 +1,27 @@
 //--------------------------------------------------------------------------------------------------------------
 //---------------------     CONTACT PAGE STYLES   --------------------------------------------------------------------
 
-
+.website {
+  background-color: #fff;
+}
 
 // BREADCRUMB LINKS STYLING 
 .breadcrumbs {
     height: 45px;
     width: 100%;
-  
     margin: 0px;
     padding: 0px;
-  
-  
+    box-shadow: 0 5px 35px rgba(0,0,0,.1);
     font-size: .8125rem;
+
+    display: flex;
+    justify-content: center;
+    color: $primary-colour;
   
     ul {
+      width: 1170px;
       margin: 0px;
-      padding: 12.5px 0px 12.5px 95px;
+      padding: 12.5px 0px 12.5px 0px;
       
       list-style-type: none;
       display: flex;
@@ -27,6 +32,127 @@
     } 
   }
 
+// PAGE HEAD
+.page-head {
+  display: flex; 
+  justify-content: center;
+  margin-top: 20px;
+  h1 {
+    font-weight: 400;
+    font-size: 36px;
+    width: 1170px;
+    color: $primary-colour;
+  }
+}
+
+// LOCATION CARD STYLING 
+.office-addresses {
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+ 
+
+  .container {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    // margin: 20px 70px;
+    width: 1170px;
+  }
+}
+
+
+.office {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  box-shadow: 0 3px 35px rgba(0,0,0,.1);
+
+  .content {
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+
+    .image {
+      width: 370px;
+      height: 167.59px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .office-info {
+      padding: 30px;
+
+      a {
+        text-decoration: none;
+          h2 {
+          font-size: 1.125rem;
+          font-weight: 400;
+          color: $primary-colour;
+          margin-top: -5px;
+          margin-bottom: 10px;
+          letter-spacing: .4px;
+
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0px;
+        font-size: 0.8125rem;
+        font-weight: 400;
+        color: #666;
+        margin: 0px;
+        line-height: 22px;
+        letter-spacing: .4px;
+        margin-bottom: 10px;
+      }
+
+      .number, .number:visited, .number:link {
+        font-weight: 700;
+        text-decoration: none;
+        color: $wd-dt-theme;
+        margin-top: 5px;
+        letter-spacing: .4px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        h3 {
+          margin: 0px;
+          font-size: 26px;
+        }
+      }
+
+      .btn-view-more {
+        @include btn-default(144px, 47px, $wd-dt-theme, row);
+        color: white;
+        margin-top: 10px;
+        font-size: 14.4px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .map {
+    width: 370px;
+    height: 300px;
+    background: #fff;
+  }
+
+
+}
 
 
 
@@ -39,13 +165,21 @@
       padding: 20px;
 
       .form {
-          width: 70%;
+          width: 770px;
+          height: 552px;
+
           display: flex;
           flex-direction: column;
           margin: 0px 15px;
           background: #e6e7e9;
           padding: 30px;
           border-radius: 10px;
+
+          button {
+            @include btn-default(149.2px, 47px, $wd-dt-theme);
+            color: white;
+            font-size: 17.008px;
+          }
 
           .form-row {
             display: flex;
@@ -89,7 +223,11 @@
       }
 
       .form-info {
-        width: 30%;
+        width: 33.33%;
+
+        strong {
+          font-weight: 600;
+        }
 
         p {
             margin-bottom: 25px;
@@ -98,9 +236,24 @@
         a {
             text-decoration: none;
 
-            h3 {
-            font-size: 1.62rem;
+            h3, h3:visited, h3:link {
+              font-size: 1.62rem;
+              font-weight: 600;
+              letter-spacing: .4px;
+              color: $wd-dt-theme;
+
+              &:hover {
+                text-decoration: underline;
+              }
             }
+          }
+
+        .dropdown, .dropdown:visited, .dropdown:link {
+          color: $primary-colour;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
   }

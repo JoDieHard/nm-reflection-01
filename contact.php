@@ -27,8 +27,8 @@
 
             <div class="breadcrumbs"> 
                 <ul>
-                    <li><strong>Home</strong> / </li>
-                    <li> Our Offices</li>
+                    <li><strong>Home &nbsp;</strong> / </li>
+                    <li>&nbsp;Our Offices</li>
                 </ul>
             </div>
             
@@ -37,32 +37,94 @@
             </div>
 
             <div class="office-addresses">
-                <div class="office">
-                    <div class="image">
-                        <img src="" alt="This is an image of Netmatters' LOCATION Office">
+              <div class="container">
+                    <!-- OFFICE 1 -->
+                    <div class="office">
+                        <div class="content">
+                            <div class="image">
+                                <img src="assets/locations/cambridge.jpg" alt="This is an image of Netmatters' LOCATION Office">
+                            </div>
+                            <div class="office-info">
+                                <a href="#"><h2>Cambridge Office</h2></a>
+                                <ul>
+                                    <li>Unit 1.28,</li>
+                                    <li>St John's Innovation Centre,</li>
+                                    <li>Cowley Road, Milton,</li>
+                                    <li>Cambridge,</li>
+                                    <li>CB4 0WS</li>
+                                </ul>
+                                <a class="number" href="01223 37 57 72">
+                                    <h3>01223 37 57 72</h3>
+                                </a>
+                                <a class="btn-view-more" href="#">    
+                                    <p>View More</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="map">
+                        <!-- <img src="" alt="a screenshot of the office location"> -->
+                        </div>
                     </div>
-                    <div class="office-info">
-                        <a><h2>Office Title</h2></a>
-                        <ul>
-                            <li>Address Line 1</li>
-                            <li>Address Line 2</li>
-                            <li>Address Line 3</li>
-                            <li>Address Line 4</li>
-                            <li>Postcode</li>
-                        </ul>
-                        <a class="number" href="01223 37 57 72">
-                            <h3>01223 37 57 72</h3>
-                        </a>
-                        <a class="btn-contact" href="#">    
-                            <p>View More</p>
-                        </a>
+    
+                    <!-- OFFICE 2 -->
+                    <div class="office">
+                        <div class="content">
+                            <div class="image">
+                                <img src="assets/locations/wymondham.jpg" alt="This is an image of Netmatters' LOCATION Office">
+                            </div>
+                            <div class="office-info">
+                                <a href="#"><h2>Wymondham Office</h2></a>
+                                <ul>
+                                    <li>Unit 15,</li>
+                                    <li>Penfold Drive,</li>
+                                    <li>Gateway 11 Business Park,</li>
+                                    <li>Wymondham, Norfolk,</li>
+                                    <li>NR18 0WZ</li>
+                                </ul>
+                                <a class="number" href="01603 70 40 20">
+                                    <h3>01603 70 40 20</h3>
+                                </a>
+                                <a class="btn-view-more" href="#">    
+                                    <p>View More</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="map">
+    
+                        </div>
                     </div>
-                    <div class="map">
-
+    
+                    <!-- OFFICE 3 -->
+                    <div class="office">
+                        <div class="content">
+                            <div class="image">
+                                <img src="assets/locations/yarmouth-2.jpg" alt="This is an image of Netmatters' LOCATION Office">
+                            </div>
+                            <div class="office-info">
+                                <a href="#"><h2>Great Yarmouth Office</h2></a>
+                                <ul>
+                                    <li>Suite F23,</li>
+                                    <li>Beacon Innovation Centre,</li>
+                                    <li>Beacon Park, Gorleston,</li>
+                                    <li>Great Yarmouth, Norfolk,</li>
+                                    <li>NR31 7RA</li>
+                                </ul>
+                                <a class="number" href="01493 60 32 04">
+                                    <h3>01493 60 32 04</h3>
+                                </a>
+                                <a class="btn-view-more" href="#">    
+                                    <p>View More</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="map">
+    
+                        </div>
                     </div>
-                </div>
+              </div>
 
             </div>
+
 
             <div class="enquiry-form">
                 <div class="form">
@@ -98,8 +160,8 @@
                             </div>
 
                             <div class="custom-checkbox">
-                                <input type="checkbox" class="nl-check" id="nl-check"> 
-                                <label for="nl-check">
+                                <input type="checkbox" class="en-check" id="en-check"> 
+                                <label for="en-check">
                                     <span class="check-select"></span>
                                     <strong>Please tick this box if you wish to receive marketing information from us. 
                                         Please see our <a class="inline-link" href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a> 
@@ -122,7 +184,7 @@
                     
                     <p><strong>Monday - Friday 07:00 - 18:00</strong> </p>
                     
-                    <a href="#"><strong>Out of Hours IT Support</strong> <i class="fas fa-chevron-down"></i></a>
+                    <a class="dropdown" href="#"><strong>Out of Hours IT Support</strong> <i class="fas fa-chevron-down"></i></a>
                 </div>
             </div>
 
