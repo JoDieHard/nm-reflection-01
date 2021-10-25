@@ -1,6 +1,6 @@
 <header>
     <div class="container flexy">
-        <img src="assets/nm-logo.png" alt="Netmatters logo">
+        <a href="index.php"><img src="assets/nm-logo.png" alt="Netmatters logo"></a>
 
         <a class="btn-theme show-s phone-btn">    
             <i class="material-icons">phone_in_talk</i>
@@ -10,7 +10,7 @@
             <i class="material-icons">mouse</i> <p>Support</p>
         </a>
 
-        <a class="btn-contact hide-m">    
+        <a class="btn-contact hide-m" href="contact.php">    
             <i class="fas fa-paper-plane"></i> <p>Contact</p>
         </a>
 
