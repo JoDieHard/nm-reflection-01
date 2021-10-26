@@ -1,6 +1,60 @@
 
 <!DOCTYPE html>
 
+<?php
+    // echo "<pre>";
+    // print_r($_POST);
+    // echo "</pre>";
+
+    $message_sent = false; // $message_sent default value
+
+    if ( isset($_POST['enquiryMessage']) && $_POST['enquiryMessage'] != '' ) {                    // Check the Message is NOT empty
+        if ( isset($_POST['enquirySubject']) && $_POST['enquirySubject'] != '' ) {                // Check the Subject is NOT empty
+            if ( isset($_POST['enquiryName']) && $_POST['enquiryName'] != '' ) {                  // Check the Name is NOT empty
+                if ( isset($_POST['enquiryTelephone']) && $_POST['enquiryTelephone'] != '' ) {    // Check the Telephone is NOT empty
+                    if ( filter_var($_POST['enquiryEmail'], FILTER_VALIDATE_EMAIL) ) {  // Validate Email 
+
+                        $name = $_POST['enquiryName'];
+                        $email = $_POST['enquiryEmail'];
+                        $tel = $_POST['enquiryTelephone'];
+                        $subject = $_POST['enquirySubject'];
+                        $msg = $_POST['enquiryMessage'];
+                    
+                        $to = "xjodiehardx@gmail.com";
+                        $body = "";
+                    
+                        $body .= "From: " . $name . "\r\n";
+                        $body .= "Email: " . $email . "\r\n";
+                        $body .= "Telephone: " . $tel . "\r\n";
+                        $body .= "Message: " . $msg . "\r\n";
+                    
+                        // Send Email
+                        mail($to, $subject, $body );
+
+                        // Message Sent is True
+                        $message_sent = true;
+                    } else {
+                        // echo "Your email is Invalid";
+                        $emailError = true;
+                    }
+                } else {
+                    // echo "Your Telephone is Invalid";
+                    $telError = true;
+                }
+            } else {
+                // echo "Please enter your name";
+                $nameError = true;
+            }
+        } else {
+            // echo "Please enter a subject";
+            $subjectError = true;
+        }
+    } else {
+        // echo "Please enter a message";
+        $messageError = true;
+    }
+?>
+
 <html lang="en">
 
     <!-- HEAD -->
@@ -62,7 +116,7 @@
                             </div>
                         </div>
                         <div class="map" id="map1">
-                        <!-- <img src="" alt="a screenshot of the office location"> -->
+    
                         </div>
                     </div>
     
@@ -129,39 +183,39 @@
             <div class="enquiry-form">
                <div class="container">
                     <div class="form">
-                            <form action="">
+                            <form action="contact.php" method="POST">
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label for="name">Your Name</label>
-                                        <input type="text" name="name" id="name">
+                                        <input type="text" name="enquiryName" id="name">
                                     </div>
         
                                     <div class="form-group">
                                         <label for="email">Your Email</label>
-                                        <input type="email" name="email" id="email">
+                                        <input type="email" name="enquiryEmail" id="email">
                                     </div>
                                 </div>
     
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label for="telephone">Your Telephone Number</label>
-                                        <input type="tel" name="telephone" id="telephone">
+                                        <input type="tel" name="enquiryTelephone" id="telephone">
                                     </div>
         
                                     <div class="form-group">
                                         <label for="subject">Subject</label>
-                                        <input type="text" name="subject" id="subject">
+                                        <input type="text" name="enquirySubject" id="subject">
                                     </div>
                                 </div>
     
                                 
                                 <div class="form-group">
                                     <label for="message">Message</label>
-                                    <textarea name="message" id="message"> </textarea>
+                                    <textarea name="enquiryMessage" id="message"> </textarea>
                                 </div>
     
                                 <div class="custom-checkbox">
-                                    <input type="checkbox" class="nm-check" id="en-check"> 
+                                    <input type="checkbox" class="nm-check" id="en-check" name="enquiryCheckBox"> 
                                     <label for="en-check" class="check-label">
                                         <span class="check-select"></span>
                                         <strong>Please tick this box if you wish to receive marketing information from us. 
@@ -170,7 +224,7 @@
                                     </label>
                                 <div>
     
-                                <button type="submit" name="submit">Send Enquiry</button>
+                                <button type="submit">Send Enquiry</button>
     
 
                             </div>
