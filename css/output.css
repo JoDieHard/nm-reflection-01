@@ -765,6 +765,10 @@ header .container img {
 }
 .btn-contact i {
   font-size: 1.3rem;
+  color: white;
+}
+.btn-contact p {
+  color: white;
 }
 
 #search-box {
@@ -5313,6 +5317,7 @@ footer .container .ft-website {
   width: 370px;
   height: 300px;
   background: #fff;
+  overflow: hidden;
 }
 
 .enquiry-form {

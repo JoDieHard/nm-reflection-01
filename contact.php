@@ -53,7 +53,7 @@
                                     <li>Cambridge,</li>
                                     <li>CB4 0WS</li>
                                 </ul>
-                                <a class="number" href="01223 37 57 72">
+                                <a class="number" href="01223375772">
                                     <h3>01223 37 57 72</h3>
                                 </a>
                                 <a class="btn-view-more" href="#">    
@@ -61,7 +61,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="map">
+                        <div class="map" id="map1">
                         <!-- <img src="" alt="a screenshot of the office location"> -->
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                                     <li>Wymondham, Norfolk,</li>
                                     <li>NR18 0WZ</li>
                                 </ul>
-                                <a class="number" href="01603 70 40 20">
+                                <a class="number" href="01603704020">
                                     <h3>01603 70 40 20</h3>
                                 </a>
                                 <a class="btn-view-more" href="#">    
@@ -89,7 +89,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="map">
+                        <div class="map" id="map2">
     
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                                     <li>Great Yarmouth, Norfolk,</li>
                                     <li>NR31 7RA</li>
                                 </ul>
-                                <a class="number" href="01493 60 32 04">
+                                <a class="number" href="01493603204">
                                     <h3>01493 60 32 04</h3>
                                 </a>
                                 <a class="btn-view-more" href="#">    
@@ -117,7 +117,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="map">
+                        <div class="map" id="map3">
     
                         </div>
                     </div>
