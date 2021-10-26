@@ -15,8 +15,8 @@
 
                         <br>
                         <form class="custom-checkbox">
-                        <input type="checkbox" class="nl-check" id="nl-check"> 
-                        <label for="nl-check">
+                        <input type="checkbox" class="nm-check" id="nl-check"> 
+                        <label for="nl-check" class="check-label">
                             <span class="check-select"></span>
                             <strong>Please tick this box if you wish to receive marketing information from us. 
                                 Please see our <a class="inline-link" href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a> 

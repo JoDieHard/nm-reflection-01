@@ -127,65 +127,69 @@
 
 
             <div class="enquiry-form">
-                <div class="form">
-                        <form action="">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Your Name</label>
-                                    <input type="text" name="name" id="name">
+               <div class="container">
+                    <div class="form">
+                            <form action="">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="name">Your Name</label>
+                                        <input type="text" name="name" id="name">
+                                    </div>
+        
+                                    <div class="form-group">
+                                        <label for="email">Your Email</label>
+                                        <input type="email" name="email" id="email">
+                                    </div>
                                 </div>
     
-                                <div class="form-group">
-                                    <label for="email">Your Email</label>
-                                    <input type="email" name="email" id="email">
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="telephone">Your Telephone Number</label>
-                                    <input type="tel" name="telephone" id="telephone">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="telephone">Your Telephone Number</label>
+                                        <input type="tel" name="telephone" id="telephone">
+                                    </div>
+        
+                                    <div class="form-group">
+                                        <label for="subject">Subject</label>
+                                        <input type="text" name="subject" id="subject">
+                                    </div>
                                 </div>
     
+                                
                                 <div class="form-group">
-                                    <label for="subject">Subject</label>
-                                    <input type="text" name="subject" id="subject">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message"> </textarea>
                                 </div>
+    
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" class="nm-check" id="en-check"> 
+                                    <label for="en-check" class="check-label">
+                                        <span class="check-select"></span>
+                                        <strong>Please tick this box if you wish to receive marketing information from us. 
+                                            Please see our <a class="inline-link" href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a> 
+                                            for more information on how we use your data.</strong> 
+                                    </label>
+                                <div>
+    
+                                <button type="submit" name="submit">Send Enquiry</button>
+    
+
                             </div>
-
-                            
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea type="text" name="message" id="message"> </textarea>
-                            </div>
-
-                            <div class="custom-checkbox">
-                                <input type="checkbox" class="en-check" id="en-check"> 
-                                <label for="en-check">
-                                    <span class="check-select"></span>
-                                    <strong>Please tick this box if you wish to receive marketing information from us. 
-                                        Please see our <a class="inline-link" href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a> 
-                                        for more information on how we use your data.</strong> 
-                                </label>
-                            <div>
-
-                            <button type="submit" name="submit">Send Enquiry</button>
-
                         </form>
                     </div>
+
                 </div>
-            </div>
-            <div class="form-info">
-                    <p><strong>Email us on:</strong></p>
-                    
-                    <a href="mailto:sales@netmatters.com"><h3>sales@netmatters.com</h3></a>
-                    
-                    <p><strong>Business Hours</strong></p>
-                    
-                    <p><strong>Monday - Friday 07:00 - 18:00</strong> </p>
-                    
-                    <a class="dropdown" href="#"><strong>Out of Hours IT Support</strong> <i class="fas fa-chevron-down"></i></a>
-                </div>
+                <div class="form-info">
+                        <p><strong>Email us on:</strong></p>
+                        
+                        <a href="mailto:sales@netmatters.com"><h3>sales@netmatters.com</h3></a>
+                        
+                        <p><strong>Business Hours</strong></p>
+                        
+                        <p><strong>Monday - Friday 07:00 - 18:00</strong> </p>
+                        
+                        <a class="dropdown" href="#"><strong>Out of Hours IT Support</strong> <i class="fas fa-chevron-down"></i></a>
+                    </div>
+               </div>
             </div>
 
 
