@@ -8,11 +8,12 @@
 
     $message_sent = false; // $message_sent default value
 
-    if ( isset($_POST['enquiryMessage']) && $_POST['enquiryMessage'] != '' ) {                    // Check the Message is NOT empty
-        if ( isset($_POST['enquirySubject']) && $_POST['enquirySubject'] != '' ) {                // Check the Subject is NOT empty
-            if ( isset($_POST['enquiryName']) && $_POST['enquiryName'] != '' ) {                  // Check the Name is NOT empty
-                if ( isset($_POST['enquiryTelephone']) && $_POST['enquiryTelephone'] != '' ) {    // Check the Telephone is NOT empty
-                    if ( filter_var($_POST['enquiryEmail'], FILTER_VALIDATE_EMAIL) ) {  // Validate Email 
+    if ( isset($_POST['enquiryMessage']) AND $_POST['enquiryMessage'] != '' AND       // Check the Message is NOT empty
+         isset($_POST['enquiryName']) AND $_POST['enquiryName'] != '' AND             // Check the Subject is NOT empty
+         isset($_POST['enquirySubject']) AND $_POST['enquirySubject'] != '' AND       // Check the Subject is NOT empty
+         isset($_POST['enquiryTelephone']) AND $_POST['enquiryTelephone'] != '' ){   // Check the Telephone is NOT empty        
+     
+                    if ( filter_var($_POST['enquiryEmail'], FILTER_VALIDATE_EMAIL) ) {  // FILTER VALIDATES EMAIL 
 
                         $name = $_POST['enquiryName'];
                         $email = $_POST['enquiryEmail'];
@@ -34,25 +35,15 @@
                         // Message Sent is True
                         $message_sent = true;
                     } else {
-                        // echo "Your email is Invalid";
-                        $emailError = true;
+                        echo "<pre>";
+                        echo "Your email is Invalid";
+                        echo "</pre>";
                     }
                 } else {
-                    // echo "Your Telephone is Invalid";
-                    $telError = true;
+                    echo "<pre>";
+                    echo "There was an issue with submit!";
+                    echo "</pre>";
                 }
-            } else {
-                // echo "Please enter your name";
-                $nameError = true;
-            }
-        } else {
-            // echo "Please enter a subject";
-            $subjectError = true;
-        }
-    } else {
-        // echo "Please enter a message";
-        $messageError = true;
-    }
 ?>
 
 <html lang="en">
@@ -242,6 +233,15 @@
                         <p><strong>Monday - Friday 07:00 - 18:00</strong> </p>
                         
                         <a class="dropdown" href="#"><strong>Out of Hours IT Support</strong> <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-contents">
+                            <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+                            <ul>
+                                <li><strong>Monday - Friday 18:00 - 22:00 Saturday</strong></li>
+                                <li><strong>08:00 - 16:00</strong></li>
+                                <li><strong>Sunday 10:00 - 18:00</strong></li>
+                            </ul>
+                            <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours  voicemail. A technician will contact you on the number provided within 45 minutes of your call. </p>
+                        </div>
                     </div>
                </div>
             </div>

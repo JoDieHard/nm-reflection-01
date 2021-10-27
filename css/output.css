@@ -5432,9 +5432,12 @@ footer .container .ft-website {
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
+.enquiry-form .form .form-group input.error, .enquiry-form .form .form-group textarea.error {
+  border: solid 1px red;
+}
 .enquiry-form .form-info {
   width: 33.33%;
-  padding: 0px 20px;
+  padding: 0px 15px;
 }
 .enquiry-form .form-info strong {
   font-weight: 600;
@@ -5460,10 +5463,32 @@ footer .container .ft-website {
 .enquiry-form .form-info .dropdown, .enquiry-form .form-info .dropdown:visited, .enquiry-form .form-info .dropdown:link {
   color: #333645;
 }
-.enquiry-form .form-info .dropdown:hover, .enquiry-form .form-info .dropdown:visited:hover, .enquiry-form .form-info .dropdown:link:hover {
+.enquiry-form .form-info .dropdown:hover, .enquiry-form .form-info .dropdown.active, .enquiry-form .form-info .dropdown:visited:hover, .enquiry-form .form-info .dropdown:visited.active, .enquiry-form .form-info .dropdown:link:hover, .enquiry-form .form-info .dropdown:link.active {
   text-decoration: underline;
 }
 
 form.form-group {
   width: 100%;
+}
+
+.dropdown-contents {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.15s ease-out;
+}
+.dropdown-contents p {
+  color: #666;
+  margin: 30px 0px 0px !important;
+}
+.dropdown-contents ul {
+  list-style-type: none;
+  padding: 0px;
+  margin-top: 25px;
+  color: #333645;
+  line-height: 1.875rem;
+}
+
+.dropdown-contents.active {
+  max-height: 500px;
+  transition: max-height 0.25s ease-in;
 }
