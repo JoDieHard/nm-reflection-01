@@ -1,4 +1,8 @@
 
+<?php 
+include_once 'php/databaseHandler.php';
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
