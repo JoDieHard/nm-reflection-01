@@ -2,48 +2,7 @@
 <!DOCTYPE html>
 
 <?php
-    // echo "<pre>";
-    // print_r($_POST);
-    // echo "</pre>";
-
-    $message_sent = false; // $message_sent default value
-
-    if ( isset($_POST['enquiryMessage']) AND $_POST['enquiryMessage'] != '' AND       // Check the Message is NOT empty
-         isset($_POST['enquiryName']) AND $_POST['enquiryName'] != '' AND             // Check the Subject is NOT empty
-         isset($_POST['enquirySubject']) AND $_POST['enquirySubject'] != '' AND       // Check the Subject is NOT empty
-         isset($_POST['enquiryTelephone']) AND $_POST['enquiryTelephone'] != '' ){   // Check the Telephone is NOT empty        
-     
-                    if ( filter_var($_POST['enquiryEmail'], FILTER_VALIDATE_EMAIL) ) {  // FILTER VALIDATES EMAIL 
-
-                        $name = $_POST['enquiryName'];
-                        $email = $_POST['enquiryEmail'];
-                        $tel = $_POST['enquiryTelephone'];
-                        $subject = $_POST['enquirySubject'];
-                        $msg = $_POST['enquiryMessage'];
-                    
-                        $to = "xjodiehardx@gmail.com";
-                        $body = "";
-                    
-                        $body .= "From: " . $name . "\r\n";
-                        $body .= "Email: " . $email . "\r\n";
-                        $body .= "Telephone: " . $tel . "\r\n";
-                        $body .= "Message: " . $msg . "\r\n";
-                    
-                        // Send Email
-                        mail($to, $subject, $body );
-
-                        // Message Sent is True
-                        $message_sent = true;
-                    } else {
-                        echo "<pre>";
-                        echo "Your email is Invalid";
-                        echo "</pre>";
-                    }
-                } else {
-                    echo "<pre>";
-                    echo "There was an issue with submit!";
-                    echo "</pre>";
-                }
+    include 'php/enquiryForm.php';
 ?>
 
 <html lang="en">

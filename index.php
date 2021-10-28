@@ -1,6 +1,6 @@
 
 <?php 
-include_once 'php/databaseHandler.php';
+// include_once 'php/databaseHandler.php';
 ?>
 
 <!DOCTYPE html>

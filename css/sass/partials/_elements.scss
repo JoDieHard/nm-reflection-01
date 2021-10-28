@@ -382,7 +382,7 @@
 }
 
 // ------- ARTICLES CARD THEMES -----------------------------------------------
-
+/*
 @mixin article-theme($theme, $img-url) {
 
     .title-img-wrap {
@@ -440,7 +440,136 @@
         background-color: $theme;
     }
 }
-
+*/
 //------------------------------------------------------
 
+
+// DYNAMIC ARTICLE THEME 
+.article {
+
+    .title-img-wrap {
+
+        overflow: hidden;
+        position: relative;
+
+        .title-img {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 103%;
+
+            transition: .1s ease-in-out;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: auto;
+                height: 100%;
+            }
+
+            &::after {
+                content:" ";
+
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background-color: $white;
+                opacity: 0;
+
+                transition: opacity .2s ease-in-out;
+            }
+
+            &:hover::after {
+                opacity: 0.15;
+            }
+
+
+            &:hover {
+                // background-image: url($img-url); 
+                // background-size: 110%;
+                transform: scale(1.075);
+            }
+        }
+
+    }
+
+    .title {
+        // color: $theme;
+        font-size: 1rem;
+        letter-spacing: .5px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+
+
+}
+// DEFINING ALL DEPARTMENT COLOURS FOR ARTICLE CARDS
+.article.it-theme {
+
+    .title {
+        color: $it-theme;
+    }
+
+    & .label, .btn {
+        background-color: $it-theme;
+    }
+}
+
+.article.dm-theme {
+
+    .title {
+        color: $dm-theme;
+    }
+
+    & .label, .btn {
+        background-color: $dm-theme;
+    }
+}
+
+.article.ts-theme {
+
+    .title {
+        color: $ts-theme;
+    }
+
+    & .label, .btn {
+        background-color: $ts-theme;
+    }
+}
+
+.article.wd-dt-theme {
+
+    .title {
+        color: $wd-dt-theme;
+    }
+
+    & .label, .btn {
+        background-color: $wd-dt-theme;
+    }
+}
+
+.article.cs-theme {
+
+    .title {
+        color: $cs-theme;
+    }
+
+    & .label, .btn {
+        background-color: $cs-theme;
+    }
+}
+
+.article.bs-theme {
+
+    .title {
+        color: $bs-theme;
+    }
+
+    & .label, .btn {
+        background-color: $bs-theme;
+    }
+}
 

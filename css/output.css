@@ -50,6 +50,149 @@
   height: 0;
 }
 
+/*
+@mixin article-theme($theme, $img-url) {
+
+    .title-img-wrap {
+
+        overflow: hidden;
+        position: relative;
+
+        .title-img {
+            background-position: center;
+            background-repeat: no-repeat;
+
+            background-image: url($img-url); 
+            background-size: 103%;
+
+            transition: .1s ease-in-out;
+            position: relative;
+
+            &::after {
+                content:" ";
+
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background-color: $white;
+                opacity: 0;
+
+                transition: opacity .2s ease-in-out;
+            }
+
+            &:hover::after {
+                opacity: 0.15;
+            }
+
+
+            &:hover {
+                // background-image: url($img-url); 
+                // background-size: 110%;
+                transform: scale(1.075);
+            }
+        }
+
+    }
+
+    .title {
+        color: $theme;
+        font-size: 1rem;
+        letter-spacing: .5px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+
+    & .label, .btn {
+        background-color: $theme;
+    }
+}
+*/
+.article .title-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.article .title-img-wrap .title-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 103%;
+  transition: 0.1s ease-in-out;
+  position: relative;
+}
+.article .title-img-wrap .title-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+}
+.article .title-img-wrap .title-img::after {
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.article .title-img-wrap .title-img:hover::after {
+  opacity: 0.15;
+}
+.article .title-img-wrap .title-img:hover {
+  transform: scale(1.075);
+}
+.article .title {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.article.it-theme .title {
+  color: #4183d7;
+}
+.article.it-theme .label, .article.it-theme .btn {
+  background-color: #4183d7;
+}
+
+.article.dm-theme .title {
+  color: #2ecc71;
+}
+.article.dm-theme .label, .article.dm-theme .btn {
+  background-color: #2ecc71;
+}
+
+.article.ts-theme .title {
+  color: #d64541;
+}
+.article.ts-theme .label, .article.ts-theme .btn {
+  background-color: #d64541;
+}
+
+.article.wd-dt-theme .title {
+  color: #926fb1;
+}
+.article.wd-dt-theme .label, .article.wd-dt-theme .btn {
+  background-color: #926fb1;
+}
+
+.article.cs-theme .title {
+  color: #f62459;
+}
+.article.cs-theme .label, .article.cs-theme .btn {
+  background-color: #f62459;
+}
+
+.article.bs-theme .title {
+  color: #67809f;
+}
+.article.bs-theme .label, .article.bs-theme .btn {
+  background-color: #67809f;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -4197,6 +4340,11 @@ header .container img {
     padding-top: 60%;
   }
 }
+@media (max-width: 1260px) {
+  .articles .article-item:nth-last-of-type(1) {
+    display: none;
+  }
+}
 @media (max-width: 992px) {
   .articles .article-item {
     width: 350px;
@@ -4373,6 +4521,11 @@ header .container img {
     padding-top: 60%;
   }
 }
+@media (max-width: 767px) {
+  .articles .article-item:nth-last-of-type(1) {
+    display: block;
+  }
+}
 .articles .article-desc {
   height: 270px;
   -ms-flex-direction: column;
@@ -4491,132 +4644,6 @@ header .container img {
   color: #999aa2;
   font-size: 0.9em;
   margin-left: 98px;
-}
-
-.article-1 .title-img-wrap {
-  overflow: hidden;
-  position: relative;
-}
-.article-1 .title-img-wrap .title-img {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../assets/articles/10-tips.jpg");
-  background-size: 103%;
-  transition: 0.1s ease-in-out;
-  position: relative;
-}
-.article-1 .title-img-wrap .title-img::after {
-  content: " ";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #fff;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-.article-1 .title-img-wrap .title-img:hover::after {
-  opacity: 0.15;
-}
-.article-1 .title-img-wrap .title-img:hover {
-  transform: scale(1.075);
-}
-.article-1 .title {
-  color: #926fb1;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-  margin-bottom: 0px;
-}
-.article-1 .label, .article-1 .btn {
-  background-color: #926fb1;
-}
-
-.article-2 {
-  background: #4183d7;
-}
-.article-2 .title-img-wrap {
-  overflow: hidden;
-  position: relative;
-}
-.article-2 .title-img-wrap .title-img {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../assets/articles/it-call-handler.jpg");
-  background-size: 103%;
-  transition: 0.1s ease-in-out;
-  position: relative;
-}
-.article-2 .title-img-wrap .title-img::after {
-  content: " ";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #fff;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-.article-2 .title-img-wrap .title-img:hover::after {
-  opacity: 0.15;
-}
-.article-2 .title-img-wrap .title-img:hover {
-  transform: scale(1.075);
-}
-.article-2 .title {
-  color: #4183d7;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-  margin-bottom: 0px;
-}
-.article-2 .label, .article-2 .btn {
-  background-color: #4183d7;
-}
-
-.article-3 {
-  background: #4183d7;
-}
-.article-3 .title-img-wrap {
-  overflow: hidden;
-  position: relative;
-}
-.article-3 .title-img-wrap .title-img {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../assets/articles/notable-01-2021.jpg");
-  background-size: 103%;
-  transition: 0.1s ease-in-out;
-  position: relative;
-}
-.article-3 .title-img-wrap .title-img::after {
-  content: " ";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #fff;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-.article-3 .title-img-wrap .title-img:hover::after {
-  opacity: 0.15;
-}
-.article-3 .title-img-wrap .title-img:hover {
-  transform: scale(1.075);
-}
-.article-3 .title {
-  color: #4183d7;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-  margin-bottom: 0px;
-}
-.article-3 .label, .article-3 .btn {
-  background-color: #4183d7;
 }
 
 .clients .container {

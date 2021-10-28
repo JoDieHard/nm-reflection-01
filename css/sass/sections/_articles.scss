@@ -72,8 +72,12 @@
     .article-item {
         @include card-a();
 
-        @media (max-width: $media-l) {                  // MEDIUM BREAKPOINT CHANGE
+        @media (max-width: $media-l) {                  // LARGE BREAKPOINT CHANGE
             @include card-a(455px, 630px);
+
+            &:nth-last-of-type(1) {
+                display: none;
+            }
         }
 
         @media (max-width: $media-m) {                  // MEDIUM BREAKPOINT CHANGE
@@ -85,6 +89,10 @@
             
             -ms-flex-direction: column;
             flex-direction: column;
+
+            &:nth-last-of-type(1) {
+                display: block;
+            }
         }
 
 
@@ -193,17 +201,18 @@
 
 //--------- This is the styling for each Article 
 
-        .article-1 {
-            @include article-theme($wd-dt-theme, "../assets/articles/10-tips.jpg");
-        }
+        // .article-1 {
+        //     @include article-theme($wd-dt-theme, "../assets/articles/10-tips.jpg");
+        // }
 
-        .article-2 {
-            @include article-theme($btn-primary, "../assets/articles/it-call-handler.jpg");
-            background: $btn-primary;
-        }
+        // .article-2 {
+        //     @include article-theme($btn-primary, "../assets/articles/it-call-handler.jpg");
+        //     background: $btn-primary;
+        // }
 
-        .article-3 {
-            @include article-theme($btn-primary, "../assets/articles/notable-01-2021.jpg");
-            background: $btn-primary;
-        }
+        // .article-3 {
+        //     @include article-theme($btn-primary, "../assets/articles/notable-01-2021.jpg");
+        //     background: $btn-primary;
+        // }
+
 
