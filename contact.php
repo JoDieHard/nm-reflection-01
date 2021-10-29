@@ -137,31 +137,31 @@
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label for="name">Your Name</label>
-                                        <input type="text" name="enquiryName" id="name">
+                                        <input type="text" name="enquiryName" id="name" <?php if ($nameErr) :?> class="error" <?php else : ?> <?php endif;?>>
                                     </div>
         
                                     <div class="form-group">
                                         <label for="email">Your Email</label>
-                                        <input type="email" name="enquiryEmail" id="email">
+                                        <input type="email" name="enquiryEmail" id="email" <?php if ($emailErr) :?> class="error" <?php else : ?> <?php endif;?>>
                                     </div>
                                 </div>
     
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label for="telephone">Your Telephone Number</label>
-                                        <input type="tel" name="enquiryTelephone" id="telephone">
+                                        <input type="tel" name="enquiryTelephone" id="telephone" <?php if ($telErr) :?> class="error" <?php else : ?> <?php endif;?>>
                                     </div>
         
                                     <div class="form-group">
                                         <label for="subject">Subject</label>
-                                        <input type="text" name="enquirySubject" id="subject">
+                                        <input type="text" name="enquirySubject" id="subject" <?php if ($subjectErr) :?> class="error" <?php else : ?> <?php endif;?>>
                                     </div>
                                 </div>
     
                                 
                                 <div class="form-group">
                                     <label for="message">Message</label>
-                                    <textarea name="enquiryMessage" id="message"> </textarea>
+                                    <textarea name="enquiryMessage" id="message" <?php if ($msgErr) :?> class="error" <?php else : ?> <?php endif;?>> </textarea>
                                 </div>
     
                                 <div class="custom-checkbox">
