@@ -134,6 +134,12 @@
                <div class="container">
                     <div class="form">
                             <form action="contact.php" method="POST">
+                                <?php if ($enquirySuccess) :?>
+                                <div class="message-area">
+                                    <div class="flash-msg">Your message has been sent!<button type="button" class="flash-close" onclick="flashClose()"><i class="fas fa-times"></i></button></div>
+                                </div>
+                                <?php else :?> <?php endif;?>
+
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label for="name">Your Name</label>
@@ -174,7 +180,7 @@
                                     </label>
                                 <div>
     
-                                <button type="submit">Send Enquiry</button>
+                                <button type="submit" class="submit">Send Enquiry</button>
     
 
                             </div>

@@ -573,3 +573,98 @@
     }
 }
 
+
+
+// OFFICE CARD MIXIN
+@mixin office($width: 370px, $height: 167.59px ) {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    box-shadow: 0 3px 35px rgba(0,0,0,.1);
+  
+    .content {
+  
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      overflow: hidden;
+  
+      .image {
+        width: 370px;
+        height: 167.59px;
+        overflow: hidden;
+  
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+  
+      .office-info {
+        padding: 30px;
+  
+        a {
+          text-decoration: none;
+            h2 {
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: $primary-colour;
+            margin-top: -5px;
+            margin-bottom: 10px;
+            letter-spacing: .4px;
+  
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+  
+        ul {
+          list-style-type: none;
+          padding-left: 0px;
+          font-size: 0.8125rem;
+          font-weight: 400;
+          color: #666;
+          margin: 0px;
+          line-height: 22px;
+          letter-spacing: .4px;
+          margin-bottom: 10px;
+        }
+  
+        .number, .number:visited, .number:link {
+          font-weight: 700;
+          text-decoration: none;
+          color: $wd-dt-theme;
+          margin-top: 5px;
+          letter-spacing: .4px;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+  
+          h3 {
+            margin: 0px;
+            font-size: 26px;
+          }
+        }
+  
+        .btn-view-more {
+          @include btn-default(144px, 47px, $wd-dt-theme, row);
+          color: white;
+          margin-top: 10px;
+          font-size: 14.4px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  
+    .map {
+      width: 370px;
+      height: 300px;
+      background: #fff;
+      overflow: hidden;
+    }
+  
+  
+  }

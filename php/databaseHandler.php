@@ -13,8 +13,10 @@
 // $user = "root";
 // $pass = "";
 
+include("connection.php");
+
     try {
-        $db = new PDO("mysql:host=127.0.0.1;port=8889;dbname=netmatters;charset=utf8mb4", "root", "root");
+        
         $sql = 'SELECT * from articles ORDER BY date_published DESC LIMIT 3';
 
         foreach($db->query($sql) as $article) {

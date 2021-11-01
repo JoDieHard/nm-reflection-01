@@ -177,7 +177,7 @@
 
       .form {
           width: 770px;
-          height: 522px;
+          height: auto;
 
           display: flex; 
           flex-direction: column;
@@ -186,11 +186,12 @@
           padding: 30px;
           border-radius: 10px;
 
-          button {
+          .submit {
             @include btn-default(149.2px, 47px, $wd-dt-theme);
             color: white;
             font-size: 17.008px;
             margin-top: 30px;
+            margin-bottom: 15px;
           }
 
           .form-row {
@@ -198,9 +199,9 @@
             flex-direction: row;
             justify-content: space-between;
 
-            .form-group {
+            // .form-group {
                 // width: 50%;
-            }
+            // }
           }
           
           .form-group {
@@ -332,3 +333,34 @@
     transition: max-height 0.25s ease-in;
   }
 
+
+  // ERROR MESSAGE STYLING 
+
+  .flash-msg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 54px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #2ecc71;
+
+    button {
+      background: none;
+      border: none;
+      color: #000;
+      font-size: 21px;
+      cursor: pointer;
+      text-shadow: 0 1px 0 #fff;
+      opacity: .2;
+      transition: .075s ease-in-out;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
