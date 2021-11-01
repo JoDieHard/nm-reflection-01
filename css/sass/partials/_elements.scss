@@ -1,3 +1,21 @@
+// Contact Page Global Mixins 
+
+@mixin containerWidth() {
+    width: 1170px;
+
+    @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
+        width: 935px;
+      }
+
+    @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+        width: 718px;
+    }
+    @media (max-width: $media-s) {          // MEDIUM BREAKPOINT CHANGES
+        width: 100%;
+        margin: 0px 15px;
+    }
+}
+
 
 
 //--------------------------------------------------------------------------------------------------
@@ -575,11 +593,19 @@
 
 
 
+
+
+
+
+
+
+
+
 // OFFICE CARD MIXIN
 @mixin office($width: 370px, $height: 167.59px ) {
     display: flex;
     flex-direction: column;
-    width: 370px;
+    width: $width;
     box-shadow: 0 3px 35px rgba(0,0,0,.1);
   
     .content {
@@ -589,8 +615,8 @@
       overflow: hidden;
   
       .image {
-        width: 370px;
-        height: 167.59px;
+        width: $width;
+        height: $height;
         overflow: hidden;
   
         img {
@@ -660,7 +686,7 @@
     }
   
     .map {
-      width: 370px;
+      width: $width;
       height: 300px;
       background: #fff;
       overflow: hidden;

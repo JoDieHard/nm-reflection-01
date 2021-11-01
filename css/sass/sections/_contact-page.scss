@@ -17,9 +17,17 @@
     display: flex;
     justify-content: center;
     color: $primary-colour;
+
+    @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+      border: solid 1px $primary-colour;
+  }
+
+  @media (max-width: $media-s) {          // MEDIUM BREAKPOINT CHANGES
+    display: none;
+  }
   
     ul {
-      width: 1170px;
+      @include containerWidth();
       margin: 0px;
       padding: 12.5px 0px 12.5px 0px;
       
@@ -38,10 +46,20 @@
   justify-content: center;
   margin-top: 20px;
   h1 {
+    @include containerWidth();
     font-weight: 400;
     font-size: 36px;
-    width: 1170px;
     color: $primary-colour;
+  }
+
+  @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+    background-color: $primary-colour;
+    margin-top: 0px;
+    margin-bottom: 35px;
+    h1 {  
+      color: white;  
+      margin: 15px 0px; 
+    }
   }
 }
 
@@ -58,101 +76,36 @@
     flex-direction: row;
     justify-content: space-between;
     // margin: 20px 70px;
-    width: 1170px;
+    @include containerWidth();
+
+    @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+      flex-direction: column;
+      width: auto;
+    }
+    @media (max-width: $media-s) {          // MEDIUM BREAKPOINT CHANGES
+      margin: 0px 15px;
+    }
   }
 }
 
 
+
 .office {
-  display: flex;
-  flex-direction: column;
-  width: 370px;
-  box-shadow: 0 3px 35px rgba(0,0,0,.1);
+  @include office();
 
-  .content {
-
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    overflow: hidden;
-
-    .image {
-      width: 370px;
-      height: 167.59px;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    .office-info {
-      padding: 30px;
-
-      a {
-        text-decoration: none;
-          h2 {
-          font-size: 1.125rem;
-          font-weight: 400;
-          color: $primary-colour;
-          margin-top: -5px;
-          margin-bottom: 10px;
-          letter-spacing: .4px;
-
-        }
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      ul {
-        list-style-type: none;
-        padding-left: 0px;
-        font-size: 0.8125rem;
-        font-weight: 400;
-        color: #666;
-        margin: 0px;
-        line-height: 22px;
-        letter-spacing: .4px;
-        margin-bottom: 10px;
-      }
-
-      .number, .number:visited, .number:link {
-        font-weight: 700;
-        text-decoration: none;
-        color: $wd-dt-theme;
-        margin-top: 5px;
-        letter-spacing: .4px;
-
-        &:hover {
-          text-decoration: underline;
-        }
-
-        h3 {
-          margin: 0px;
-          font-size: 26px;
-        }
-      }
-
-      .btn-view-more {
-        @include btn-default(144px, 47px, $wd-dt-theme, row);
-        color: white;
-        margin-top: 10px;
-        font-size: 14.4px;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
+  @media (max-width: $media-l) {          // LARGE BREAKPOINT CHANGES
+    @include office(291.3px);
   }
 
-  .map {
-    width: 370px;
-    height: 300px;
-    background: #fff;
-    overflow: hidden;
+  @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+    @include office(718px, 327px);
+    margin: 15px 0px;
   }
 
+  @media (max-width: $media-s) {          // SMALL BREAKPOINT CHANGES
+    @include office(100%, auto);
+    // margin: 15px 15px; 
+}
 
 }
 
@@ -173,6 +126,16 @@
         width: 1170px;
         // margin: 20px 50px;
         // padding: 20px;
+
+        @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+          flex-direction: column-reverse;
+          width: 720px;
+        }
+        @media (max-width: $media-s) {          // MEDIUM BREAKPOINT CHANGES
+          flex-direction: column-reverse;
+          width: 100%;
+          margin: 0px 15px;
+        }
       }
 
       .form {
@@ -186,6 +149,10 @@
           padding: 30px;
           border-radius: 10px;
 
+          @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+            width: 100%;
+        }
+
           .submit {
             @include btn-default(149.2px, 47px, $wd-dt-theme);
             color: white;
@@ -198,6 +165,10 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+
+            @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+              flex-direction: column;
+          }
 
             // .form-group {
                 // width: 50%;
@@ -237,6 +208,10 @@
                     outline: 0;
                     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
                 }
+
+                @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+                    width: 100%;
+                }
               }
 
               textarea {
@@ -265,6 +240,11 @@
       .form-info {
         width: 33.33%;
         padding: 0px 15px;
+
+        @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGES
+          margin-bottom: 30px;
+          width: 100%;
+      }
 
         strong {
           font-weight: 600;
